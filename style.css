@@ -90,11 +90,16 @@ h1 {
   vertical-align: 2px;
   margin-left: 6px;
 }
-.map {
+.map-wrap {
+  position: relative;
   aspect-ratio: 5 / 3;
   background: var(--bg);
+  overflow: hidden;
+}
+.map {
   display: block;
   width: 100%;
+  height: 100%;
   object-fit: cover;
   filter: saturate(0.55) brightness(0.92);
 }
@@ -103,7 +108,16 @@ h1 {
     filter: saturate(0.55) brightness(0.78);
   }
 }
+.map-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
 .map.empty {
+  aspect-ratio: 5 / 3;
+  background: var(--bg);
   display: flex;
   align-items: center;
   justify-content: center;

@@ -62,6 +62,49 @@ const labelForType = (type) => {
   return type.replace(/([A-Z])/g, ' $1').trim().toLowerCase();
 };
 
+// ---- polyline overlay (must use the same Web Mercator math as sync.js) ----
+const D2R = Math.PI / 180;
+const mercY = (lat) => Math.log(Math.tan(Math.PI / 4 + (lat * D2R) / 2));
+
+function decodePolyline(str) {
+  const points = [];
+  let index = 0, lat = 0, lng = 0;
+  while (index < str.length) {
+    let shift = 0, result = 0, b;
+    do { b = str.charCodeAt(index++) - 63; result |= (b & 0x1f) << shift; shift += 5; } while (b >= 0x20);
+    lat += (result & 1) ? ~(result >> 1) : (result >> 1);
+    shift = 0; result = 0;
+    do { b = str.charCodeAt(index++) - 63; result |= (b & 0x1f) << shift; shift += 5; } while (b >= 0x20);
+    lng += (result & 1) ? ~(result >> 1) : (result >> 1);
+    points.push([lat * 1e-5, lng * 1e-5]);
+  }
+  return points;
+}
+
+const SVG_W = 600, SVG_H = 360;
+
+function project(lat, lng, bbox) {
+  // bbox = [west, south, east, north]
+  const mxw = bbox[0] * D2R, mxe = bbox[2] * D2R;
+  const myn = mercY(bbox[3]), mys = mercY(bbox[1]);
+  const x = ((lng * D2R) - mxw) / (mxe - mxw) * SVG_W;
+  const y = (myn - mercY(lat)) / (myn - mys) * SVG_H;
+  return [x, y];
+}
+
+function polylineSvg(a) {
+  if (!a.polyline || !a.bbox) return '';
+  const points = decodePolyline(a.polyline);
+  if (points.length < 2) return '';
+  const d = points.map(([lat, lng], i) => {
+    const [x, y] = project(lat, lng, a.bbox);
+    return `${i === 0 ? 'M' : 'L'}${x.toFixed(1)},${y.toFixed(1)}`;
+  }).join(' ');
+  return `<svg class="map-svg" viewBox="0 0 ${SVG_W} ${SVG_H}" preserveAspectRatio="none">
+    <path d="${d}" fill="none" stroke="#fc4c02" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+  </svg>`;
+}
+
 // ---- render ----
 function statsFor(a) {
   if (a.type === 'Swim') {
@@ -96,7 +139,10 @@ function renderCard(a) {
   card.rel = 'noopener';
 
   const map = a.has_map
-    ? `<img class="map" src="./maps/${a.id}.png" alt="" loading="lazy" />`
+    ? `<div class="map-wrap">
+         <img class="map" src="./maps/${a.id}.png" alt="" loading="lazy" />
+         ${polylineSvg(a)}
+       </div>`
     : `<div class="map empty">no gps</div>`;
 
   const statHtml = statsFor(a)
