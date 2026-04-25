@@ -157,10 +157,14 @@ function renderCard(a) {
     '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;', "'": '&#39;',
   })[c]);
 
+  const titleHtml = a.is_race
+    ? `<p class="title">${safeName} <span class="race-badge">race</span></p>`
+    : '';
+
   card.innerHTML = `
     ${map}
     <div class="body">
-      <p class="title">${safeName}${a.is_race ? ' <span class="race-badge">race</span>' : ''}</p>
+      ${titleHtml}
       <p class="meta">${fmtDate(a.date)} · ${labelForType(a.type)}</p>
       <div class="stats">${statHtml}
       </div>
