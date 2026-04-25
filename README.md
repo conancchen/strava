@@ -1,8 +1,13 @@
-# strava log
+# minimalist personal training log
 
-Static page that pulls my Strava activities every 6 hours and renders them as a card grid. Lives at https://conancchen.github.io/strava/.
+Pulls from Strava every 6 hours and displays in minimalist grid. 
 
-GitHub Actions runs the sync (`scripts/sync.js`) and Pages serves the result. Maps come from Mapbox.
+Check it out at https://conancchen.github.io/strava/.
+
+Features
+- Shows activity map, distance, time, pace, and heart rate or elevation.
+- Skips activities that are private on Strava
+- Can filter races
 
 ## Setup if you want your own
 
@@ -24,7 +29,7 @@ GitHub Actions runs the sync (`scripts/sync.js`) and Pages serves the result. Ma
 
    The response JSON has a `refresh_token`. Save it.
 
-4. Mapbox account at https://account.mapbox.com. Grab the default public token (starts with `pk.`).
+4. Set up a free Mapbox account at https://account.mapbox.com. Grab the default public token (starts with `pk.`).
 
 5. In your fork, Settings → Secrets and variables → Actions, add: `STRAVA_CLIENT_ID`, `STRAVA_CLIENT_SECRET`, `STRAVA_REFRESH_TOKEN`, `MAPBOX_TOKEN`.
 
@@ -43,11 +48,7 @@ If the sync 401s with `activity:read_permission missing`, the refresh token does
 
 ## Notes
 
-- Private Strava activities are skipped.
-- Races (Strava `workout_type` 1 or 11) get an orange border and badge.
-- Swims show yards, miles, and pace per 100yd.
-- The route polyline is drawn as SVG on top of a clean basemap, so the map can be dimmed via CSS without touching the route.
-- Anything in the repo is public. If you don't want your activity history out there, make the repo private (needs GitHub Pro for Pages on private repos) or host elsewhere.
+GitHub Actions runs the sync (`scripts/sync.js`) and Pages serves the result. Maps come from Mapbox.
 
 ## License
 
