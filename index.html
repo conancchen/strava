@@ -125,9 +125,14 @@
               </div>`)
           .join('');
 
+        const safeName = (a.name ?? '').replace(/[<>&"']/g, (c) => ({
+          '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;', "'": '&#39;',
+        })[c]);
+
         card.innerHTML = `
           ${map}
           <div class="body">
+            <p class="title">${safeName}</p>
             <p class="meta">${fmtDate(a.date)} · ${labelForType(a.type)}</p>
             <div class="stats">${statHtml}
             </div>
