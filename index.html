@@ -14,7 +14,11 @@
         <p class="sub">recent runs, rides, and swims</p>
       </header>
       <div class="controls">
-        <button id="races-toggle" class="toggle">hold to see races</button>
+        <label class="switch">
+          <input type="checkbox" id="races-toggle" />
+          <span class="switch-track"><span class="switch-thumb"></span></span>
+          <span class="switch-label">races only</span>
+        </label>
       </div>
       <div id="grid" class="grid"></div>
     </div>

@@ -57,21 +57,52 @@ h1 {
 .controls {
   margin-bottom: 1.5rem;
 }
-.toggle {
-  background: var(--surface);
-  border: 0.5px solid var(--border);
-  border-radius: 6px;
-  padding: 6px 14px;
-  color: var(--muted);
-  font: inherit;
-  font-size: 13px;
+.switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   cursor: pointer;
-  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  font-size: 13px;
+  color: var(--muted);
+  user-select: none;
 }
-.toggle.active {
+.switch input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.switch-track {
+  position: relative;
+  display: inline-block;
+  width: 38px;
+  height: 22px;
+  background: var(--border);
+  border-radius: 11px;
+  transition: background 0.25s ease;
+}
+.switch-thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.switch input:checked + .switch-track {
   background: #fc4c02;
-  color: #fff;
-  border-color: #fc4c02;
+}
+.switch input:checked + .switch-track .switch-thumb {
+  transform: translateX(16px);
+}
+.switch input:checked ~ .switch-label {
+  color: var(--text);
+}
+.switch input:focus-visible + .switch-track {
+  outline: 2px solid var(--muted);
+  outline-offset: 2px;
 }
 ::view-transition-old(*),
 ::view-transition-new(*) {
