@@ -104,9 +104,12 @@ h1 {
   outline: 2px solid var(--muted);
   outline-offset: 2px;
 }
-::view-transition-old(*),
-::view-transition-new(*) {
-  animation-duration: 0.4s;
+.grid.races-only .card:not(.race) {
+  display: none;
+}
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.25s;
   animation-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 .grid {

@@ -112,7 +112,6 @@ function statsFor(a) {
 function renderCard(a) {
   const card = document.createElement(a.is_race ? 'a' : 'div');
   card.className = a.is_race ? 'card race' : 'card';
-  card.style.viewTransitionName = `card-${a.id}`;
   if (a.is_race) {
     card.href = `https://www.strava.com/activities/${a.id}`;
     card.target = '_blank';
@@ -160,18 +159,8 @@ let allActivities = [];
 let racesOnly = false;
 
 function applyFilters() {
-  const filtered = racesOnly ? allActivities.filter((a) => a.is_race) : allActivities;
   const grid = document.getElementById('grid');
-  const update = () => {
-    grid.innerHTML = '';
-    if (filtered.length === 0) {
-      grid.innerHTML = '<p class="empty-state">no races yet</p>';
-      return;
-    }
-    const frag = document.createDocumentFragment();
-    for (const a of filtered) frag.appendChild(renderCard(a));
-    grid.appendChild(frag);
-  };
+  const update = () => grid.classList.toggle('races-only', racesOnly);
   if (document.startViewTransition) {
     document.startViewTransition(update);
   } else {
@@ -197,8 +186,10 @@ async function load() {
       grid.innerHTML = '<p class="empty-state">no activities synced yet</p>';
       return;
     }
+    const frag = document.createDocumentFragment();
+    for (const a of allActivities) frag.appendChild(renderCard(a));
+    grid.appendChild(frag);
     wireControls();
-    applyFilters();
   } catch (e) {
     grid.innerHTML = '<p class="empty-state">no activities synced yet</p>';
   }
