@@ -54,6 +54,11 @@ h1 {
   font-size: 13px;
   margin: 0;
 }
+.plain-link {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
 .controls {
   margin-bottom: 1.5rem;
 }
