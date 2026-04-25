@@ -56,6 +56,19 @@
 
       const fmtElevation = (m) => (m == null ? '—' : Math.round(m * 3.28084).toLocaleString() + ' ft');
 
+      const fmtHr = (bpm) => Math.round(bpm) + ' bpm';
+
+      // Swim helpers: yards distance and pace per 100 yards.
+      const M_PER_YD = 0.9144;
+      const fmtDistanceYds = (m) => Math.round(m / M_PER_YD).toLocaleString() + ' yds';
+      const fmtSwimPace = (mps) => {
+        if (!mps) return '—';
+        const secPer100Yd = (100 * M_PER_YD) / mps;
+        const min = Math.floor(secPer100Yd / 60);
+        const sec = Math.round(secPer100Yd % 60);
+        return `${min}:${String(sec).padStart(2, '0')} /100yd`;
+      };
+
       // Strava activity types — group into "run-like" vs "ride-like" for unit selection.
       const RUN_LIKE = new Set(['Run', 'TrailRun', 'VirtualRun', 'Walk', 'Hike']);
       const RIDE_LIKE = new Set([
@@ -68,16 +81,32 @@
       };
 
       // ---- render ----
-      function renderCard(a) {
+      function statsFor(a) {
+        if (a.type === 'Swim') {
+          return [
+            ['yards', fmtDistanceYds(a.distance_m)],
+            ['miles', fmtDistance(a.distance_m)],
+            ['time', fmtTime(a.moving_time_s)],
+            ['pace', fmtSwimPace(a.average_speed)],
+          ];
+        }
         const isRun = RUN_LIKE.has(a.type);
-        const isRide = RIDE_LIKE.has(a.type);
-        const speedOrPaceLabel = isRun ? 'pace' : 'avg speed';
-        const speedOrPaceValue = isRun
-          ? fmtPace(a.average_speed)
-          : isRide
-          ? fmtSpeed(a.average_speed)
-          : fmtSpeed(a.average_speed); // fallback to mph for misc types
+        const speedOrPace = isRun
+          ? ['pace', fmtPace(a.average_speed)]
+          : ['avg speed', fmtSpeed(a.average_speed)];
+        const hasHr = a.average_heartrate != null && a.average_heartrate > 0;
+        const lastStat = hasHr
+          ? ['avg hr', fmtHr(a.average_heartrate)]
+          : ['elevation', fmtElevation(a.elevation_gain_m)];
+        return [
+          ['distance', fmtDistance(a.distance_m)],
+          ['time', fmtTime(a.moving_time_s)],
+          speedOrPace,
+          lastStat,
+        ];
+      }
 
+      function renderCard(a) {
         const card = document.createElement('a');
         card.className = 'card';
         card.href = `https://www.strava.com/activities/${a.id}`;
@@ -88,27 +117,19 @@
           ? `<img class="map" src="./maps/${a.id}.png" alt="" loading="lazy" />`
           : `<div class="map empty">no gps</div>`;
 
+        const statHtml = statsFor(a)
+          .map(([label, value]) => `
+              <div>
+                <p class="stat-label">${label}</p>
+                <p class="stat-value">${value}</p>
+              </div>`)
+          .join('');
+
         card.innerHTML = `
           ${map}
           <div class="body">
             <p class="meta">${fmtDate(a.date)} · ${labelForType(a.type)}</p>
-            <div class="stats">
-              <div>
-                <p class="stat-label">distance</p>
-                <p class="stat-value">${fmtDistance(a.distance_m)}</p>
-              </div>
-              <div>
-                <p class="stat-label">time</p>
-                <p class="stat-value">${fmtTime(a.moving_time_s)}</p>
-              </div>
-              <div>
-                <p class="stat-label">${speedOrPaceLabel}</p>
-                <p class="stat-value">${speedOrPaceValue}</p>
-              </div>
-              <div>
-                <p class="stat-label">elevation</p>
-                <p class="stat-value">${fmtElevation(a.elevation_gain_m)}</p>
-              </div>
+            <div class="stats">${statHtml}
             </div>
           </div>
         `;

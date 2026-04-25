@@ -92,6 +92,7 @@ function shapeActivity(a) {
     distance_m: a.distance, // meters
     moving_time_s: a.moving_time, // seconds
     average_speed: a.average_speed, // m/s
+    average_heartrate: a.average_heartrate ?? null, // bpm, may be missing
     elevation_gain_m: a.total_elevation_gain ?? 0, // meters
     has_map: Boolean(a.map?.summary_polyline),
     polyline: a.map?.summary_polyline ?? null,
