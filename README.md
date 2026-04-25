@@ -50,6 +50,8 @@ If the sync 401s with `activity:read_permission missing`, the refresh token does
 
 GitHub Actions runs the sync (`scripts/sync.js`) and Pages serves the result. Maps come from Mapbox.
 
+Shoutout Claude.
+
 ## License
 
 MIT.
