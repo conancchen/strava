@@ -54,7 +54,7 @@
         return (mps * 2.23694).toFixed(1) + ' mph';
       };
 
-      const fmtHr = (bpm) => (bpm == null ? '—' : Math.round(bpm) + ' bpm');
+      const fmtElevation = (m) => (m == null ? '—' : Math.round(m * 3.28084).toLocaleString() + ' ft');
 
       // Strava activity types — group into "run-like" vs "ride-like" for unit selection.
       const RUN_LIKE = new Set(['Run', 'TrailRun', 'VirtualRun', 'Walk', 'Hike']);
@@ -106,8 +106,8 @@
                 <p class="stat-value">${speedOrPaceValue}</p>
               </div>
               <div>
-                <p class="stat-label">avg hr</p>
-                <p class="stat-value">${fmtHr(a.average_heartrate)}</p>
+                <p class="stat-label">elevation</p>
+                <p class="stat-value">${fmtElevation(a.elevation_gain_m)}</p>
               </div>
             </div>
           </div>

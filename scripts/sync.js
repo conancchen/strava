@@ -92,7 +92,7 @@ function shapeActivity(a) {
     distance_m: a.distance, // meters
     moving_time_s: a.moving_time, // seconds
     average_speed: a.average_speed, // m/s
-    average_heartrate: a.average_heartrate ?? null, // bpm, may be missing
+    elevation_gain_m: a.total_elevation_gain ?? 0, // meters
     has_map: Boolean(a.map?.summary_polyline),
     polyline: a.map?.summary_polyline ?? null,
   };
@@ -130,8 +130,12 @@ async function main() {
   const fresh = await fetchActivities(accessToken, afterTimestamp);
   console.log(`Strava returned ${fresh.length} activities`);
 
-  // Filter out any duplicates (in case `after` boundary overlaps).
-  const newOnes = fresh.filter((a) => !existingIds.has(a.id)).map(shapeActivity);
+  // Filter out any duplicates (in case `after` boundary overlaps), and skip private activities.
+  const deduped = fresh.filter((a) => !existingIds.has(a.id));
+  const publicOnly = deduped.filter((a) => !a.private && a.visibility !== 'only_me');
+  const skippedPrivate = deduped.length - publicOnly.length;
+  if (skippedPrivate > 0) console.log(`Skipped ${skippedPrivate} private activities`);
+  const newOnes = publicOnly.map(shapeActivity);
   console.log(`${newOnes.length} new activities after dedup`);
 
   // Download a map PNG for each new activity that has GPS.
