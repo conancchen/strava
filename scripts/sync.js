@@ -13,7 +13,7 @@ const {
 } = process.env;
 
 if (!STRAVA_CLIENT_ID || !STRAVA_CLIENT_SECRET || !STRAVA_REFRESH_TOKEN || !MAPBOX_TOKEN) {
-  console.error('Missing required env vars. Need: STRAVA_CLIENT_ID, STRAVA_CLIENT_SECRET, STRAVA_REFRESH_TOKEN, MAPBOX_TOKEN');
+  console.error('Missing required env vars: STRAVA_CLIENT_ID, STRAVA_CLIENT_SECRET, STRAVA_REFRESH_TOKEN, MAPBOX_TOKEN');
   process.exit(1);
 }
 
@@ -22,7 +22,6 @@ const MAPS_DIR = 'maps';
 const MAP_WIDTH = 600;
 const MAP_HEIGHT = 360;
 
-// Step 1: refresh the Strava access token using the long-lived refresh token.
 async function getAccessToken() {
   const res = await fetch('https://www.strava.com/oauth/token', {
     method: 'POST',
@@ -35,34 +34,27 @@ async function getAccessToken() {
     }),
   });
   if (!res.ok) throw new Error(`Token refresh failed: ${res.status} ${await res.text()}`);
-  const data = await res.json();
-  return data.access_token;
+  return (await res.json()).access_token;
 }
 
-// Step 2: fetch activity summaries from Strava, paginated, only newer than `after`.
 async function fetchActivities(accessToken, afterTimestamp) {
   const all = [];
-  let page = 1;
   const perPage = 100;
-  while (true) {
+  for (let page = 1; ; page++) {
     const url = new URL('https://www.strava.com/api/v3/athlete/activities');
     url.searchParams.set('per_page', perPage);
     url.searchParams.set('page', page);
     if (afterTimestamp) url.searchParams.set('after', afterTimestamp);
-    const res = await fetch(url, {
-      headers: { Authorization: `Bearer ${accessToken}` },
-    });
+    const res = await fetch(url, { headers: { Authorization: `Bearer ${accessToken}` } });
     if (!res.ok) throw new Error(`Activities fetch failed: ${res.status} ${await res.text()}`);
     const batch = await res.json();
     if (batch.length === 0) break;
     all.push(...batch);
     if (batch.length < perPage) break;
-    page++;
   }
   return all;
 }
 
-// Decode Google's encoded-polyline format (used by Strava + Mapbox) into [lat, lng] points.
 function decodePolyline(str) {
   const points = [];
   let index = 0, lat = 0, lng = 0;
@@ -78,13 +70,12 @@ function decodePolyline(str) {
   return points;
 }
 
-// Web Mercator helpers; mercY is the standard projection of latitude.
 const D2R = Math.PI / 180;
 const mercY = (lat) => Math.log(Math.tan(Math.PI / 4 + (lat * D2R) / 2));
 const invMercY = (y) => (2 * Math.atan(Math.exp(y)) - Math.PI / 2) / D2R;
 
-// Compute a bbox that contains all points, expanded to match the image's aspect ratio
-// (so Mapbox renders exactly the area we project against, with no auto-fit padding mismatch).
+// Compute a bbox containing all points, expanded to match the image aspect ratio so
+// Mapbox renders exactly the area we project against (no auto-fit padding mismatch).
 function computeBbox(points, width, height, padFrac = 0.08) {
   let minLat = Infinity, maxLat = -Infinity, minLng = Infinity, maxLng = -Infinity;
   for (const [lat, lng] of points) {
@@ -93,15 +84,11 @@ function computeBbox(points, width, height, padFrac = 0.08) {
     if (lng < minLng) minLng = lng;
     if (lng > maxLng) maxLng = lng;
   }
-  // Convert to mercator units so padding/aspect math is in the same projection as the rendered image.
   let mxw = minLng * D2R, mxe = maxLng * D2R;
   let mys = mercY(minLat), myn = mercY(maxLat);
-  // Pad equally on all 4 sides (in mercator units).
-  const xExt = mxe - mxw, yExt = myn - mys;
-  const xPad = Math.max(xExt * padFrac, 1e-5);
-  const yPad = Math.max(yExt * padFrac, 1e-5);
+  const xPad = Math.max((mxe - mxw) * padFrac, 1e-5);
+  const yPad = Math.max((myn - mys) * padFrac, 1e-5);
   mxw -= xPad; mxe += xPad; mys -= yPad; myn += yPad;
-  // Adjust to image aspect ratio so mapbox renders the bbox exactly without extra fit.
   const targetAspect = width / height;
   const curAspect = (mxe - mxw) / (myn - mys);
   if (curAspect > targetAspect) {
@@ -116,35 +103,27 @@ function computeBbox(points, width, height, padFrac = 0.08) {
   return [mxw / D2R, invMercY(mys), mxe / D2R, invMercY(myn)];
 }
 
-// Download a static map PNG for the given bbox — no polyline overlay; the browser draws that on top.
 async function downloadMapPng(bbox, outPath) {
   const [w, s, e, n] = bbox;
   const url = `https://api.mapbox.com/styles/v1/mapbox/outdoors-v12/static/[${w},${s},${e},${n}]/${MAP_WIDTH}x${MAP_HEIGHT}@2x?access_token=${MAPBOX_TOKEN}`;
   const res = await fetch(url);
   if (!res.ok) throw new Error(`Mapbox failed: ${res.status} ${await res.text()}`);
-  const buf = Buffer.from(await res.arrayBuffer());
-  await fs.writeFile(outPath, buf);
+  await fs.writeFile(outPath, Buffer.from(await res.arrayBuffer()));
 }
 
-// Strava `start_date` is ISO. Convert to "YYYY-MM-DD" for display, plus keep the full ISO.
-function toDateOnly(iso) {
-  return iso.slice(0, 10);
-}
-
-// Reduce a Strava activity to just the fields we render.
 function shapeActivity(a) {
   return {
     id: a.id,
     name: a.name,
-    type: a.type, // "Run", "Ride", "TrailRun", "VirtualRide", etc.
-    date: toDateOnly(a.start_date_local),
+    type: a.type,
+    date: a.start_date_local.slice(0, 10),
     start_date: a.start_date,
-    distance_m: a.distance, // meters
-    moving_time_s: a.moving_time, // seconds
-    average_speed: a.average_speed, // m/s
-    average_heartrate: a.average_heartrate ?? null, // bpm, may be missing
-    elevation_gain_m: a.total_elevation_gain ?? 0, // meters
-    // Strava workout_type: 1 = race (run), 11 = race (ride). All others are non-race.
+    distance_m: a.distance,
+    moving_time_s: a.moving_time,
+    average_speed: a.average_speed,
+    average_heartrate: a.average_heartrate ?? null,
+    elevation_gain_m: a.total_elevation_gain ?? 0,
+    // workout_type 1 = race (run), 11 = race (ride).
     is_race: a.workout_type === 1 || a.workout_type === 11,
     has_map: Boolean(a.map?.summary_polyline),
     polyline: a.map?.summary_polyline ?? null,
@@ -152,21 +131,16 @@ function shapeActivity(a) {
 }
 
 async function main() {
-  // Make sure output dirs exist.
   await fs.mkdir(MAPS_DIR, { recursive: true });
 
-  // Load the existing manifest, if any.
   let existing = [];
   try {
-    const raw = await fs.readFile(ACTIVITIES_FILE, 'utf-8');
-    existing = JSON.parse(raw);
+    existing = JSON.parse(await fs.readFile(ACTIVITIES_FILE, 'utf-8'));
   } catch (e) {
     if (e.code !== 'ENOENT') throw e;
   }
   const existingIds = new Set(existing.map((a) => a.id));
 
-  // Find the most recent activity we already have, so we only fetch newer ones.
-  // Strava's `after` is a unix epoch in seconds.
   let afterTimestamp = 0;
   if (existing.length > 0) {
     const latest = existing.reduce((acc, a) =>
@@ -178,26 +152,19 @@ async function main() {
     console.log('No existing manifest — fetching all activities');
   }
 
-  // Pull from Strava.
   const accessToken = await getAccessToken();
   const fresh = await fetchActivities(accessToken, afterTimestamp);
   console.log(`Strava returned ${fresh.length} activities`);
 
-  // Filter out any duplicates (in case `after` boundary overlaps), and skip private activities.
   const deduped = fresh.filter((a) => !existingIds.has(a.id));
   const publicOnly = deduped.filter((a) => !a.private && a.visibility !== 'only_me');
-  const skippedPrivate = deduped.length - publicOnly.length;
-  if (skippedPrivate > 0) console.log(`Skipped ${skippedPrivate} private activities`);
+  const skipped = deduped.length - publicOnly.length;
+  if (skipped > 0) console.log(`Skipped ${skipped} private activities`);
   const newOnes = publicOnly.map(shapeActivity);
   console.log(`${newOnes.length} new activities after dedup`);
 
-  // Download a map PNG for each new activity that has GPS, and save the bbox so the
-  // browser can project the polyline as an SVG overlay using the same extent.
   for (const a of newOnes) {
-    if (!a.has_map) {
-      console.log(`  skip map for ${a.id} (no GPS)`);
-      continue;
-    }
+    if (!a.has_map) continue;
     const points = decodePolyline(a.polyline);
     if (points.length < 2) {
       a.has_map = false;
@@ -214,7 +181,6 @@ async function main() {
     }
   }
 
-  // Merge and sort newest-first.
   const merged = [...existing, ...newOnes].sort(
     (x, y) => new Date(y.start_date) - new Date(x.start_date)
   );

@@ -1,17 +1,13 @@
-// ---- formatting helpers (imperial) ----
 const M_PER_MI = 1609.344;
+const M_PER_YD = 0.9144;
 
-const fmtDate = (d) => {
-  // d is "YYYY-MM-DD"
-  const dt = new Date(d + 'T00:00:00');
-  return dt.toLocaleDateString('en-US', {
-    month: 'short',
-    day: 'numeric',
-    year: 'numeric',
+const fmtDate = (d) =>
+  new Date(d + 'T00:00:00').toLocaleDateString('en-US', {
+    month: 'short', day: 'numeric', year: 'numeric',
   }).toLowerCase();
-};
 
 const fmtDistance = (m) => (m / M_PER_MI).toFixed(2) + ' mi';
+const fmtDistanceYds = (m) => Math.round(m / M_PER_YD).toLocaleString() + ' yds';
 
 const fmtTime = (s) => {
   const h = Math.floor(s / 3600);
@@ -21,48 +17,29 @@ const fmtTime = (s) => {
   return `${m}:${String(sec).padStart(2, '0')}`;
 };
 
-// For runs: pace as min/mi (mm:ss)
 const fmtPace = (mps) => {
   if (!mps) return '—';
   const secPerMile = M_PER_MI / mps;
-  const m = Math.floor(secPerMile / 60);
-  const s = Math.round(secPerMile % 60);
-  return `${m}:${String(s).padStart(2, '0')} /mi`;
+  return `${Math.floor(secPerMile / 60)}:${String(Math.round(secPerMile % 60)).padStart(2, '0')} /mi`;
 };
 
-// For rides: speed as mph
-const fmtSpeed = (mps) => {
-  if (!mps) return '—';
-  return (mps * 2.23694).toFixed(1) + ' mph';
-};
+const fmtSpeed = (mps) => (mps ? (mps * 2.23694).toFixed(1) + ' mph' : '—');
 
-const fmtElevation = (m) => (m == null ? '—' : Math.round(m * 3.28084).toLocaleString() + ' ft');
-
-const fmtHr = (bpm) => Math.round(bpm) + ' bpm';
-
-// Swim helpers: yards distance and pace per 100 yards.
-const M_PER_YD = 0.9144;
-const fmtDistanceYds = (m) => Math.round(m / M_PER_YD).toLocaleString() + ' yds';
 const fmtSwimPace = (mps) => {
   if (!mps) return '—';
   const secPer100Yd = (100 * M_PER_YD) / mps;
-  const min = Math.floor(secPer100Yd / 60);
-  const sec = Math.round(secPer100Yd % 60);
-  return `${min}:${String(sec).padStart(2, '0')} /100yd`;
+  return `${Math.floor(secPer100Yd / 60)}:${String(Math.round(secPer100Yd % 60)).padStart(2, '0')} /100yd`;
 };
 
-// Strava activity types — group into "run-like" vs "ride-like" for unit selection.
+const fmtElevation = (m) => (m == null ? '—' : Math.round(m * 3.28084).toLocaleString() + ' ft');
+const fmtHr = (bpm) => Math.round(bpm) + ' bpm';
+
 const RUN_LIKE = new Set(['Run', 'TrailRun', 'VirtualRun', 'Walk', 'Hike']);
-const RIDE_LIKE = new Set([
-  'Ride', 'VirtualRide', 'EBikeRide', 'EMountainBikeRide', 'GravelRide', 'MountainBikeRide',
-]);
 
-const labelForType = (type) => {
-  // Lowercase, drop "Virtual" prefix etc. for cleanliness.
-  return type.replace(/([A-Z])/g, ' $1').trim().toLowerCase();
-};
+const labelForType = (type) =>
+  type.replace(/([A-Z])/g, ' $1').trim().toLowerCase();
 
-// ---- polyline overlay (must use the same Web Mercator math as sync.js) ----
+// Polyline overlay: must use the same Web Mercator math as sync.js so the SVG aligns with the PNG.
 const D2R = Math.PI / 180;
 const mercY = (lat) => Math.log(Math.tan(Math.PI / 4 + (lat * D2R) / 2));
 
@@ -83,21 +60,15 @@ function decodePolyline(str) {
 
 const SVG_W = 600, SVG_H = 360;
 
-function project(lat, lng, bbox) {
-  // bbox = [west, south, east, north]
-  const mxw = bbox[0] * D2R, mxe = bbox[2] * D2R;
-  const myn = mercY(bbox[3]), mys = mercY(bbox[1]);
-  const x = ((lng * D2R) - mxw) / (mxe - mxw) * SVG_W;
-  const y = (myn - mercY(lat)) / (myn - mys) * SVG_H;
-  return [x, y];
-}
-
 function polylineSvg(a) {
   if (!a.polyline || !a.bbox) return '';
   const points = decodePolyline(a.polyline);
   if (points.length < 2) return '';
+  const [w, s, e, n] = a.bbox;
+  const mxw = w * D2R, mxe = e * D2R, myn = mercY(n), mys = mercY(s);
   const d = points.map(([lat, lng], i) => {
-    const [x, y] = project(lat, lng, a.bbox);
+    const x = ((lng * D2R) - mxw) / (mxe - mxw) * SVG_W;
+    const y = (myn - mercY(lat)) / (myn - mys) * SVG_H;
     return `${i === 0 ? 'M' : 'L'}${x.toFixed(1)},${y.toFixed(1)}`;
   }).join(' ');
   return `<svg class="map-svg" viewBox="0 0 ${SVG_W} ${SVG_H}" preserveAspectRatio="none">
@@ -105,7 +76,6 @@ function polylineSvg(a) {
   </svg>`;
 }
 
-// ---- render ----
 function statsFor(a) {
   if (a.type === 'Swim') {
     return [
@@ -115,12 +85,10 @@ function statsFor(a) {
       ['pace', fmtSwimPace(a.average_speed)],
     ];
   }
-  const isRun = RUN_LIKE.has(a.type);
-  const speedOrPace = isRun
+  const speedOrPace = RUN_LIKE.has(a.type)
     ? ['pace', fmtPace(a.average_speed)]
     : ['avg speed', fmtSpeed(a.average_speed)];
-  const hasHr = a.average_heartrate != null && a.average_heartrate > 0;
-  const lastStat = hasHr
+  const lastStat = a.average_heartrate > 0
     ? ['avg hr', fmtHr(a.average_heartrate)]
     : ['elevation', fmtElevation(a.elevation_gain_m)];
   return [
@@ -153,12 +121,8 @@ function renderCard(a) {
         </div>`)
     .join('');
 
-  const safeName = (a.name ?? '').replace(/[<>&"']/g, (c) => ({
-    '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;', "'": '&#39;',
-  })[c]);
-
   const titleHtml = a.is_race
-    ? `<p class="title">${safeName} <span class="race-badge">race</span></p>`
+    ? `<p class="title">${escapeHtml(a.name ?? '')} <span class="race-badge">race</span></p>`
     : '';
 
   card.innerHTML = `
@@ -171,6 +135,12 @@ function renderCard(a) {
     </div>
   `;
   return card;
+}
+
+function escapeHtml(s) {
+  return s.replace(/[<>&"']/g, (c) => ({
+    '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;', "'": '&#39;',
+  })[c]);
 }
 
 async function load() {
