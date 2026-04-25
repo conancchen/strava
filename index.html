@@ -108,7 +108,7 @@
 
       function renderCard(a) {
         const card = document.createElement('a');
-        card.className = 'card';
+        card.className = a.is_race ? 'card race' : 'card';
         card.href = `https://www.strava.com/activities/${a.id}`;
         card.target = '_blank';
         card.rel = 'noopener';
@@ -132,7 +132,7 @@
         card.innerHTML = `
           ${map}
           <div class="body">
-            <p class="title">${safeName}</p>
+            <p class="title">${safeName}${a.is_race ? ' <span class="race-badge">race</span>' : ''}</p>
             <p class="meta">${fmtDate(a.date)} · ${labelForType(a.type)}</p>
             <div class="stats">${statHtml}
             </div>

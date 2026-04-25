@@ -68,8 +68,8 @@ async function downloadMapPng(polyline, outPath) {
   // The polyline contains characters that need URL-encoding (especially backslashes).
   const encoded = encodeURIComponent(polyline);
   // path-{stroke-width}+{stroke-color}-{stroke-opacity}({encoded-polyline})
-  const overlay = `path-3+f44-1(${encoded})`;
-  const url = `https://api.mapbox.com/styles/v1/mapbox/light-v11/static/${overlay}/auto/${MAP_WIDTH}x${MAP_HEIGHT}@2x?access_token=${MAPBOX_TOKEN}&padding=30`;
+  const overlay = `path-3+fc4c02-1(${encoded})`;
+  const url = `https://api.mapbox.com/styles/v1/mapbox/outdoors-v12/static/${overlay}/auto/${MAP_WIDTH}x${MAP_HEIGHT}@2x?access_token=${MAPBOX_TOKEN}&padding=30`;
   const res = await fetch(url);
   if (!res.ok) throw new Error(`Mapbox failed: ${res.status} ${await res.text()}`);
   const buf = Buffer.from(await res.arrayBuffer());
@@ -94,6 +94,8 @@ function shapeActivity(a) {
     average_speed: a.average_speed, // m/s
     average_heartrate: a.average_heartrate ?? null, // bpm, may be missing
     elevation_gain_m: a.total_elevation_gain ?? 0, // meters
+    // Strava workout_type: 1 = race (run), 11 = race (ride). All others are non-race.
+    is_race: a.workout_type === 1 || a.workout_type === 11,
     has_map: Boolean(a.map?.summary_polyline),
     polyline: a.map?.summary_polyline ?? null,
   };
