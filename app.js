@@ -112,6 +112,7 @@ function statsFor(a) {
 function renderCard(a) {
   const card = document.createElement(a.is_race ? 'a' : 'div');
   card.className = a.is_race ? 'card race' : 'card';
+  card.style.viewTransitionName = `card-${a.id}`;
   if (a.is_race) {
     card.href = `https://www.strava.com/activities/${a.id}`;
     card.target = '_blank';
@@ -156,60 +157,35 @@ function escapeHtml(s) {
 }
 
 let allActivities = [];
-const filters = { search: '', type: 'all', distMin: null, distMax: null, timeMin: null, timeMax: null };
-
-function matches(a) {
-  if (filters.type !== 'all' && categoryOf(a.type) !== filters.type) return false;
-  if (filters.search) {
-    const hay = `${a.date} ${a.location ?? ''} ${a.name ?? ''} ${labelForType(a.type)}`.toLowerCase();
-    if (!hay.includes(filters.search.toLowerCase())) return false;
-  }
-  const distMi = a.distance_m / M_PER_MI;
-  if (filters.distMin != null && distMi < filters.distMin) return false;
-  if (filters.distMax != null && distMi > filters.distMax) return false;
-  const timeMin = a.moving_time_s / 60;
-  if (filters.timeMin != null && timeMin < filters.timeMin) return false;
-  if (filters.timeMax != null && timeMin > filters.timeMax) return false;
-  return true;
-}
+let racesOnly = false;
 
 function applyFilters() {
+  const filtered = racesOnly ? allActivities.filter((a) => a.is_race) : allActivities;
   const grid = document.getElementById('grid');
-  grid.innerHTML = '';
-  const filtered = allActivities.filter(matches);
-  if (filtered.length === 0) {
-    grid.innerHTML = '<p class="empty-state">no matches</p>';
-    return;
+  const update = () => {
+    grid.innerHTML = '';
+    if (filtered.length === 0) {
+      grid.innerHTML = '<p class="empty-state">no races yet</p>';
+      return;
+    }
+    const frag = document.createDocumentFragment();
+    for (const a of filtered) frag.appendChild(renderCard(a));
+    grid.appendChild(frag);
+  };
+  if (document.startViewTransition) {
+    document.startViewTransition(update);
+  } else {
+    update();
   }
-  const frag = document.createDocumentFragment();
-  for (const a of filtered) frag.appendChild(renderCard(a));
-  grid.appendChild(frag);
 }
 
 function wireControls() {
-  const num = (v) => (v === '' || v == null ? null : Number(v));
-  document.getElementById('search').addEventListener('input', (e) => {
-    filters.search = e.target.value.trim();
+  const btn = document.getElementById('races-toggle');
+  btn.addEventListener('click', () => {
+    racesOnly = !racesOnly;
+    btn.classList.toggle('active', racesOnly);
     applyFilters();
   });
-  document.getElementById('type-filter').addEventListener('click', (e) => {
-    const btn = e.target.closest('button[data-type]');
-    if (!btn) return;
-    filters.type = btn.dataset.type;
-    document.querySelectorAll('#type-filter button').forEach((b) =>
-      b.classList.toggle('active', b === btn)
-    );
-    applyFilters();
-  });
-  for (const [id, key] of [
-    ['dist-min', 'distMin'], ['dist-max', 'distMax'],
-    ['time-min', 'timeMin'], ['time-max', 'timeMax'],
-  ]) {
-    document.getElementById(id).addEventListener('input', (e) => {
-      filters[key] = num(e.target.value);
-      applyFilters();
-    });
-  }
 }
 
 async function load() {

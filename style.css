@@ -55,51 +55,28 @@ h1 {
   margin: 0;
 }
 .controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem 1rem;
-  align-items: center;
   margin-bottom: 1.5rem;
+}
+.toggle {
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: 6px;
+  padding: 6px 14px;
+  color: var(--muted);
+  font: inherit;
   font-size: 13px;
-}
-.controls input {
-  background: var(--surface);
-  border: 0.5px solid var(--border);
-  border-radius: 6px;
-  padding: 6px 10px;
-  color: var(--text);
-  font: inherit;
-}
-.controls input:focus { outline: 1px solid var(--muted); }
-#search { min-width: 220px; flex: 1 1 220px; }
-.controls input[type="number"] {
-  width: 64px;
-  -moz-appearance: textfield;
-}
-.controls input[type="number"]::-webkit-inner-spin-button,
-.controls input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none; margin: 0;
-}
-.pills { display: flex; gap: 4px; }
-.pills button {
-  background: var(--surface);
-  border: 0.5px solid var(--border);
-  border-radius: 6px;
-  padding: 6px 12px;
-  color: var(--muted);
-  font: inherit;
   cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
 }
-.pills button.active {
-  background: var(--text);
-  color: var(--bg);
-  border-color: var(--text);
+.toggle.active {
+  background: #fc4c02;
+  color: #fff;
+  border-color: #fc4c02;
 }
-.range {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--muted);
+::view-transition-old(*),
+::view-transition-new(*) {
+  animation-duration: 0.4s;
+  animation-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 .grid {
   display: grid;
