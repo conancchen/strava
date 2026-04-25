@@ -181,11 +181,18 @@ function applyFilters() {
 
 function wireControls() {
   const btn = document.getElementById('races-toggle');
-  btn.addEventListener('click', () => {
-    racesOnly = !racesOnly;
-    btn.classList.toggle('active', racesOnly);
+  const peek = (on) => {
+    if (racesOnly === on) return;
+    racesOnly = on;
+    btn.classList.toggle('active', on);
     applyFilters();
-  });
+  };
+  btn.addEventListener('mousedown', (e) => { e.preventDefault(); peek(true); });
+  btn.addEventListener('mouseup', () => peek(false));
+  btn.addEventListener('mouseleave', () => peek(false));
+  btn.addEventListener('touchstart', (e) => { e.preventDefault(); peek(true); }, { passive: false });
+  btn.addEventListener('touchend', () => peek(false));
+  btn.addEventListener('touchcancel', () => peek(false));
 }
 
 async function load() {
