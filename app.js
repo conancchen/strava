@@ -35,6 +35,16 @@ const fmtElevation = (m) => (m == null ? '—' : Math.round(m * 3.28084).toLocal
 const fmtHr = (bpm) => Math.round(bpm) + ' bpm';
 
 const RUN_LIKE = new Set(['Run', 'TrailRun', 'VirtualRun', 'Walk', 'Hike']);
+const RIDE_LIKE = new Set([
+  'Ride', 'VirtualRide', 'EBikeRide', 'EMountainBikeRide', 'GravelRide', 'MountainBikeRide',
+]);
+
+function categoryOf(type) {
+  if (RUN_LIKE.has(type)) return 'run';
+  if (RIDE_LIKE.has(type)) return 'bike';
+  if (type === 'Swim') return 'swim';
+  return 'other';
+}
 
 const labelForType = (type) =>
   type.replace(/([A-Z])/g, ' $1').trim().toLowerCase();
@@ -145,19 +155,75 @@ function escapeHtml(s) {
   })[c]);
 }
 
+let allActivities = [];
+const filters = { search: '', type: 'all', distMin: null, distMax: null, timeMin: null, timeMax: null };
+
+function matches(a) {
+  if (filters.type !== 'all' && categoryOf(a.type) !== filters.type) return false;
+  if (filters.search) {
+    const hay = `${a.date} ${a.location ?? ''} ${a.name ?? ''} ${labelForType(a.type)}`.toLowerCase();
+    if (!hay.includes(filters.search.toLowerCase())) return false;
+  }
+  const distMi = a.distance_m / M_PER_MI;
+  if (filters.distMin != null && distMi < filters.distMin) return false;
+  if (filters.distMax != null && distMi > filters.distMax) return false;
+  const timeMin = a.moving_time_s / 60;
+  if (filters.timeMin != null && timeMin < filters.timeMin) return false;
+  if (filters.timeMax != null && timeMin > filters.timeMax) return false;
+  return true;
+}
+
+function applyFilters() {
+  const grid = document.getElementById('grid');
+  grid.innerHTML = '';
+  const filtered = allActivities.filter(matches);
+  if (filtered.length === 0) {
+    grid.innerHTML = '<p class="empty-state">no matches</p>';
+    return;
+  }
+  const frag = document.createDocumentFragment();
+  for (const a of filtered) frag.appendChild(renderCard(a));
+  grid.appendChild(frag);
+}
+
+function wireControls() {
+  const num = (v) => (v === '' || v == null ? null : Number(v));
+  document.getElementById('search').addEventListener('input', (e) => {
+    filters.search = e.target.value.trim();
+    applyFilters();
+  });
+  document.getElementById('type-filter').addEventListener('click', (e) => {
+    const btn = e.target.closest('button[data-type]');
+    if (!btn) return;
+    filters.type = btn.dataset.type;
+    document.querySelectorAll('#type-filter button').forEach((b) =>
+      b.classList.toggle('active', b === btn)
+    );
+    applyFilters();
+  });
+  for (const [id, key] of [
+    ['dist-min', 'distMin'], ['dist-max', 'distMax'],
+    ['time-min', 'timeMin'], ['time-max', 'timeMax'],
+  ]) {
+    document.getElementById(id).addEventListener('input', (e) => {
+      filters[key] = num(e.target.value);
+      applyFilters();
+    });
+  }
+}
+
 async function load() {
   const grid = document.getElementById('grid');
   try {
     const res = await fetch('./activities.json', { cache: 'no-cache' });
     if (!res.ok) throw new Error(res.status);
-    const activities = await res.json();
-    if (activities.length === 0) {
+    allActivities = await res.json();
+    if (allActivities.length === 0) {
       grid.innerHTML = '<p class="empty-state">no activities synced yet</p>';
       return;
     }
-    for (const a of activities) {
-      grid.appendChild(renderCard(a));
-    }
+    wireControls();
+    applyFilters();
   } catch (e) {
     grid.innerHTML = '<p class="empty-state">no activities synced yet</p>';
   }
