@@ -111,22 +111,46 @@ async function downloadMapPng(bbox, outPath) {
   await fs.writeFile(outPath, Buffer.from(await res.arrayBuffer()));
 }
 
-// Reverse geocode (lat, lng) to a "city, region" label like "princeton, nj" or "milan, italy".
-async function reverseGeocode(lat, lng) {
-  const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${lng},${lat}.json?access_token=${MAPBOX_TOKEN}&types=place&limit=1`;
+// Reverse geocode (lat, lng) to a "city, region" label.
+// US gets "princeton, nj"; Chinese-script regions get the city + country in 中文; others stay English.
+async function geocodeOne(lat, lng, language) {
+  const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${lng},${lat}.json?access_token=${MAPBOX_TOKEN}&types=place&limit=1&language=${language}`;
   const res = await fetch(url);
   if (!res.ok) return null;
-  const feature = (await res.json()).features?.[0];
-  if (!feature) return null;
+  return (await res.json()).features?.[0] ?? null;
+}
+
+function countryCodeOf(feature) {
+  for (const ctx of feature.context ?? []) {
+    if (ctx.id.startsWith('country.')) return ctx.short_code?.toLowerCase() ?? null;
+  }
+  return null;
+}
+
+function formatLabel(feature, countryCode) {
   const city = feature.text.toLowerCase();
-  let regionShort = null, country = null, countryCode = null;
+  let regionShort = null, country = null;
   for (const ctx of feature.context ?? []) {
     if (ctx.id.startsWith('region.')) regionShort = ctx.short_code?.split('-').pop()?.toLowerCase() ?? null;
-    if (ctx.id.startsWith('country.')) { country = ctx.text.toLowerCase(); countryCode = ctx.short_code?.toLowerCase(); }
+    if (ctx.id.startsWith('country.')) country = ctx.text.toLowerCase();
   }
   if (countryCode === 'us' && regionShort) return `${city}, ${regionShort}`;
   if (country) return `${city}, ${country}`;
   return city;
+}
+
+async function reverseGeocode(lat, lng) {
+  const en = await geocodeOne(lat, lng, 'en');
+  if (!en) return null;
+  const cc = countryCodeOf(en);
+  const zhLang = cc === 'cn' ? 'zh-Hans'
+    : ['tw', 'hk', 'mo'].includes(cc) ? 'zh-Hant'
+    : null;
+  if (zhLang) {
+    const zh = await geocodeOne(lat, lng, zhLang);
+    if (zh) return formatLabel(zh, cc);
+  }
+  return formatLabel(en, cc);
 }
 
 const bboxCenter = ([w, s, e, n]) => [(s + n) / 2, (w + e) / 2];
@@ -204,8 +228,11 @@ async function main() {
     }
   }
 
-  // Backfill locations for older activities that have a bbox but no location yet.
-  const toBackfill = existing.filter((a) => a.bbox && a.location === undefined);
+  // Backfill locations: missing entirely, or stored in English for a Chinese-script country.
+  const needsZhUpgrade = /,\s*(china|taiwan|hong kong|macau)$/i;
+  const toBackfill = existing.filter((a) =>
+    a.bbox && (a.location === undefined || (a.location && needsZhUpgrade.test(a.location)))
+  );
   if (toBackfill.length > 0) {
     console.log(`Backfilling location for ${toBackfill.length} existing activities`);
     for (const a of toBackfill) {
