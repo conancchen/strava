@@ -83,6 +83,12 @@ h1 {
   display: block;
   width: 100%;
   object-fit: cover;
+  filter: saturate(0.55) brightness(0.92);
+}
+@media (prefers-color-scheme: dark) {
+  .map {
+    filter: saturate(0.55) brightness(0.78);
+  }
 }
 .map.empty {
   display: flex;
