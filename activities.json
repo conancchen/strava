@@ -8009,7 +8009,7 @@
     "average_speed": 3.132,
     "average_heartrate": 197.5,
     "elevation_gain_m": 26,
-    "is_race": false,
+    "is_race": true,
     "has_map": true,
     "polyline": "un~uFnpcjMBDRDN^Nj@f@j@`@XVVHb@B^Cf@\\nALx@?TSf@IZm@rAa@XOV}@fBG`@?LNzACx@c@fAA\\H`@Nb@`@b@^XPZ~AbC`@^\\T\\HvAx@h@^hAfAd@LZKx@oANE\\J|C`ClAdAt@t@Pd@@`AHx@\\`@TDVAJGZGn@Rz@d@NXl@r@Tl@Db@Q?w@g@{Ac@Y?IDYBGAER@VhAfCp@xBb@l@XX^Tx@|@XNRFf@V`A^MO{@o@eAc@a@[e@Qk@c@]_@[g@Kc@Iw@Oi@_@_AUaA@GZCdB^hA`@Z@@YOm@s@cAiBwAWMS@]HUGMMIIM_@Ei@Mk@Wa@}D}DoA}@OKa@M[RWd@WZWDu@g@WCm@YkAkA]KaAi@KOq@o@m@y@{AuAm@gAGY`@s@D]@e@Im@Qu@@QN_@V]j@qAPWJETWL_@h@oANe@@c@WmBGeAMk@g@w@Gk@Ka@SYUOUYa@SCGSa@Qu@S_@Qk@Ui@[aA_@m@_@{@?_@F{@?{@Eo@Os@?_@Ga@QIE@OXBN^l@Hl@Dn@KjBCJ@FQAk@RWf@IlAHt@@ZAH",
     "bbox": [
@@ -8031,7 +8031,7 @@
     "average_speed": 8.673,
     "average_heartrate": 184.1,
     "elevation_gain_m": 203.5,
-    "is_race": false,
+    "is_race": true,
     "has_map": true,
     "polyline": "{d_vFpmcjMKDGHBJGZEz@ClCUfCS~@m@dBIj@CdABf@Lz@Rj@b@n@hBzApBlApAdAfAlAZb@Nh@Dj@Gd@O`@i@j@{@f@UVM\\Ev@Kr@g@jAUP}@h@MLGRSbA?pANp@f@nARTnBvAf@d@d@d@|@zAfBbBlAbB~BvBtDtDb@Xb@Hd@?RE|@g@V_@Rm@`@eDXu@PSj@SX@l@N~@f@NNNRLTBv@Cl@Md@s@xAK~@CjAOx@IXa@p@i@t@m@h@YTSBi@OaEoEaB}AuAuA}@iAcDeDuAeBiBkBo@e@y@{@{DeFsGyG}@w@mBwBu@eA}AiBmAoAe@s@iAsB}B{EgA{Cg@uBaCkI_@sBk@eEQkBWaIC{DBaK?{HGkDi@wNScCUiBsAqJoBmKaB}Ge@{AwAaEkEiKqEsIiAgBeBgCiB{BcEmEsCuDyDmE{A_BsA{AoBcCQCNVhDxDbHtI|CrDzAxAdGbIhCdElDnG|@vBx@`B~BhG~@nCfAlE|AjHb@`Bt@xDZhCb@fCHx@XlE^xGFdCNbCDfBJnB@|@CfAMxC?rACzA@jBCr@@dBNdEJxE`@dDXnBz@jFf@xBpAxE\\v@d@pALd@Vh@lBpDjAlB`CnDx@bAbA~@lA|@`CjChArAxBzBzBdCv@fAvA|AtBxBlBxBrCxCtA~ApEzE|@dAnDpD`CnChBdBnAvA~@r@jE`ExEhDnIvGrJ`It@`@p@h@hBjAv@V`BpAzA|Av@f@p@j@nAx@`A|@rEfDn@v@tC`ChAt@lCpB`NfI`JfFfCpArBlAdC`B|AhAxAlA`JlIHFHCESOWqB}AgHmG_EuCsBmAwFsCaB_AcAw@qMkHcG}D{BgBgEyC_EcD_P{LiEiDoDoCi@[kFkEmAy@{AoAoCkByAsAc@i@gCyB{@cAaBuAQYu@y@[k@Eg@B}@De@b@s@z@aAHSHm@@o@KqCN{B?]K{@[}A[q@c@c@SK_AUe@Ba@TY`@ITQz@O~ASx@Uf@OVWRw@N[AWMkC_C{@m@uDaDgAoAq@q@e@u@o@mAyBuBsAcAe@iA_@yA?i@Fe@Xi@nBaBZk@Lq@HoAPo@VWp@a@LOJUFs@Gw@Qs@gAeBkAaAsAs@_BqA}@}AO_@YiAASAcAJo@p@_B\\qAL}AJuFLk@^OvAFpAG",
     "bbox": [
