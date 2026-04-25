@@ -1,0 +1,42 @@
+name: sync
+
+on:
+  schedule:
+    # every 6 hours
+    - cron: '0 */6 * * *'
+  workflow_dispatch:  # lets you trigger manually from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - run: npm install
+
+      - name: Run sync
+        env:
+          STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}
+          STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
+          STRAVA_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
+          MAPBOX_TOKEN: ${{ secrets.MAPBOX_TOKEN }}
+        run: npm run sync
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add activities.json maps/
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "sync: update activities"
+            git push
+          fi

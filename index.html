@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>training log</title>
+    <style>
+      :root {
+        --bg: #fafaf8;
+        --surface: #ffffff;
+        --text: #1a1a1a;
+        --muted: #888;
+        --border: rgba(0, 0, 0, 0.08);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #111;
+          --surface: #1a1a1a;
+          --text: #f0f0f0;
+          --muted: #888;
+          --border: rgba(255, 255, 255, 0.1);
+        }
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        padding: 3rem 1.5rem 5rem;
+        background: var(--bg);
+        color: var(--text);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      header {
+        margin-bottom: 2.5rem;
+      }
+      h1 {
+        font-size: 18px;
+        font-weight: 500;
+        margin: 0 0 0.25rem;
+      }
+      .sub {
+        color: var(--muted);
+        font-size: 13px;
+        margin: 0;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1rem;
+      }
+      .card {
+        background: var(--surface);
+        border: 0.5px solid var(--border);
+        border-radius: 10px;
+        overflow: hidden;
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.1s ease;
+      }
+      .card:hover {
+        transform: translateY(-1px);
+      }
+      .map {
+        aspect-ratio: 5 / 3;
+        background: var(--bg);
+        display: block;
+        width: 100%;
+        object-fit: cover;
+      }
+      .map.empty {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--muted);
+        font-size: 12px;
+      }
+      .body {
+        padding: 14px 16px 16px;
+      }
+      .meta {
+        font-size: 12px;
+        color: var(--muted);
+        margin: 0 0 12px;
+      }
+      .stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px 16px;
+      }
+      .stat-label {
+        font-size: 11px;
+        color: var(--muted);
+        margin: 0;
+      }
+      .stat-value {
+        font-size: 15px;
+        font-weight: 500;
+        margin: 2px 0 0;
+      }
+      .empty-state {
+        text-align: center;
+        padding: 4rem 1rem;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>training log</h1>
+        <p class="sub">runs and rides, synced from strava</p>
+      </header>
+      <div id="grid" class="grid"></div>
+    </div>
+
+    <script>
+      // ---- formatting helpers (imperial) ----
+      const M_PER_MI = 1609.344;
+
+      const fmtDate = (d) => {
+        // d is "YYYY-MM-DD"
+        const dt = new Date(d + 'T00:00:00');
+        return dt.toLocaleDateString('en-US', {
+          month: 'short',
+          day: 'numeric',
+          year: 'numeric',
+        }).toLowerCase();
+      };
+
+      const fmtDistance = (m) => (m / M_PER_MI).toFixed(2) + ' mi';
+
+      const fmtTime = (s) => {
+        const h = Math.floor(s / 3600);
+        const m = Math.floor((s % 3600) / 60);
+        const sec = Math.floor(s % 60);
+        if (h > 0) return `${h}:${String(m).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
+        return `${m}:${String(sec).padStart(2, '0')}`;
+      };
+
+      // For runs: pace as min/mi (mm:ss)
+      const fmtPace = (mps) => {
+        if (!mps) return '—';
+        const secPerMile = M_PER_MI / mps;
+        const m = Math.floor(secPerMile / 60);
+        const s = Math.round(secPerMile % 60);
+        return `${m}:${String(s).padStart(2, '0')} /mi`;
+      };
+
+      // For rides: speed as mph
+      const fmtSpeed = (mps) => {
+        if (!mps) return '—';
+        return (mps * 2.23694).toFixed(1) + ' mph';
+      };
+
+      const fmtHr = (bpm) => (bpm == null ? '—' : Math.round(bpm) + ' bpm');
+
+      // Strava activity types — group into "run-like" vs "ride-like" for unit selection.
+      const RUN_LIKE = new Set(['Run', 'TrailRun', 'VirtualRun', 'Walk', 'Hike']);
+      const RIDE_LIKE = new Set([
+        'Ride', 'VirtualRide', 'EBikeRide', 'EMountainBikeRide', 'GravelRide', 'MountainBikeRide',
+      ]);
+
+      const labelForType = (type) => {
+        // Lowercase, drop "Virtual" prefix etc. for cleanliness.
+        return type.replace(/([A-Z])/g, ' $1').trim().toLowerCase();
+      };
+
+      // ---- render ----
+      function renderCard(a) {
+        const isRun = RUN_LIKE.has(a.type);
+        const isRide = RIDE_LIKE.has(a.type);
+        const speedOrPaceLabel = isRun ? 'pace' : 'avg speed';
+        const speedOrPaceValue = isRun
+          ? fmtPace(a.average_speed)
+          : isRide
+          ? fmtSpeed(a.average_speed)
+          : fmtSpeed(a.average_speed); // fallback to mph for misc types
+
+        const card = document.createElement('a');
+        card.className = 'card';
+        card.href = `https://www.strava.com/activities/${a.id}`;
+        card.target = '_blank';
+        card.rel = 'noopener';
+
+        const map = a.has_map
+          ? `<img class="map" src="./maps/${a.id}.png" alt="" loading="lazy" />`
+          : `<div class="map empty">no gps</div>`;
+
+        card.innerHTML = `
+          ${map}
+          <div class="body">
+            <p class="meta">${fmtDate(a.date)} · ${labelForType(a.type)}</p>
+            <div class="stats">
+              <div>
+                <p class="stat-label">distance</p>
+                <p class="stat-value">${fmtDistance(a.distance_m)}</p>
+              </div>
+              <div>
+                <p class="stat-label">time</p>
+                <p class="stat-value">${fmtTime(a.moving_time_s)}</p>
+              </div>
+              <div>
+                <p class="stat-label">${speedOrPaceLabel}</p>
+                <p class="stat-value">${speedOrPaceValue}</p>
+              </div>
+              <div>
+                <p class="stat-label">avg hr</p>
+                <p class="stat-value">${fmtHr(a.average_heartrate)}</p>
+              </div>
+            </div>
+          </div>
+        `;
+        return card;
+      }
+
+      async function load() {
+        const grid = document.getElementById('grid');
+        try {
+          const res = await fetch('./activities.json', { cache: 'no-cache' });
+          if (!res.ok) throw new Error(res.status);
+          const activities = await res.json();
+          if (activities.length === 0) {
+            grid.innerHTML = '<p class="empty-state">no activities synced yet</p>';
+            return;
+          }
+          for (const a of activities) {
+            grid.appendChild(renderCard(a));
+          }
+        } catch (e) {
+          grid.innerHTML = '<p class="empty-state">no activities synced yet</p>';
+        }
+      }
+
+      load();
+    </script>
+  </body>
+</html>

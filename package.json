@@ -1,0 +1,12 @@
+{
+  "name": "strava-log",
+  "version": "1.0.0",
+  "description": "Personal Strava training log",
+  "type": "module",
+  "scripts": {
+    "sync": "node scripts/sync.js"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
