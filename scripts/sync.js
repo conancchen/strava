@@ -185,20 +185,26 @@ async function main() {
   }
   const existingIds = new Set(existing.map((a) => a.id));
 
-  let afterTimestamp = 0;
-  if (existing.length > 0) {
-    const latest = existing.reduce((acc, a) =>
-      new Date(a.start_date) > new Date(acc.start_date) ? a : acc
-    );
-    afterTimestamp = Math.floor(new Date(latest.start_date).getTime() / 1000);
-    console.log(`Fetching activities after ${latest.start_date}`);
-  } else {
-    console.log('No existing manifest — fetching all activities');
-  }
-
+  // Always pull the full list so we can refresh mutable fields (name, race tag) on existing entries.
+  console.log('Fetching all activities');
   const accessToken = await getAccessToken();
-  const fresh = await fetchActivities(accessToken, afterTimestamp);
+  const fresh = await fetchActivities(accessToken, 0);
   console.log(`Strava returned ${fresh.length} activities`);
+
+  const existingById = new Map(existing.map((a) => [a.id, a]));
+  let updatedCount = 0;
+  for (const a of fresh) {
+    const ex = existingById.get(a.id);
+    if (!ex) continue;
+    const newName = a.name;
+    const newIsRace = a.workout_type === 1 || a.workout_type === 11;
+    if (ex.name !== newName || ex.is_race !== newIsRace) {
+      ex.name = newName;
+      ex.is_race = newIsRace;
+      updatedCount++;
+    }
+  }
+  if (updatedCount > 0) console.log(`Updated name/race tag on ${updatedCount} existing activities`);
 
   const deduped = fresh.filter((a) => !existingIds.has(a.id));
   const publicOnly = deduped.filter((a) => !a.private && a.visibility !== 'only_me');
