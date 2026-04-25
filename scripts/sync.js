@@ -111,6 +111,26 @@ async function downloadMapPng(bbox, outPath) {
   await fs.writeFile(outPath, Buffer.from(await res.arrayBuffer()));
 }
 
+// Reverse geocode (lat, lng) to a "city, region" label like "princeton, nj" or "milan, italy".
+async function reverseGeocode(lat, lng) {
+  const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${lng},${lat}.json?access_token=${MAPBOX_TOKEN}&types=place&limit=1`;
+  const res = await fetch(url);
+  if (!res.ok) return null;
+  const feature = (await res.json()).features?.[0];
+  if (!feature) return null;
+  const city = feature.text.toLowerCase();
+  let regionShort = null, country = null, countryCode = null;
+  for (const ctx of feature.context ?? []) {
+    if (ctx.id.startsWith('region.')) regionShort = ctx.short_code?.split('-').pop()?.toLowerCase() ?? null;
+    if (ctx.id.startsWith('country.')) { country = ctx.text.toLowerCase(); countryCode = ctx.short_code?.toLowerCase(); }
+  }
+  if (countryCode === 'us' && regionShort) return `${city}, ${regionShort}`;
+  if (country) return `${city}, ${country}`;
+  return city;
+}
+
+const bboxCenter = ([w, s, e, n]) => [(s + n) / 2, (w + e) / 2];
+
 function shapeActivity(a) {
   return {
     id: a.id,
@@ -178,6 +198,18 @@ async function main() {
     } catch (e) {
       console.error(`  failed map for ${a.id}: ${e.message}`);
       a.has_map = false;
+    }
+    if (a.has_map) {
+      a.location = await reverseGeocode(...bboxCenter(a.bbox));
+    }
+  }
+
+  // Backfill locations for older activities that have a bbox but no location yet.
+  const toBackfill = existing.filter((a) => a.bbox && a.location === undefined);
+  if (toBackfill.length > 0) {
+    console.log(`Backfilling location for ${toBackfill.length} existing activities`);
+    for (const a of toBackfill) {
+      a.location = await reverseGeocode(...bboxCenter(a.bbox));
     }
   }
 

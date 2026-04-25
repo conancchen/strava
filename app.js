@@ -100,11 +100,13 @@ function statsFor(a) {
 }
 
 function renderCard(a) {
-  const card = document.createElement('a');
+  const card = document.createElement(a.is_race ? 'a' : 'div');
   card.className = a.is_race ? 'card race' : 'card';
-  card.href = `https://www.strava.com/activities/${a.id}`;
-  card.target = '_blank';
-  card.rel = 'noopener';
+  if (a.is_race) {
+    card.href = `https://www.strava.com/activities/${a.id}`;
+    card.target = '_blank';
+    card.rel = 'noopener';
+  }
 
   const map = a.has_map
     ? `<div class="map-wrap">
@@ -129,7 +131,7 @@ function renderCard(a) {
     ${map}
     <div class="body">
       ${titleHtml}
-      <p class="meta">${fmtDate(a.date)} · ${labelForType(a.type)}</p>
+      <p class="meta">${fmtDate(a.date)} · ${labelForType(a.type)}${a.location ? ` · ${escapeHtml(a.location)}` : ''}</p>
       <div class="stats">${statHtml}
       </div>
     </div>

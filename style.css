@@ -70,7 +70,7 @@ h1 {
   flex-direction: column;
   transition: transform 0.1s ease;
 }
-.card:hover {
+.card.race:hover {
   transform: translateY(-1px);
 }
 .card.race {
