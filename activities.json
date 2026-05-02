@@ -1,5 +1,27 @@
 [
   {
+    "id": 18347310821,
+    "name": "Kesem 5k (19:18, 4th)",
+    "type": "Run",
+    "date": "2026-05-02",
+    "start_date": "2026-05-02T14:15:44Z",
+    "distance_m": 5017.7,
+    "moving_time_s": 1173,
+    "average_speed": 4.278,
+    "average_heartrate": 193,
+    "elevation_gain_m": 40.3,
+    "is_race": true,
+    "has_map": true,
+    "polyline": "cpfuF|dtfMj@^HAHSFi@B[Ae@W{BYiBc@uBKq@Oc@a@g@WSU_@YYc@q@Uw@Ms@K{@a@]S_@Om@C]JEn@]dBwANEHMEk@Ie@@SLa@@OSi@I[Ua@AUD_@Pi@AQEQS[a@c@a@s@m@o@Ya@[u@[qAk@iByAoGGIC?kBxAe@r@eAt@u@z@iAdAg@l@gAr@ILER@Fb@z@VbAb@tAZnA~@|CLj@FNVFfGyCTKD@@HOZuBzAy@Zg@NOHOd@Ip@?r@BV^xBHT\\d@`@ZNDf@Jh@@f@KZ_@fAe@`@MNARDZd@TzA?NPR\\X^j@T|@FbACXQCIBADHf@BD@ZKl@Up@[d@y@bAq@~@Ah@Jn@N^P@p@k@`@IVbBB`@AFLlACZQp@YfBIL]ZeCbBeAd@u@h@]j@]d@y@n@yClAu@b@aATEEUq@McAu@iDKs@La@f@YPQ?G]uAUaCIWKXC^Bh@UfBQfA[dAOjABTHPNl@f@vCj@vBHNN@FCj@e@JO\\cA^e@dAm@RId@IxBy@PI\\WZu@\\k@~BsAxAkAz@k@dAy@dAq@Ri@ZsA?M",
+    "bbox": [
+      -74.6612828,
+      40.34163645658798,
+      -74.64311720000002,
+      40.34994341667072
+    ],
+    "location": "princeton, nj"
+  },
+  {
     "id": 18339427884,
     "name": "strength and honor",
     "type": "Run",
