@@ -1,5 +1,27 @@
 [
   {
+    "id": 18377624056,
+    "name": "6x3min",
+    "type": "Run",
+    "date": "2026-05-04",
+    "start_date": "2026-05-04T21:06:31Z",
+    "distance_m": 9695.7,
+    "moving_time_s": 2820,
+    "average_speed": 3.438,
+    "average_heartrate": 170.9,
+    "elevation_gain_m": 29.2,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "okfuFv_ufMjCe@t@?`Ae@LOt@g@jBaAZYnAu@tAgA`@i@bCyA`BwAb@Q`@Yf@Qj@[b@Mb@YZ[\\KRSj@]`@]XSVI^WdAqAtBiBPY`@Sj@IpALpABn@?\\G`@MZ[x@iARm@p@cBNQD@h@RZEPB^VF?FFDCJ[DCdAHlAd@f@\\x@b@h@Tt@Rr@b@nBz@f@Vr@Vd@X`Bn@pBvA^d@v@t@lAzA^^f@z@hArAt@hAZ`@d@`@bAbBP^d@h@x@bAz@tAPNb@l@`@ZXd@XT`@l@VTP^dCdDXj@rApBv@dAZn@dAhCXXj@bBNVr@|AZdAt@nAfAxCh@nAPr@j@z@Rh@p@fAP`@Fn@FXj@l@n@tAj@xAXXZz@p@bBVb@dAzBZd@xA`B^p@^b@HR`A~@jAbA^TRTt@b@JHjAl@h@^v@t@bAv@jAx@fDpCn@\\HHn@b@Z\\`@\\tClCrB|B~A~Bb@r@\\~@JJN\\Xf@Jd@P^@COIKMiAiCoB_DiAuBe@o@q@u@s@i@{@{@}CeCo@a@uAkA_@YOQ}BaBeA}@[MMOSKm@Y}@u@i@Sg@a@[a@g@YyAoAqAwA][y@mAk@iASg@_EmHe@eA]s@Qy@Wk@Um@[k@kAsCa@o@m@{BW[]qA]g@u@iB_AsBUo@s@wA]eAMW[]q@cBq@aAu@}@y@uAg@k@S_@oA{Aa@]c@k@We@I[mAcBeAoAWc@Ya@i@_Ae@s@QMm@w@cBmB}AyBiDoEe@[m@q@c@Yi@i@aC_A}Ay@m@UaAm@_@Ya@MuAq@g@So@c@e@QkBWg@MiA_AOAO`@^h@EAOAg@HKFkArCa@l@g@n@e@Pa@Fo@?s@Ea@Bg@EiA?c@XkAdAkA`Ac@NUb@a@f@mBzAc@VQFoBzA]NS@i@Xe@NkA~@c@NoAjAcAt@aBz@yBtBsBjAIFSF_@k@M]",
+    "bbox": [
+      -74.70956713266025,
+      40.30551085014796,
+      -74.62276286733977,
+      40.34521765009092
+    ],
+    "location": "princeton, nj"
+  },
+  {
     "id": 18365929474,
     "name": "Evening Run",
     "type": "Run",
