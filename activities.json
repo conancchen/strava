@@ -1,5 +1,27 @@
 [
   {
+    "id": 18414199116,
+    "name": "2x15 min + 2 min max",
+    "type": "Run",
+    "date": "2026-05-07",
+    "start_date": "2026-05-07T15:17:30Z",
+    "distance_m": 11845.2,
+    "moving_time_s": 3401,
+    "average_speed": 3.483,
+    "average_heartrate": 172.6,
+    "elevation_gain_m": 17.6,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "oefuF|cufM{@oACQd@g@fAy@vAqATO^M\\Sx@s@lBoArAiAXIXO~C_CPKLAPO`@Ox@OVS\\OX_@LGHK\\KVYZQX_@VWd@[r@u@TKRSHOv@u@hDeCHCb@@r@JjAJXAd@I\\Ad@KVUZc@l@mAz@uBZiAEYu@_@YGG@q@a@YYe@WyAo@WGg@Wi@OWOo@ImC{AYS[GIKIAy@e@g@Og@a@cAo@USiBs@uC}BiBcAi@c@g@]WK_@c@MUUWm@y@[]FSKSuBiCEO{A}BuAiBcA_Ca@sAWqBK}BQyBQyCGuAAo@IoAEuEKqAO{BEyAW}DDy@?o@Ew@@OUkDk@cNQyAs@kE[wABs@Fg@YuAKUc@c@Sc@U{@k@wAq@{@Q]sBsB]Ms@]w@[c@KeAKg@KkAKu@Me@AeCe@oBWq@U_E[c@GKCc@Cm@IoB_@o@Ak@OO?e@IQG}@Cg@GiCe@MGe@?i@OcAGeAOc@Mc@?yAUc@@q@Wu@Og@@aAOo@EyDm@mCI_B?WE{@Ci@@i@F_A?uAEkAU[Ke@Cv@B`@DTHh@JNEjBJ`@?\\KdCH^AhABr@CXH~@b@^AnALj@J`@Ch@Bd@JzBXp@Pv@Ff@Hv@BJBh@BDCnAV^LlAT|AHj@BDAf@DZHxB`@xBTh@LhBT\\Hd@@f@Hh@P~@Jb@ATHvAF^JzARh@Dh@Ph@Lb@FTAdAJd@Jh@Fd@Lh@Xj@NfB~AjArA`@z@\\j@j@tAVbAd@VPVXrBMx@Jp@d@lBPpAJ`@Bd@XzBJrCZnEFbCRrC?t@FdAGdAr@lN\\tJFv@FfDHvATzBN~@Nr@Xv@dAbChAfBfBbCTd@NLv@vAVTTd@f@n@DLb@ZZ\\v@j@RDLF@HJLh@V|@r@x@j@ZPd@P@ASCc@Qe@WiAs@IGyAaA|@Z^Zx@d@p@X`Ap@JJr@b@hClB`@RpA~@THRPvAd@\\T~@`@b@V`@Rh@FLJ`A`@FJn@RXT~Ar@j@Pb@X`A\\JL@DALY~@u@zAUn@c@|@oAlAaA^gBGi@GgA@g@LaAv@Y^yA|@]Vk@p@]Rc@T_Av@s@d@OTc@^a@TMH]J]Zg@Fo@X]`@uAz@_@^",
+    "bbox": [
+      -74.67920147826267,
+      40.3295130676781,
+      -74.60606852173733,
+      40.36295586764413
+    ],
+    "location": "princeton, nj"
+  },
+  {
     "id": 18385843161,
     "name": "zone2maxxing",
     "type": "Run",
