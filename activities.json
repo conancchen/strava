@@ -1,5 +1,27 @@
 [
   {
+    "id": 18430554343,
+    "name": "finals weak",
+    "type": "Run",
+    "date": "2026-05-08",
+    "start_date": "2026-05-08T20:58:25Z",
+    "distance_m": 10564.4,
+    "moving_time_s": 3603,
+    "average_speed": 2.932,
+    "average_heartrate": 156.2,
+    "elevation_gain_m": 39.5,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "{ffuFp`ufMLWXWr@k@f@Yn@g@l@[n@c@lBkAvD}C`As@XO`@c@XQ\\[~@e@n@OjBcApAeAl@m@`@Wb@c@RKVWXa@JGJAZJt@f@d@Lf@X\\JNZGj@o@~A[f@[n@Ep@J\\Xf@XFPLTHZPXVPXjA`Al@b@D`@@t@V^n@p@V`Ad@jALr@b@dAOt@Bb@PXh@hAFTVd@l@fB`@p@Rh@F~AMlBHl@Jd@RPTC\\U\\a@PCV^Np@x@zBTTTZvApDLb@V`@Nf@d@z@L\\Rr@Fj@XrAAf@Dr@A`@VlDCn@L~@@p@NfBHf@Th@F`@|@tBn@rBb@l@N`@Jv@f@rARd@NLb@h@HRLb@@NJVJRZPJTb@pARb@`@^Vb@Lf@Bl@I~BDR@b@AxAJhAAt@JbCTh@^\\h@RpAV`Bf@lB^jGzAt@V`@TlAtAt@zAb@n@vBrDNLTXNL`Af@`@Z`DdBrDn@dEZnAOhDo@d@Ml@M`Di@vAQ`Ba@jAQ|Ak@p@]hBwAjBmALMjAw@LMxC_B`@Wh@g@hCgBbB_Al@W`@YZ]@CKS]e@G_@MYUc@UYWc@Sg@Yc@O]eBuC]e@_@[c@i@kB_BoCwBa@_@e@YYWa@Wa@_@gAw@wAkASUa@Us@k@iAm@q@Ya@WY]YWc@UiAeA[c@yAwAoBsC[]m@iAOa@i@iAWu@o@mAUg@Uq@S[_AkCq@wAQk@SYIa@K[]u@Yc@i@sAS_@i@mAIc@aAuBi@aAq@qBi@aAc@mAk@kAG[KWw@_AO]}@{@s@}@q@iAq@{@oCaEiAsA]q@w@_Aq@cAQSw@gAqB{Bm@mA]g@m@s@s@kA{AcB][{A_B_@YeAm@wAg@_Am@{C{AaBu@sBu@a@Ya@SaAWg@GUIc@Ss@m@i@QSv@m@~AUb@^cAYx@Wh@c@t@]d@c@Xg@No@HuBGaAGYDs@Ze@`@]d@c@JOV{@t@_@f@a@XMPa@\\{@b@_BtAgB`Aq@R{AdA_@P_@ZWLq@l@u@`@a@^i@T{@t@_@VuB`ByBvAw@v@i@Vg@^c@{@",
+    "bbox": [
+      -74.71122193180197,
+      40.30560567448777,
+      -74.62583806819804,
+      40.34466287443348
+    ],
+    "location": "princeton, nj"
+  },
+  {
     "id": 18414199116,
     "name": "2x15 min + 2 min max",
     "type": "Run",
