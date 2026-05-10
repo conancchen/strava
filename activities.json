@@ -1,5 +1,27 @@
 [
   {
+    "id": 18445280432,
+    "name": "Einstein dr intervals",
+    "type": "Run",
+    "date": "2026-05-09",
+    "start_date": "2026-05-09T23:11:20Z",
+    "distance_m": 8295.3,
+    "moving_time_s": 2375,
+    "average_speed": 3.493,
+    "average_heartrate": 171.1,
+    "elevation_gain_m": 79.3,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "aveuFjotfM\\x@PNNBl@c@h@g@f@]jA}@p@YfBsA~A}@VSNS|@i@~AwAXAZJZPTTfAh@ZV@LEPIP[hAaA|BC\\VTR`@n@n@V^p@Vx@n@XX`@TPh@?ZDRP`@z@xAPh@TZNl@?Fl@pBE`@?f@Ln@pAzB`@|@Hp@RX\\vA@\\?dAGf@AzADRNf@ATILi@\\]d@}@n@{@x@_@XSV@JP^r@pAp@|ARj@Lj@@jA@rBDxAM`B?LVTj@RtAGXKL?|@HV?DG?IIKGAi@L{ABi@Ds@Ey@UG?QLEj@K\\q@rAY^_@Xg@N_AAi@Ig@MkAw@U]k@gA[iAMgA?_@Ds@Is@@SIq@Ko@GQDk@TSpAu@nCsBJM`@YD?NOp@i@TGXF^VTb@d@jAO]aAyA[MQCOFs@l@o@n@eAr@uArAoA~@Q\\Rv@Hr@BrBAV?n@NfAXz@Vd@p@bAdA`@x@Nj@A\\I`Ac@~@y@Ve@Z}@Fe@Pq@Jm@OuEKyA_AkC[y@Q[c@e@e@E]Vy@x@_CrB}B`BMV?HVtABn@CjADbAIIFBZtBNf@Zt@l@r@j@d@ZN\\@RFP?lAYf@W\\Un@y@Xk@\\mA\\eB@s@_@yFEU]w@AOa@gAm@mAYSKC_@AUHi@t@aAz@gAx@a@LYNa@^cApA?TNn@Jn@Dl@FhCLt@\\pAHPl@|@^Xf@VTJh@Bn@?E\\[Oc@Kg@QgAm@u@mA[u@Oq@]aAXACYJmDOm@SYMEuAhA}@j@a@ZOPOL[\\q@d@OFIFAASZ_Al@KCSa@eAy@{@a@s@s@aB}@oBoAe@e@s@]OW_@Yw@d@iA~@m@ZYTSD]_@g@{Ac@gAKi@[s@[g@e@_B]mBQy@Ui@aAk@[]y@gAaAyAUg@aAeAg@oAYa@Oq@He@\\Y^Od@_@`@Uh@a@LOd@M^S~@{@h@]bAw@FCHB",
+    "bbox": [
+      -74.68008924719864,
+      40.32959428209905,
+      -74.64567075280135,
+      40.345335482095486
+    ],
+    "location": "princeton, nj"
+  },
+  {
     "id": 18430554343,
     "name": "finals weak",
     "type": "Run",
