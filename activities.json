@@ -1,5 +1,27 @@
 [
   {
+    "id": 18469849110,
+    "name": "Afternoon Run",
+    "type": "Run",
+    "date": "2026-05-11",
+    "start_date": "2026-05-11T21:45:45Z",
+    "distance_m": 8863.5,
+    "moving_time_s": 3124,
+    "average_speed": 2.837,
+    "average_heartrate": 157,
+    "elevation_gain_m": 56.5,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "uffuFfbufM@i@@KHM`@Yb@e@rDiC`@Qd@_@XO`@[LSb@UfA}@XQpFaEZQt@OnAs@Z[`@W^Y^c@b@]z@_@f@o@PKL?dDfAj@^@JALq@fBe@h@QLCJ@j@Df@Pl@f@Z|@x@b@Td@\\`BpABd@Jd@|BxFVz@Td@I`AB\\pBbFF\\n@jBNj@Hj@OrACl@@NZp@XHb@Uh@a@JGLDt@bB`@lAR\\`@dAH^R`@?Jb@x@R~@Xl@J^NXHVn@|ANh@Ff@Bn@APFd@NbB@nAJ~@?`@Dz@?`BD`@LZLn@@@DCEAGBYVa@V[^i@XKJc@Zw@`@wA`Au@^_@Va@P]Ty@`@SN[PWR]^a@f@SPQ\\SfAQh@e@fAUNUAWKOCK@MXGDG?QQSM{@a@g@c@a@UY[YSSWYSc@Qu@g@g@c@HM^gALQj@g@j@Sb@Ul@Oj@WXQZ]Tg@Ji@HeBI}B?e@GIEAs@Ke@Su@c@[_@s@cAK_@Ec@Kc@Ea@Ac@Dk@Ao@DiAYgA?g@dAy@zAaApAiAf@[dA{@d@I`@LZ^|A`EJl@Dz@FnEC~@k@pBUl@u@|@}@p@YL]Je@Dy@EYKg@W]WMQaA_BQc@QaCCy@Fk@@m@EQO}@iBgEg@uACWa@{@[eAWc@c@}@o@gBCSFSl@o@b@W~AwA\\SlC_Cz@a@fA{@\\_@fAy@vAmA|@w@V[Tc@VK^Ud@Ux@o@x@w@`BkATQ\\c@rAy@Xg@\\uATQZ_@Bk@Fa@Am@I{@Kc@g@oA_@i@MW]]sBmAsAo@mCwAaAw@s@eAIQG_@@Gl@q@LSl@qAdAqCDi@GIiAc@gAi@YQa@Qi@[i@Ua@QSAQO_@QcASc@QeBeAo@Ui@MWM{@k@eAk@[Wo@]a@]kDyBYYg@UwAcAgCsBUIC@mAtAkAbAu@|@}A`Bo@h@SV_@r@JBLT@Ld@hARX`@^f@^^j@D\\HFJv@Gl@KRM^STOl@Yd@_@\\ADYR_@Bi@d@",
+    "bbox": [
+      -74.67812191283947,
+      40.32760509080337,
+      -74.64499808716054,
+      40.34275469080025
+    ],
+    "location": "princeton, nj"
+  },
+  {
     "id": 18445280432,
     "name": "Einstein dr intervals",
     "type": "Run",
