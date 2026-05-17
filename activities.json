@@ -1,5 +1,49 @@
 [
   {
+    "id": 18534792998,
+    "name": "2 mile tempo off the bike",
+    "type": "Run",
+    "date": "2026-05-16",
+    "start_date": "2026-05-16T21:05:21Z",
+    "distance_m": 5026.6,
+    "moving_time_s": 1471,
+    "average_speed": 3.417,
+    "average_heartrate": 176,
+    "elevation_gain_m": 32.8,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "maisF`_|jMWi@Oe@Se@iByF_@_AEYu@_CaAmCgCkIeByDSa@[]C]Io@Rq@@u@m@u@Ua@a@qAUm@[q@Me@Ug@i@aBUg@Ko@e@gBa@eAMk@M{A?[Hq@TYVc@Lk@Ve@FYr@aAn@cA^o@Vm@vAyBRa@f@q@L[p@{@Vc@BOVk@j@aA`@_@`@g@RYVg@NADBP^h@vANx@b@~Al@zATz@p@bB`@|@Fj@`@|AFLRr@p@bB^pA\\z@FBR^Tp@pA|EnB~Fh@jBP^E|BKbAE@i@G{A@k@OeBg@e@CI@QTBfHA`DF`BJn@?v@APIf@YZk@Va@Ju@O]a@o@sAYkAc@qBIaAAo@JkB@gADQ@c@IyAQWGBKR_@Z}@f@c@`@c@\\c@V]^k@b@_@RCLj@`ATv@NXb@`Bf@|A^v@d@|Ad@dAv@rCZv@ZbAXl@n@xBn@xAP|@Pf@T\\P@LG\\a@NIBOLQXA\\DLX?l@GhAA|@Mb@E?MG",
+    "bbox": [
+      -75.35325399999999,
+      40.02501181414261,
+      -75.33260600000001,
+      40.034498048685876
+    ],
+    "location": "bryn mawr, pa"
+  },
+  {
+    "id": 18534546906,
+    "name": "80 mins z2 ft. maple syrup",
+    "type": "VirtualRide",
+    "date": "2026-05-16",
+    "start_date": "2026-05-16T19:31:08Z",
+    "distance_m": 46626.8,
+    "moving_time_s": 4859,
+    "average_speed": 9.596,
+    "average_heartrate": 141.7,
+    "elevation_gain_m": 73,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "nm_fAsecz^v@aHwBkFv@}@`DEZ{Er@o@dHtBJbC`C|@eAzC~@pAjI_@bC{CmAqEzC_DN}DuB_GmFmESwAnAuE~D}AbA{ACaEeEyF|BaCI_DlI_Td@gEo@eCuHgDeAuEnI{SfDw@rDp@zCcElGgAh@qEaDcFrBaCnB\\pHhKrBeA~AuEdD|AFvEdCvA\\pA_EhDAdLsAbStFzI~Fl@rL}CjBp@rAtRMlCcChDjAvKfFh@rGxAxAjA`@tCnAdAbAg@|CmJnAaAtCtAf@vCzEPhCfDzCK~A_BFeCaCoBgC^sBjCkECi@Y_@oCcDkAkAdAsC`J_Al@iAaA[kCeBwA{G{AuEa@{@mCS{FbCsDNqDyA{QiBs@aM|CoFg@sFqIrAgTAwJj@kAvC{BWcAoC}AIyEwDwA{AtEaB~@uHkKuB[{BfC`DhF_@`EuGjAuCbEsDq@mDx@oI~S`AxEvHfDr@|Be@lEsIdTLrC_CfChEzF@|DcAxA_EzAqAfFRpAnGxF|AtHa@bBmCzBjAxEmAvBaHpA}Ba@MmAhC{EpKiDjAkCcB_IkG{FQoArA}E~D}AdAgBQeE{DaF~BiCMyCtIqT`@mEy@wBoHaDaA{B@gBlImSxCs@hEn@nCcEpGkAd@qEaDiFzB{BnBd@dHbKtB}@xAuEjDrAHvEfD`DaExDC|KoAnSxFvIzFf@tL{CfBp@rArRQxC_C|ChAtK~Ej@rGtA`BjAd@xClAfA`Ae@`DuJ~@{@~ClAl@~CdFTnCfD`D[nAoBGyB}BaBiCd@gBdC{EA_AgDcDoA_FfL{@p@kA}@c@{CgBuAmGsA{Ea@qAkK`CmDPkDwAiRwBo@{L|CkFi@qFuIrAoS@oK`EwDWmAkC{ASeFkDsAaB|EgBz@eI{KcDZw@hBbDjFg@zDgGbAsCbEeEm@aDr@qIzS~@~ElHbDx@pBa@vEqInTF|CyBbC~DjFFhEmAzAmDpAwAfFNpAlGzF~AdIc@zAeCrBhAzE}AfCqG`AiCs@hCsGpKmDhAiCgBkIcGkFUiAjA}EfEgB~@sACkEcEuFzByBGiDpIcTb@gEq@aCaImDw@uEtIySvCo@zDp@vC_EvGuAh@iDgD{Fn@_B`D[`I|KpBaAvAuEpDxAFrEnC`BR~@_EtDArKuAtSvFzIvFj@zL}ClBt@nAdUgC|DI|BrAdIxEb@dH~AxAlAXjClAdA`Ag@zCeJpAiAvCtAf@xCbFRfCfDzCQ`B{BGuBuB{AkC\\kBfCsEAg@S[mCiDsAkAjAuC`JeAd@cAgA]iCgBwAqGuAyEa@oAiJ",
+    "bbox": [
+      166.96005145674872,
+      -11.665905869662874,
+      167.01719854325134,
+      -11.6323238697811
+    ],
+    "location": null
+  },
+  {
     "id": 18505542743,
     "name": "But why?",
     "type": "Run",
