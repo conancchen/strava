@@ -1,5 +1,27 @@
 [
   {
+    "id": 18576800716,
+    "name": "5000th mile of cycling on strava",
+    "type": "VirtualRide",
+    "date": "2026-05-19",
+    "start_date": "2026-05-20T01:28:33Z",
+    "distance_m": 50867.2,
+    "moving_time_s": 5426,
+    "average_speed": 9.375,
+    "average_heartrate": 132.2,
+    "elevation_gain_m": 79,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "dn_fAoicz^`@}CuByF|@{@rCD^wEr@y@bHnBThCzBbAeAhCt@vArIYbCuCiA_F~CgDBkEiB{EsFsES}ArAwE~FsDEeEeEqFzBaCI{CxI{T^yDy@kCiHwCiAwEzIeTnCo@jEp@rCeElGiAd@mEcDqFpBqBxB`@jHdKnB_AtAuEpDnAH~EdD|CaEvDAjKuAvSpF|IbGj@vL{CfBj@tAfUgCbEKhBtAzIhNxBhBvAZjCpAfA`Ag@xCgJjAgA|CtAb@rChFXfCdDfCGjBaBDqCoB_BkCN{BpCsEAcAcDuCsAoAx@}CjJgAn@cAaAe@wCeBqAeNsB{@oCUcGbCiDNyCyAwRyBm@iLxCwFg@sFsIrAa`@`EwDUmAsCeBIwEwDuAwAtEeB`AoHgKuBa@_ChCbDhFc@~DoGlAoC`EcEo@aDr@uIdTdA|EnH`Dt@jB_@pEyIxTLtC}BhCbElFDfEaGnDsA~EPvAnGzF~A~Hc@~AiCtBjAzEkArBgGpAyC_@MiAdCuEtKqDjAqCgBaIgGqFSiAvAiFdE}A|@aBOgE}DgF|BaCMqCpIkTd@qEw@cCqHcD}@{EpIwSvCq@dEp@pCaEtGqA`@qEaDeFnBuBxB\\nHfKlB_A|AyEfDtAFrEhDdDcEbE?hKqAzSxFvIxFf@xL{CbBn@tAhRMzCcClDlAtKpN|B|AjAd@vCnAdA`Ac@|CkJnAeApCnAb@tChFZtCjDxCYzAuBEwByB}AcCX}BnCiECkAiDaDiAwGrMkAw@c@yCeBuAsN_CkAkK|B_DRaDuAuRcBw@yLzCcGg@sF}IpAaRDyL`EqDSkAuCiBCkE{D}A_B|E}Av@wHmKqB[}BfCbDlFc@~DoGhAqCbE_Eo@_Dp@uIzSz@`FtHhDt@zBc@hEqIdTFfD{B|B`EpFH|D_AzAeEbBqAhFXnAxF~ElBjI]`BqCfClAhE_AlBkA~@gITg@_BdCuEjKkDtAqCkBmIcGmFQmAjAuEdGyDCqEaEoF|BcCMsCpIkTf@qEo@{B}HmDy@{EjImSdDw@~Dn@pCcEpGoA`@gEaDmFzBwBhB^xHhKjBeArAqElDpAFrEhDdD{CxBg@jA?dKuAnS~FbJbGd@~LyCtAt@pAzTiCjEInBrApI|E`@~G~AxBbFfA~@dAi@vC_JjAkA`DtAd@tCbFTlCfDrDe@hAiC[iBiCoAwBn@wAzBeFA}@gDeDiAmApAoE`KeA{@a@uCaBuA{NcCgAoKzBsCVeCuAsS_By@yLzCaGg@{FuItA_SBgL~DwDeDcDCiE{AyAgBMuAtEcB~@yHoK_DAmAlBbDnFa@xDsGpAqC`EyDo@gDr@cG~N",
+    "bbox": [
+      166.96034671476428,
+      -11.665937469482467,
+      167.01753328523577,
+      -11.632332269600925
+    ],
+    "location": null
+  },
+  {
     "id": 18561735320,
     "name": "diagnostic",
     "type": "VirtualRide",
