@@ -1,5 +1,27 @@
 [
   {
+    "id": 18662044897,
+    "name": "next time I’ll just drive to Haverford college",
+    "type": "Run",
+    "date": "2026-05-26",
+    "start_date": "2026-05-26T13:25:54Z",
+    "distance_m": 13695.9,
+    "moving_time_s": 4811,
+    "average_speed": 2.847,
+    "average_heartrate": 164.6,
+    "elevation_gain_m": 115,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "e~hsFhf|jMg@aA]sAUa@c@oA[cB}@eDuAoDk@gBO}@u@}A{@}Cg@_AqAeEqAuDOm@Iu@a@yB{@}@C]W{@cCaGKg@@UMw@y@wAg@yAAi@Ys@FYxAcBx@oB~BkDl@mA^c@l@iAdCuDb@{@dBwCt@aAN]|BeDlCgFx@eAVu@`CeE`EcI`@WnAHZCRQXi@~@oAdAw@v@g@^Kj@i@vCwBd@UnCoBl@Jf@Gn@B~BOhAOjAi@fAw@Z]`@Qf@m@lCeErDwE\\_AZ_@H_@`ASX_@XQd@m@dEqDD[AKEEc@f@[?m@gAI_@]y@Mk@`@gA`@}AFe@Tu@Be@x@mC|BcJt@eCdBqC\\YXe@d@c@x@kAv@y@zCiE\\]PK~@iAjAsCb@iBTkC?yAEcA@c@Wy@Iw@ZOj@nAf@n@`@n@xCrBRn@^h@Zt@rApBh@nAVr@r@|CX`@Rf@BdANd@^Rf@?b@IlFcCTY`@Sf@MzBgAbAqAvAo@NAxCiBZGz@y@Vo@@a@[}@Ia@q@cBi@iDm@y@e@}@Ce@[wAoA}CYaAOo@Gg@Qq@k@iAq@cAUOc@CYMq@yA?a@Mq@[U_@GK_A?k@Im@Mo@i@JYVa@BWVa@@wAb@_@Aa@Kg@y@SQi@ES@s@p@[IYNQj@]b@}@zBKDVj@`@tBjB`GNTl@^YPY@QVa@ZgAHc@C]u@YBc@KsAaB}@o@_@s@EFFp@CZo@zBC\\?b@Jd@Bp@d@hCLhAGdAVjAJbB@z@_@zESt@WXSn@}@jBg@h@c@p@gArAe@b@sAvBcCbDeBrBMZs@fAWt@Mr@Yn@k@`DSh@m@jCg@xAGh@e@~A_@pBuArEi@xBg@pCATmCzBeCxAcA|@k@Zo@l@_Al@eA`AQXc@TeAbAeAl@s@XoD~BiBvA]^a@p@cAb@qDrB[DaCtBc@P]p@u@bA]J_AYCBqAbCgBxDo@l@Qn@URiBdD_@~@w@tA_@h@gBbDcAdAQh@CAKFMVCRZ|AR`@nCzIx@jBt@bCPp@d@vAd@bAzB|Hv@rBfAnD`@|@v@vCBbKUbDE~Ee@dM@~BUjFGp@S`Ag@dBo@zAa@l@",
+    "bbox": [
+      -75.36532475457405,
+      40.000951821860724,
+      -75.28903524542599,
+      40.03600702181931
+    ],
+    "location": "bryn mawr, pa"
+  },
+  {
     "id": 18641167830,
     "name": "brain fog",
     "type": "VirtualRide",
