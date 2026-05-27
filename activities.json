@@ -1,5 +1,27 @@
 [
   {
+    "id": 18668853406,
+    "name": "Evening Ride",
+    "type": "Ride",
+    "date": "2026-05-26",
+    "start_date": "2026-05-26T22:58:58Z",
+    "distance_m": 43662.2,
+    "moving_time_s": 5122,
+    "average_speed": 8.524,
+    "average_heartrate": 148.4,
+    "elevation_gain_m": 80.1,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "i{qsFfftjMs@pAiB`CsFvImC`DaBzA_Al@aBf@_DxCaF~CqEjBsAZyR`CmLzCsCh@{[lCuJHwLo@y\\wBiCCkG|@uCjAeDfCoAhAg@r@yApCwA|DkD~N?\\Vh@P@NQAc@c@e@s@GMNiF|Z{DrNkBxFg@nD}BrIe@~CgIhZ}@~EyBzIo@jEyGfVOPUCKKO}@SM[VWfAo@xEaApNoAvM_D~c@WpKU`c@ObH[`G}@pJ}G`d@[dFOhhA\\rGdA|JjA~Jn@`DtDhO|AbHdDpIvB|DlIvQ`BbEr@jCdBfKhBjJzBpN|BzL`ArGPxBZz@Jf@dAvILhCAhEQtEW`C}@dF{FrRw@dEg@dIBbRIfJJrDGfBBxID~DHv@EjAFx@KxCHx@CrIL~Dr@fKAzFm@tHm@nCk@~A{@|A{AlB}D|CuCjAyCh@kC@kD[gDD{PjFME?QdBy@|Ac@t@g@RDHNLbCAfEq@|HKtDAhGIb@Ub@uATgG}AwDa@}DOkCBqBn@sAt@cEpGcErKmApFoBnLiAjFkAlDaBvBWl@gAbJLbE~BlOpDnJpBhIKx@cBzCaDrEg@vACh@RlAHtDRh@xAjBXhAVhGb@zCR`DFxJSzOMZqCnDgEbJA^Hd@rBrB^Pf@SzCcN\\wPHsJQ}H}@kIMwJIoA[cAu@k@}@kAK{@Ji@^w@~FiIP_@Dc@OqAgB}Gu@yBiBsDY}@aCuOGsDbAaJhAcBt@wApAmDv@sD`CqOjAoExCyHt@qAxAyBzBkCdB{@`BYlGF~Db@|FpA~@?r@YVi@Fs@?qFJcEj@gIEmFMaAKMm@h@yAZyBdAETJFxPgFfDK`E\\fCEnBYrCcAzCwB|B_CbAyAfAoCb@gBVwAXmEJmDCaCy@gMM{E@wSDqBKoL@eOKoUZmFn@oEj@mCtFqRt@iEZkDHgC@mEUuEyBwOm@cCcCsN}Fo^qB}IsB{FsMqX}C{HkCqLyCoL[}AK{As@iEe@mE}@oJUkERohAn@wHjGwb@r@kIb@iJ\\kh@TuKr@mKfBoShBcUt@qKp@gFZiANORFXjAf@@R[zCqLnBsGl@sE|BqIhBkJdHcWf@gDjBkHZkCzDwMxBqI|E}VTqBZ_@ZF`@^Bp@MRYGMW@o@|DeOr@qBxA{C~A}BtC_CjEyBr@SxEe@|Kd@bUzA|JPtGd@`CGz\\_DhO{DnCg@xLsAfFgAtG{ClFqF`Cy@lDcDrBmCdGwJbAkAnEaI",
+    "bbox": [
+      -75.51098640000001,
+      40.05187588059922,
+      -75.29513360000001,
+      40.15094005645487
+    ],
+    "location": "king of prussia, pa"
+  },
+  {
     "id": 18662044897,
     "name": "next time I’ll just drive to Haverford college",
     "type": "Run",
