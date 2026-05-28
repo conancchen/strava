@@ -1,5 +1,27 @@
 [
   {
+    "id": 18682646609,
+    "name": "new helmet day",
+    "type": "Ride",
+    "date": "2026-05-27",
+    "start_date": "2026-05-27T22:51:15Z",
+    "distance_m": 42274.3,
+    "moving_time_s": 5030,
+    "average_speed": 8.404,
+    "average_heartrate": 156.9,
+    "elevation_gain_m": 222,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "{sqsFrxsjMiA~D_EbHoBhCmFxIiCvCeDzCoBb@}ExEaA^{CrBmEzAiSjC_OtDs^dDoKGwPo@mH_@_Go@eK_@wEh@uCdAu@b@oDvCeCdD{BrFyDrO?^T`@PHRS@[MYq@SYLoB`JoCnOwHlXW`CwBhIi@lDoHpWcBtImBnHEh@[dAOzAwGfVOTUBSc@Em@UOSHc@xA_@hCsAhRs@jHcCp[}@~Na@lb@AvIS`IUtDcAlKwFj_@g@rESfEMdgAPxDb@~EtBdQt@lEfFtTnA~DzB|FxN`[~A`F|@|Dl@~D|AvHnCzQfBpJlBxLh@~Bv@`@f@]fBWz@c@rQe@jBl@bElEl@`@ZDlAy@bL}BrC_BP?^nAd@h@t@hDdBvD`BfBnFhD|@bAl@dAfV`u@rBtHdBbKCl@q@bBWbBDfB`@zAhAtA|@\\nA?bA_@v@u@b@cAP}@FcBNm@rDcCx@aA~@iBVMXHJj@~AnSz@jCjB`Df@rApEnW@lAIp@Yf@OHg@GkDqB}Ae@mBE_Cj@gAv@yAvBg@`Bo@dDS`@eA?cAu@e@EeBpAuAYsDjAgAp@yHhGcI~IqCVeAIe@YiAsAs@qAYuB@eEOq@[c@_@Qm@EkCd@cAEwA_AqBsDiAiAwBq@sCJ[KG_@CgEOgBa@gA}AyCKk@JiWk@{Zp@e}@KuDw@sIGyA\\oBt@oBh@{@dAq@~Di@RO}E`AmBjAs@a@sDyDoBaAwD?qLd@YJwAbCi@pBJvLa@~F@xE]pAL@NcAD_F`@uGIyKUkDoAq@]c@c@iEaAwEo@qEwAsHm@aFwF{[_A{DwAaEmC_GqJuR_DuIcH}ZuCwT_@kEQ}FH}PDqr@FuBd@gFnDkU~AiL~@kKTaENqJTaW?gHRsK`Giv@x@sL|@uFPi@RQJDRfAVPXKN]lGuTn@cFtBqHdBqJhHmWd@_DtBcI`@{C~AeFjEeP~EeWVwBFKfANRZCr@SJOIM]?_@jDeOfA{CdBuDzAkBjCoBjB_AxCy@jEk@lCDj[vBdXr@rTwAvGw@dTaF~MwA~F_BrDaBdEiDtB}BvBu@~AuA~DqEnFeJtAyAdFiJ~@uBdBkGd@kDb@aJCqHo@wIkDq]s@yJm@{FMkCg@qFy@mGqAcNAcB_@}DMiFQg@a@Ww@eAWEUVVl@hAFd@XLZN|F`@vDzAlS~B`U~@pL`Fdh@N`FKhF_@xEa@`B[xCy@lC",
+    "bbox": [
+      -75.4658128,
+      40.05094840662764,
+      -75.2716172,
+      40.14008088222196
+    ],
+    "location": "king of prussia, pa"
+  },
+  {
     "id": 18668853406,
     "name": "Evening Ride",
     "type": "Ride",
