@@ -1,5 +1,49 @@
 [
   {
+    "id": 18702572597,
+    "name": "washed 3x1 mile + 400 fast",
+    "type": "Run",
+    "date": "2026-05-29",
+    "start_date": "2026-05-29T13:13:56Z",
+    "distance_m": 5327.4,
+    "moving_time_s": 1210,
+    "average_speed": 4.403,
+    "average_heartrate": 186.5,
+    "elevation_gain_m": 0,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "maesFdwsjMWLOZETB\\FVP\\RLb@DNE\\[l@a@r@a@PSLY?_@C]I]SUs@Ge@Ra@\\oA|@SXEN?\\D^N`@ZRTBFAXQjCmBLWDS?UOq@MWYM[@QFULs@l@_@T]ZGFYt@?HFh@JXLLLFP@`@EPIzAeA^MPWHk@?UKe@a@a@SK]?_Ap@mAr@Yf@Cp@Jf@f@f@P@LCl@UjAaATK\\_@Lm@Gk@Yc@e@QG?iAv@[\\g@VFEWZO`@AV@VH^NXFFNBR@NAPGl@i@nA{@V_@DSA]CUMY[YWEUBe@TaBhAQPSf@@x@R`@LLh@Tf@EdAcAz@q@N]Fq@Qm@_@]c@EG@e@Rq@h@u@d@]h@Ip@Hd@\\^FDd@Hd@Q^[|AiALUFm@Eq@]e@MEe@Ca@Rw@j@e@XQL[^IV?v@Rd@d@Xb@Cn@_@vAaAVULg@Am@Sg@EG[Oc@BuA|@k@XW\\M^CV@VBTFPJNTNNB^EdCeBR[H[Ao@Ug@i@Wc@DwBxAY^ENGr@Nr@^Xb@B^StA}@l@i@FMFk@Iu@]a@i@Ga@PuBtAOPOf@Bt@Zh@`@Pb@E|ByA\\g@Fm@Km@EGa@a@e@Ae@VsBtAQb@Ct@@FVl@f@Tl@In@e@x@g@\\]Ps@Es@[e@_@QI?c@J_BhATWk@`@QPKZE^B\\FXLVZRJ@`@AxBwANMLQJWB[Ce@Ma@MQQKSAS@YN}BdB",
+    "bbox": [
+      -75.31152483426173,
+      40.006481131938294,
+      -75.30652516573828,
+      40.008778856111256
+    ],
+    "location": "haverford, pa"
+  },
+  {
+    "id": 18702135744,
+    "name": "Warmup",
+    "type": "Run",
+    "date": "2026-05-29",
+    "start_date": "2026-05-29T12:46:17Z",
+    "distance_m": 3574.9,
+    "moving_time_s": 1198,
+    "average_speed": 2.984,
+    "average_heartrate": 163.1,
+    "elevation_gain_m": 33.7,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "uhesFhctjMLLP|@Th@j@|BXRLRJ`@B`AJ\\PNZEb@WBENG|@g@b@KXKJK`@U~@MXMXU`Bs@l@a@JS^Sv@q@XKZUf@C~@u@X_@RGRMT[`A_@VWTc@Fm@EIWWi@mAIW@]E_@O[c@mBWk@Oi@[g@KW_@_CW[[s@Kc@e@s@EUA[EW?GAm@MYUa@O_@AOOSQe@WUe@KWCMGMKKy@Qw@Wc@]WYMEEEa@A{@Ku@IOEi@CCI?YT]FOJWDIAMJMD[AGEG?]Xa@LYCYO[Uc@Sa@YY?SDKZa@Nc@AEFSLS`@[\\IbAQX_@XQQ]u@M]o@}Bk@kA_@iA_@y@m@yBMo@]w@ECa@?MP]v@a@z@PRTNXp@Rz@LrAGf@KXa@`BSZUf@@NB?HHPh@?HHpALp@?^DJl@b@d@j@FNOdCKj@Uf@LlALn@F~@J^RzAZzAFHXz@b@v@VZ\\Np@VXDz@`@JE",
+    "bbox": [
+      -75.317824329242,
+      40.00268354782482,
+      -75.294905670758,
+      40.01321634782368
+    ],
+    "location": "haverford, pa"
+  },
+  {
     "id": 18682646609,
     "name": "new helmet day",
     "type": "Ride",
