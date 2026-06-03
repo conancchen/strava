@@ -1,5 +1,49 @@
 [
   {
+    "id": 18764410017,
+    "name": "track Tuesday",
+    "type": "Run",
+    "date": "2026-06-02",
+    "start_date": "2026-06-03T01:12:19Z",
+    "distance_m": 8877.4,
+    "moving_time_s": 2605,
+    "average_speed": 3.408,
+    "average_heartrate": 163.3,
+    "elevation_gain_m": 0,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "klfuFn}sfMUDg@CKM[sAMaAI[SiAIO_B{Ac@k@_@eAKi@EqAGMOKS]OMYm@?QJWzAm@XWd@SLQ@SWkA@_@EQIOUwAEIMGOBGFIAKIM]IM[O]@MFKJQ^EP?RF^C@L^DZf@nBHVNPLJRBXCXSPYDQGk@_@oAc@yBQ[SMSCOB[RS^ER?RBPdAdEP\\JL\\FXGLIPWFW@c@WaAm@sCU_@_@MYD[RKNIh@B`@Pl@R~@\\tAT\\JJZDh@UPYFW?QIg@M[s@eDQY[I_@BYRKLIb@?RFd@|@rDR`@LHXFRCNERUPc@@SEYaAaEO_@WUMAa@DMFUXGNAl@~@bEN`@TRXHTERKV[DYAe@gAwEGMKK_@I_@DMHKLKRE\\@R|@bEP^VVRFRANGPMR[B_@A[WiAUo@WiAMa@YO_@E[HKJIRG`@@d@?FB?E@\\jA@NXz@Jd@[gAg@yBz@lDPh@XTTF`@KLKTg@@k@Kc@m@wBMq@KUSSQEO?QFOJS\\CZ?Z@Nb@vAZbBHNNRJFND`@IVUJWBq@YoA_@qAKk@KWWQUC[FMHOREPCZHn@V`A^bBN^PRLDN@TCVSLWDS?[Ik@_@sAOw@Yw@OOSGO?]JORMb@@l@fAnENPRNT@PCLGNQNi@?QC[_@qAg@wBW[MEQCUBQJQXGX?RFn@@DEW|@bEJPTTZHP?RMRWFSDa@Gi@c@aBYyAIOQOOGa@AYPOXEPC\\Fd@|@vDLVTPVFLANELMJQH[@UGk@e@mBWmAS]_@IY@]RIPGp@B\\J^ACADx@bDV\\NF`@?ZQJOFQBe@AUKc@Qk@k@cCSWOGa@@SJQVGRCh@dArENVNL`@JPENKLQLc@AYOcA[sAWcAIQ[WQCa@F[XETCn@z@vDRj@JLVLZ?NGLON[BK@a@CUa@yAKs@W{@QUMKk@AMHW\\G\\?TFd@ACbAbEVXPH`@CLGNQFOFY?QGk@c@}AWqAGQWWOEc@B[RGPIh@Hl@I[Lr@t@~CLTPN^HRGZUJUHY?[EWSq@i@kCS][Oe@BQHOPITCXBd@HVGM?Db@xA\\xAP\\XNT@ZMPWL]@WAOo@kCK[Gc@Q]_@QQ?ODMJUXGb@@XJ^d@bCLb@T`@VPNBb@MFEVq@?e@cAoEKSQQWGWBULIHM^CT@d@~@xDNZXTNBJ?TGVWBK",
+    "bbox": [
+      -74.65517427663185,
+      40.34218329760459,
+      -74.64777572336817,
+      40.34556668331933
+    ],
+    "location": "princeton, nj"
+  },
+  {
+    "id": 18763372352,
+    "name": "canal road",
+    "type": "Ride",
+    "date": "2026-06-02",
+    "start_date": "2026-06-02T22:19:33Z",
+    "distance_m": 50345.2,
+    "moving_time_s": 5828,
+    "average_speed": 8.639,
+    "average_heartrate": 153.2,
+    "elevation_gain_m": 221,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "iihuFreufMar@pTcENaFS}QmJgMuEcJwE{TiHuC}BeH_FiBc@kCQ}El@_EoAqGkEgAgA{EoGwAaAeBSqEVqGnBmBPmBMyB_AqBiDiAaAsF{AuC{AwCg@kDcBmCy@aBqB_DiHaDeIeBeGm@}CkCwVkE{X_AsDw@_BoAmAsMgD[WxBgh@ByBGm@c@BkDnDaJtM_DnDmEzDkFnC}H~@oC@}Fm@mH{AgIoDwT{KiOiImF{BuMyH}BgBqHyHiOaRyGaHsF{DoJwEaHsEcCm@yDyAcEw@yGqBoCkBgF}BqG{DqCiCiFwHgPg[wA_DwAaF_@eH_@wCyHyT}I_^kVeS}JiJ{J}JwD_FoSgToA`Ck@KyM}Q{I{QuB_DyG_HyKqIkBeAgEoAoGe@yMt@aIfBcKrJoDhA{D~CaCtA{B|@gMlCqIy@q[xBaHbEi@t@kA~CgDhCgIzCwPtIqDjCcB|@}BhCu@f@kDbAy@@_AU]m@MoAwGcEkE}EQ{HM_ZDcCd@_FKeAcHqDgD{@{A{@i@c@M]VwBWpBUVaOcEYm@CmBmAgCIeBl@}DKgCi@}AwCiE[gAGiATiBfAaCXmAHgBC}BJ}@xAqCRy@FeBMsBQkAg@sAsH_N[iAGkAFqCR{BtBoMz@_C~@aEXqBEUYZ{@tGeAbD{B|NM|F`@vBzHvNn@fCLpCEnAwAjCYx@M~@DbCKfB]z@o@]nAs@]~AiAhCM`BD`AVjA|CvEl@dBJtBk@hELtAx@dCNvC`@ZfO`DlDbCbEjAtF~CFl@m@~FE`BRb]P|ER`@tDzD~G`E^xAX\\n@ThABnCe@~AgAtBiCpBcAfCoBfUmLtE}AfDeCpAkDb@k@nGaEx[sBlIz@pK}BdFqBlCaBxCeCbD_AxJqJbH{AvFe@~GQdGr@|DrAhAl@`K|H~H`I|A`ClJvRlMnQd@VXCbAsBVBbQzQtCfEpMpMhLjK|TzQ|BjJzEdR`I~Th@`EZzGv@xCvChHfOzXpChEtClD|BfBrEhCzFhC`DtBbWbHjIrFjJpEdE|CfGjG|GtIxI|JbGbGnBzAbK~FbInDpN~HdC~@lLnGxKjF~HdBtHn@jDCdFk@dA[xFaDlCcC|DsEbJsMdGaFpKqDfKsCpCW`FElB]fAk@jKsInBo@vMkBnAc@xB}AxAsBbAkC|BqJx@}A~AaBfC_A`Gm@zViFxAs@hHcGzBuAz@h@~CdO^dDJ|HX~D~@vCrA|BtB~BbDhC|l@ra@jG|EjH`HrEfFdFrHvE~HzYjx@rMln@t@pEvFfWxBtL",
+    "bbox": [
+      -74.81215556942398,
+      40.33705324803465,
+      -74.40196443057606,
+      40.52439324215958
+    ],
+    "location": "princeton, nj"
+  },
+  {
     "id": 18749146355,
     "name": "new map",
     "type": "Run",
