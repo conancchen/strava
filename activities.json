@@ -1,5 +1,35 @@
 [
   {
+    "id": 18790330783,
+    "name": "short treadmill",
+    "type": "Run",
+    "date": "2026-06-04",
+    "start_date": "2026-06-04T22:54:52Z",
+    "distance_m": 3572.7,
+    "moving_time_s": 1203,
+    "average_speed": 2.97,
+    "average_heartrate": 149.1,
+    "elevation_gain_m": 0,
+    "is_race": false,
+    "has_map": false,
+    "polyline": ""
+  },
+  {
+    "id": 18790039027,
+    "name": "first swim in three months",
+    "type": "Swim",
+    "date": "2026-06-04",
+    "start_date": "2026-06-04T21:51:45Z",
+    "distance_m": 3040.4,
+    "moving_time_s": 2567,
+    "average_speed": 1.184,
+    "average_heartrate": 151.8,
+    "elevation_gain_m": 0,
+    "is_race": false,
+    "has_map": false,
+    "polyline": ""
+  },
+  {
     "id": 18764410017,
     "name": "track Tuesday",
     "type": "Run",
