@@ -1,5 +1,42 @@
 [
   {
+    "id": 18802679477,
+    "name": "10 min power test (306W)",
+    "type": "VirtualRide",
+    "date": "2026-06-05",
+    "start_date": "2026-06-05T22:09:16Z",
+    "distance_m": 35921.4,
+    "moving_time_s": 3643,
+    "average_speed": 9.86,
+    "average_heartrate": 149.8,
+    "elevation_gain_m": 34,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "`o_fAaacz^q@iDt@iGkByDGy@|@y@xCAXuE`@k@vBC~DlBNfCzBt@aA~C~@rAjI_@bCuCkAwEVu@bCmBJyDkBsFyF}EOmApA_F`E}A~@yALqBW{AaEcFzBcCI{CpIkTd@oEq@_CoH_D}@gBMeBzIoTvCo@|Bt@bAEv@g@`B}CvCEvBeAb@cBCeBaDoFhBoBfAIt@`@lFxIdAp@fB}@`B}ErALpAbANdFfCrAZ~@Y`A_Cz@i@lA?jKsAlSbEnFn@jB~Fj@rL{CjBl@|@jHTvKUvAkBbBOlB\\nFv@pBnAj@pCGlGvA`BpA^rCtAbA~@q@nCqIlAqAzCjAd@xClF\\jCdDjBCzAq@j@iAHeBkAaBeBa@mBr@aBzB_FGs@_DyAcAsAKgAlAqCvI}@l@gA{@c@yCeBqAoGyAoCHmAk@q@mB_@gFLmBjB_BXgBYeLw@qGcB{@cMzCwFe@[OW}AcEkFrAmS@qKl@eAvBs@Z{@WmAmC}AK}EmAcAcBScB~EgBv@aAq@mFyIoB[qAp@m@hA`DpFBfBg@bBkB|@gDLgCzDeAF_Cu@eDv@qApE_GjMHrBbAtBdHvCv@xBc@hEuIxTPdC_CfCTdAlDzDBzDw@pAgEbBsA`FNrAhGrFrAvDPhC_@~AmC`CH`B`AlBiAvB}@t@oE`@oCYSuAhCuEhBcAvC]hCgAt@s@ZyAOeCyAeEiGsFMgAtAeFpDqAjAaBCcEcEuF~BiCOmCtIsT`@gE{@gCiH}C_AuBCeBvI}SvCo@`Cv@dAGt@m@nAoCnDQfB_Aj@mBEaB_DaF^eAvAy@tBh@vE|HjA|@nBy@xAwEjAB`BfAJzErCdBRx@Qv@_C|@m@dACtKuAfS~DnFx@vBrFh@fM}CzAj@z@~FZlMUrAmBhBMlB^hFt@nBzAl@hCIdGrAfBxA`@rCfA|@jAs@nCsIfAkA|@D`BdAj@|CjFXbCbDnCKhBuB?sBsBgBsCZmBfC{EA_@U]qCyCmAkAx@yC`JaAx@gAw@e@{CaBqAoGyA_CJ}Ak@w@qB]iFJgBjBcBZoAWqLw@yGiB_AwLzC_Ge@}@yB{DeFtAcSB}Kl@aA|By@JgB{CqBCgEkAuAyBUuArEmB|@gA{@}EgIqBe@sAn@q@nA~ClFD~Ae@hB{BbAqCDuCbEaAB}Bs@{Cp@_JvTJ~A`ArBhHxCv@xBg@rEqIlTJrC{BbCX|@hDvDD~D}@tA_EzAuAhFNnAdE|CpAjBrAnEAdC",
+    "bbox": [
+      166.95967671476427,
+      -11.665937469482467,
+      167.01686328523576,
+      -11.632332269600925
+    ],
+    "location": null
+  },
+  {
+    "id": 18801736831,
+    "name": "sinking",
+    "type": "Swim",
+    "date": "2026-06-05",
+    "start_date": "2026-06-05T20:34:36Z",
+    "distance_m": 2948.9,
+    "moving_time_s": 2460,
+    "average_speed": 1.199,
+    "average_heartrate": 145.3,
+    "elevation_gain_m": 0,
+    "is_race": false,
+    "has_map": false,
+    "polyline": ""
+  },
+  {
     "id": 18790330783,
     "name": "short treadmill",
     "type": "Run",
