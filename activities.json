@@ -1,5 +1,27 @@
 [
   {
+    "id": 18868819947,
+    "name": "two of the same fortune cookie",
+    "type": "Run",
+    "date": "2026-06-10",
+    "start_date": "2026-06-10T17:58:19Z",
+    "distance_m": 6466.8,
+    "moving_time_s": 2209,
+    "average_speed": 2.927,
+    "average_heartrate": 163.2,
+    "elevation_gain_m": 51,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "g{guFhwtfM?CGF[JmAXSJUBk@\\I?KKO_@a@gCKc@KISFi@ZkAh@u@VE?KQS@IMQs@MYG]MWOu@GQIa@g@kBe@sAMu@Gm@SWeDaGe@{@o@_AMoA?c@Eg@]qCa@kAgAkB_@cASgAK[Mq@OiAGq@_@sBQyAWqAASBG]qAY{A_@wAUk@YuAWm@m@mB]w@k@eBq@{AGYECOw@MqA?g@F}@XyA@a@Fm@Co@Ky@s@gAc@k@SQU_@Y[g@w@s@oAUs@g@iAq@gAo@u@{@{@KOCAGBEAkAyAg@g@GOGc@GOk@y@gAaAQQkCiB@SXo@h@i@dCqDjAuAhA}AVWz@mAHSh@q@LIJFJMd@_@nBkA\\[dAk@b@YHAHDj@j@~A`AZL~C~@vAbAX\\\\ZXf@dBzBv@lAb@f@j@z@DFNBJHt@dA^^b@t@f@h@^n@NPfBxCt@~A^bAT\\`@z@FV`@`ABd@DPb@hA\\dAJTd@`BpAjH\\dBb@hBHt@f@tCLj@\\rBp@rD\\tBZpABZLj@Fn@r@nDNdAPx@L`Af@|BB\\ZhBd@~BL|@FRJp@Pt@VdBNn@ZrBpAzGBVRdAINc@Vg@`@a@Ta@\\_@XUJgAv@WLk@d@[Nk@h@SLOPWN_@`@QZGD{ClAQJYb@?RVt@VhALfAFHR@h@QzBaAN?HF",
+    "bbox": [
+      -74.66446652370931,
+      40.346623851980056,
+      -74.6259034762907,
+      40.364255851975095
+    ],
+    "location": "princeton, nj"
+  },
+  {
     "id": 18859269461,
     "name": "campus tour",
     "type": "Run",
