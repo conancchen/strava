@@ -1,5 +1,27 @@
 [
   {
+    "id": 18872590797,
+    "name": "performative nyc matcha walk",
+    "type": "Walk",
+    "date": "2026-06-10",
+    "start_date": "2026-06-10T23:16:24Z",
+    "distance_m": 3235.9,
+    "moving_time_s": 2307,
+    "average_speed": 1.403,
+    "average_heartrate": 103.2,
+    "elevation_gain_m": 9,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "s`owFfiobMGH?NKZWpAOl@MdAKXMv@W|@g@rCMj@KVKLi@jCIVk@lCAROd@o@jDqA|FQhA_@fBStAe@zB[lAk@jDO\\?L^VYbBUx@Mp@Uz@ET?TCDC?QCKPIRQdAQx@GHBTOf@O`@C^ShAc@jBM\\CRBBCNGTG^KTMt@o@tCKh@KhAe@rBY`Ao@xC[b@[nAQPEPId@s@IKDMCg@SOK@CGG]CSH_@Gw@c@MQg@Mu@EMEOSGCq@@g@MOAk@Ss@_@[IIGYKa@CKOGUM?EG]GQAIH_@By@QSKOK]m@DWPa@B_@@SIUg@EUMUGOS]Uc@AQGO@CA@GNm@EGUAkBe@MD[`@w@FSCUOU{@?GTa@g@KqA_AKKK?]UQCUIYYMHK@{@KKCMIMSG[Bo@Fc@\\gAT[DMFm@CB?A@FIf@A\\MLSbAKRIJEEG?ABJAFIA?",
+    "bbox": [
+      -74.00443202465753,
+      40.71329265221243,
+      -73.96593797534248,
+      40.73079705220792
+    ],
+    "location": "new york city, ny"
+  },
+  {
     "id": 18868819947,
     "name": "two of the same fortune cookie",
     "type": "Run",
