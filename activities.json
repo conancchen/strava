@@ -1,5 +1,27 @@
 [
   {
+    "id": 18885707291,
+    "name": "world cup",
+    "type": "VirtualRide",
+    "date": "2026-06-11",
+    "start_date": "2026-06-12T01:18:07Z",
+    "distance_m": 35196.8,
+    "moving_time_s": 3635,
+    "average_speed": 9.683,
+    "average_heartrate": 131.7,
+    "elevation_gain_m": 54,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "tm_fA}dcz^r@gHyB}Ft@{@|C?`@_Fn@o@vBHnDfBLdC~B|@cAvCv@pAhIUjCwCy@kCOuAvCuCXaBIcBiBmF{F_FO}AlAiEhEeB|@{AHoBWyA_EcF~BkCK}CpIcTb@kEy@gCcHsCcAqBIcBdGcNjAcEbDu@lBr@pACtCcEnCE|BeAh@kBEcBaDcF^cArAw@nBZdFhIjA|@pB}@~AyErAPpAbAJ|ElC|AV`A]|@qBn@q@fAC|KsAbS`EnFx@rB`Gh@xL{C~An@p@~Eb@rLWdCeBvAU~@LbF|@pDzAr@xCEvFlAfBpAb@xCtAbA`Ao@rC_JjAgAvClAj@|C`FTtChDlBEnAk@h@u@RgBm@yA{B_AqBj@{A|BmF?m@}CaBiAgAKeA|@sCzI}@z@qA_Ac@wC_BmAwG{AeCJsAm@y@gCW}FPcAnBkBR}Ci@kMo@mDoBo@_MzCqFi@k@kBeEsFtAyR@yK`@aAbC{@ZaAUcAsCgBI{EwAeAwAMaBzEmBx@eAw@aFkIyB_@oAr@i@hA`DnFBfBg@`BiBz@kDPgCxDiADwBs@eDt@aBpFoFjLDrBbAvBdHtCz@zBg@tEsIhTNpC_CfCZ~@dDnDHdEcAxA}DzAsA|ET|AdGpFpApDPnCc@dBgCpBBvAdAhCkAlB_At@eE\\{C]MiA`CsEpBkA~C_@~BeAt@q@ZsAMoCuA}DuAiBmDgCWmAnA_F|D_BdAyACkEcEkF|BkCOmCvIuT`@{Eu@oBoHaDaA}B@gBtFuLvAwE~Cu@xBt@`ACv@e@zA}CdDKnBcAh@gBC_BcDgFd@kArAs@hB\\jFpIjAx@nBeArAqEnAF|AhAHxEfCxA\\pAa@x@_Cz@_@|@AvKqAjS`EfF\\dB^NpFf@|L{CdBr@x@~GV~K[|AkBdBIdB\\jFp@nB|Ap@~BKjGpAhBrAb@tCpAfA`Ak@pCwIhAqAfAJtA~@p@`DzENlCfDlCGjBqBBwBsBiByC\\cBbCaFAc@_@S}ByAeAqAM_Ar@yCdJaAx@gAy@c@uC_BsAsG{AgCH{Ao@q@mB[wGNaAnBiBRyCk@yMq@iDmBk@{LzCsFi@k@mBeEqFtAaSByK`@y@fCcAHoBuCgBEiEiAwAyBWyAvEcB|@eAs@aFgIwAs@kBj@y@rAbD|FAhBi@zAcBt@aDJqCbE_ADaCu@aDt@sAlEaGlMBjB`AzBlH|Ct@hCe@`EmI~SJxCaClCZ~@jCdCh@~AKxC{A~A",
+    "bbox": [
+      166.95997697483614,
+      -11.66594906930216,
+      167.0172030251639,
+      -11.63232066942085
+    ],
+    "location": null
+  },
+  {
     "id": 18872590797,
     "name": "performative nyc matcha walk",
     "type": "Walk",
