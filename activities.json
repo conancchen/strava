@@ -1,5 +1,20 @@
 [
   {
+    "id": 18896063803,
+    "name": "faster",
+    "type": "Swim",
+    "date": "2026-06-12",
+    "start_date": "2026-06-12T22:17:10Z",
+    "distance_m": 2743.2,
+    "moving_time_s": 2204,
+    "average_speed": 1.245,
+    "average_heartrate": 140.5,
+    "elevation_gain_m": 0,
+    "is_race": false,
+    "has_map": false,
+    "polyline": ""
+  },
+  {
     "id": 18885707291,
     "name": "world cup",
     "type": "VirtualRide",
