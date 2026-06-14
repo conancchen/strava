@@ -1,5 +1,49 @@
 [
   {
+    "id": 18919535394,
+    "name": "30 min run off the bike",
+    "type": "Run",
+    "date": "2026-06-14",
+    "start_date": "2026-06-14T15:30:09Z",
+    "distance_m": 5778.5,
+    "moving_time_s": 1732,
+    "average_speed": 3.336,
+    "average_heartrate": 171.1,
+    "elevation_gain_m": 51,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "m{guF`wtfMG?ILWFWJQBOAOD}@d@UHMCSUEAE@IDc@Lq@\\mAb@QHC?OQGMw@kC?_@AEKCEK_@}A{@sCWcA{@sCOeAcAuBmAgBWk@q@eAi@eAMy@E_AWmBWoAQo@Wi@}@_BQa@WcAk@aEOo@YgBO{AWiAKs@So@mA}F_@sAk@uAQm@k@sAoAoDMi@OqACe@@iAHm@Nk@HeAA_ASiAAO?GFKj@a@l@i@PIXSV[^YrAiAz@k@PQBCd@Jz@w@jAo@fAw@`A}@^i@n@s@f@c@d@[RQTMPSTOhAcAPGLFJRLZ\\r@|@tBXz@|@lBFTj@pANj@Lp@HXTlAD\\Pn@Fh@^jBZvB\\lAXnBFVNd@^rBJZHp@Nr@Ff@t@`EBZHVXhBVhAz@nF`A`F`@jC~ApIVzAbApFZvBPp@Hx@ZrA@XGVmAz@GH?LPx@@b@Hd@@f@Z`BJz@Pr@Jl@DNRfBbAbFb@lCL`@HdAFHHB^OTCVId@Ub@IFGrA]P?TNFPEVGHOL{@d@k@f@}@h@eAz@ODQR_BdAQDKEGKCk@Ki@Gu@UcAE]g@cCISIIMG{Bs@_CqA[KMo@U_ACUGGK@MJ",
+    "bbox": [
+      -74.66621522015447,
+      40.34443788922708,
+      -74.63285477984553,
+      40.35969188922384
+    ],
+    "location": "princeton, nj"
+  },
+  {
+    "id": 18918650697,
+    "name": "saving lives",
+    "type": "Ride",
+    "date": "2026-06-14",
+    "start_date": "2026-06-14T11:48:42Z",
+    "distance_m": 81284,
+    "moving_time_s": 9506,
+    "average_speed": 8.551,
+    "average_heartrate": 152.3,
+    "elevation_gain_m": 443,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "ozguFp_ufMn@h@|BlIlC|OqOlJ?p@`FrX`@xEtI|HvD|IEd@qF|D[x@jOhe@r@`n@tG`v@xd@pkCt@P`XsQj@GVl@xDfv@nBdVbAbCjEtDOi@mEkDpEbEbAlB|N~p@vAfBbDhAbB~Or@jWM`I`Kxl@bAlBtF|FRv@cG`ByUpA_Ib_@oJn@aBbBe@hCBbKa@dA{\\dK_PqOMgAfEqNh@oNk@e\\aBgXmCkY}Fqg@uM}s@sQkf@_HlMiF~CwFAcOsHiJwBsD@woAzg@cC~BiBjD_Hfg@uAtDkCvDgDhByf@tMcDnCkMhTeClCum@bVsImh@wGg[}`@_hA}FwHeOq^eIu}@gGwa@kEeToF}i@eBgB}d@s@mB{d@Ru@`Bw@x@uAf@iG[kB_AuAuDcA{CfAqArDInBZdCz@jBnEvBr@pNxBJ`@fBx@e@yBmAyAz@n@zSa^SqIj@[]oNkfDp@QdRtEj@Q`DqXhRisA~B}UgAgHcFyH{@wDXgGfD_MFgD_@uD}AyD}L_QgDcIgEcRqDaJe@_Ko@aCqF_EqEyEuKmEcDaDoTa\\sIiTkAyAmJqCySuDqDiClFe^sIoFyFyGoT}a@wByGoAcNuHqTwIq]ya@w]ie@og@{AxBm@OoMsQ{LaVsI{IuL_JoH{BeIUqR|BkBbAyI~IoCt@sGtE{DbB_MjCsIw@c\\xBwG|DuBvEoDjCw[`OgGdE}ChDkC|@wBGs@_@k@uBaJmGpAtAgEuE]id@b@aLaScJmV_GyQ_LwPkGwWoDdJkiAZeAzC{ClI}PdIaBdBeI`UbJB`BuCjJoBzM[fGh@~CvHtNn@hC@zEsB~EGbGgBfFMbBl@`DtCjEj@nBk@xH~@lDFvCj@p@nOnDrHdDpHbEc@xMVh]Zn@lEjCMpDlG|DpAfClCD`Cu@zD_E|FuDrT{K|E_BpDoCxB}EdH{D~ZoBtIt@bJmB`EmA`JoGhDeA|JsJzG{AxQq@`Gv@nEnBnLbJdHnHbN|WrLfP|@Lz@eBZAje@ng@ba@`]hJv^vHzT~@xL|@nDxCjHrNdX|GdJrV|NrWjHxI`GpI~DpL`K~LfOdPnPfe@dW~_@~QzPbCdNoAlIiFrFgG`JyMnGmFhW{HnMo@|NmKhRmDrBmAjB}BjAqCdCaKjDiEzb@oIfN}Jv@BxDlQv@`RpC`HbF`Fzs@`g@tPhPxNzTlLh[zDkB`KuJn@K`@h@rGjQfX|zAQx@_NzJv@`I",
+    "bbox": [
+      -74.91087053058327,
+      40.306504893258406,
+      -74.40867946941677,
+      40.53589488245354
+    ],
+    "location": "skillman, nj"
+  },
+  {
     "id": 18910693796,
     "name": "Spurs in 9 🤞",
     "type": "Run",
