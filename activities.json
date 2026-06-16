@@ -1,5 +1,27 @@
 [
   {
+    "id": 18936630823,
+    "name": "maruichi 50% off",
+    "type": "Run",
+    "date": "2026-06-15",
+    "start_date": "2026-06-15T23:06:52Z",
+    "distance_m": 13404.9,
+    "moving_time_s": 4562,
+    "average_speed": 2.938,
+    "average_heartrate": 156.8,
+    "elevation_gain_m": 84,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "cwguFx}tfMV@f@M`Ad@f@JnA`@R?t@UJKTa@Tw@RU`CaAx@UtBy@LKZaAP_@HGhAe@p@m@l@]dAw@Z_@lAq@h@e@b@QHGr@UdAG~B}@~@E|CJPBRPPDp@_@|AW|DsAZCh@XbAzAnAlDH\\NLJETQv@Ut@e@pHiFVg@TGlAz@fBz@DHCT_@dAm@~@Ur@C^Df@Vf@j@t@f@d@`@V|@t@\\Rd@d@JPNx@vA~Cx@fCZl@I~@Df@t@nBNVv@tBLb@j@pAFR@TAx@I|A@RPn@HNNFf@Qj@g@N@NLH\\`AnCbCrFf@vAp@|Al@jBPhA@f@LtADlAHnA?n@F`A@v@^lD|@tC~@~BlAtDPZ\\jAr@nAl@zA\\p@p@dBl@nAd@pABT@|AFr@DtBFj@FzCFb@FR\\h@ZRtMdDbB^zAh@p@n@b@j@p@pAl@z@^x@fApBj@p@|FfDdA\\t@L~Gn@XA~Dq@bBa@bGeA`@QrDi@v@Sp@_@\\[hGoEvAy@NOhAk@nA}@j@[lBuAfB_Ap@O`@[FOYs@Kg@a@w@EOqE}HaBuBeAu@o@s@{FgEgA_AyDsCg@e@WQk@SgBmAeAy@eC}BgD_EqAqBiAaCYu@o@qAg@}AWa@wAiD_AoBQi@m@qAu@mBa@w@[eA}@gBc@kAw@cBWu@mAyCa@q@K]Wi@SU{A_COOcAqA_A{Ay@{@kAiB[[m@_A}AqBYg@oAaBc@s@uA}Aq@}@[c@y@wASQOYeD{DqBiBaAi@{BeA]Ky@i@aFyBoAc@iAs@kCa@]SMOsAaAWM]WmD}Am@a@iBu@]Ui@GkCyAiA_@y@c@YG[W}@_@SOQE]]qAaAuAy@u@i@w@_@cAy@{Aw@{@s@O[SMMCIDo@v@uExEsAlAg@n@E@UGYFsBdBeAn@{BhBkAr@k@d@_@Ry@p@}@b@aC`BwAfAk@ZmB~Ac@d@gGhE_@LiA`AaFdD]\\e@Xe@b@Mf@}@p@AJ^lBd@`DDFXDZIjB_Ap@Uz@Az@XNz@ZlAVdBJLVPBJEZ?TF|@ObBCHwAh@gAl@ACHm@Ac@Ea@ISWGs@Pc@@YHIC_@}BUa@MqA[wBAS",
+    "bbox": [
+      -74.71937920356578,
+      40.30494127255278,
+      -74.61294079643422,
+      40.35362647244773
+    ],
+    "location": "princeton, nj"
+  },
+  {
     "id": 18919535394,
     "name": "30 min run off the bike",
     "type": "Run",
