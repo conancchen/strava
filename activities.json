@@ -1,5 +1,27 @@
 [
   {
+    "id": 18951173907,
+    "name": "4x4 w/ 3 min active recovery",
+    "type": "Run",
+    "date": "2026-06-16",
+    "start_date": "2026-06-16T23:15:51Z",
+    "distance_m": 8885.2,
+    "moving_time_s": 2488,
+    "average_speed": 3.571,
+    "average_heartrate": 170.9,
+    "elevation_gain_m": 19,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "{ufuFj`sfM?QKi@M_@UuAU{@UYMG[CMBOHSVIXA`@BXv@bDBLANDTTVLHPFT?NEZYPm@A{@Ke@a@qAGk@Me@Q]KK[KY?ODWTKLIh@?^f@`C^vAHRVXPFX?ZIX[Lc@?c@Ik@_@qAQ_AQo@YYk@KOB[RQ^Id@Db@n@pCLt@P`@LHXJT@d@QT[Lc@@UGc@gAiEW_@MI[CYDMHWZGVAT@^@BC[Pd@r@jDRh@^TNB^KXa@FS@a@AMs@mCUiAYYQGQ@UFOHMVG`@@TfAxEFN^XP@NCTONUFSBg@CSi@qBYwAKO[USAWDMHORGRAj@BR\\jA^pBHRPRVJ\\ARKNWF[@]My@_AiDKQMISE[DYRGLEPCf@FV^vA\\fBVZJHXDPCNIT[DQBe@CQm@wBQaAGQIOOKYIUBWLMJS^IX`@j@p@bDPb@JLTHN@VEVWHOFS?[ASc@_BKm@W}@MWYOOAM@UJMJKXCRBh@dApEHLPN`@FNELIJMPs@@SESaA{DOYKM]Ia@FOJMXEb@B^fAjEHNZT`@?NGNOL]Da@AUg@cBSeAOm@WUUK]DUPMRCNA`@D^YYLLDL\\lB`@vARXZPZ?^UP[Hg@ASe@wBAS@Ms@qAMK_@K]LOJSf@APB^Pn@j@lCRb@TNb@BTIRWJ[BSGg@m@yBMw@GSKMSQMGY?ULOTKX?`@D\\v@jDN`@LLRLh@CTQPc@B_@CSs@mCOy@Sa@WMMAg@JGFMXET?^D^\\jAXxAJZJL\\PPBVGLKNYF]?UIg@M]o@qCW_@QKQAWDg@d@Ud@LFFNdArEHNVTNBZCVSHOFU@k@k@_CWsAIOWUYEK@ADUFWZCTAVDZh@tBPhAHPLLTNLB\\CNKJOJg@?_@}@{DOc@IMSM]EMDSNILIZA`@P|@v@dDVXNFh@GLIR_@BU?i@c@}A[yAM[IMUOYAODOFKNIRCT?VHh@~@tDVZXHPAVOR[FW@WMu@]kAe@oBo@U[DURUp@IPVxAd@lBHN`@d@XL\\AXSNUDQ@o@s@wCMq@M[KM[KQ?WHMFQ^Ef@@Tj@dCNt@Lb@RVf@JPCZUN]DS?i@]{AY{@Oy@GOUU]KO@c@XMXIx@HNdAhET\\HFN@`@EXWLa@@c@Ms@Y{@Ii@WcAW[UI]@YTQ\\ARBj@`@bB",
+    "bbox": [
+      -74.6515882478226,
+      40.34362330692664,
+      -74.6471417521774,
+      40.34565668273668
+    ],
+    "location": "princeton, nj"
+  },
+  {
     "id": 18936630823,
     "name": "maruichi 50% off",
     "type": "Run",
