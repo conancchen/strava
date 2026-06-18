@@ -1,5 +1,42 @@
 [
   {
+    "id": 18965933609,
+    "name": "1hr easy",
+    "type": "VirtualRide",
+    "date": "2026-06-17",
+    "start_date": "2026-06-17T23:50:59Z",
+    "distance_m": 34859,
+    "moving_time_s": 3656,
+    "average_speed": 9.535,
+    "average_heartrate": 140.1,
+    "elevation_gain_m": 53,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "~m_fAaicz^d@yDkBoDG}@|@y@rCD^wEv@{@zBNfDdBFzBdCfAeArCr@pAdBLhFc@jC{CaAuCIgAzC{CVeBKwAkBoFuFyESuAlAyE~D{AfAeBGyDeEqF|BeCKyCpIgTd@iEs@kCiHwCcAsBIcB`GuMpAoE~Cs@|Bv@dAGv@k@zAyCzCGrBcAd@_BAaBaDmF^eAtAy@fBXjFpIlAz@lB}@bB}EpARnA~@HzErCfBRz@Yz@wBt@q@fAArKsAjS`EnFVxAb@Z|Ff@vL{CbBp@h@vCh@lMShDeBzAW`ARdGv@nCvAr@tCGhGvA`BrA`@rCnA`A~@i@xCeJlAgAtClAn@~C|ERfCdDxCK|A}AJeC{BmBmC\\iBdC{E?e@YYiCwAaAoAOoAnAuCzIy@h@eAy@k@aDcBmAuGyAwBLgBy@w@{DIwE~ByCPeC]cKu@aGkBy@uLzCgGg@q@wB{D}ErAqS@mKl@gAzBy@V}@[kAkC}AEkEeAgAmB]iBbFeBt@kAaAuE{Hu@i@gA?yAz@c@hA`DhFBdBc@zAqBbAcDLuApCw@l@eABcCs@uCp@}A|EwF|L@tB`AtBlA|@dFdBn@zBc@dEoIbTH~C_CfCX~@hDpDTdBOdBkAxAuDtAqAdFRpAbGjFrAxDRfC]bBoCdCHzA`AnBiAxB{@p@_E^eD[MoAhCwEfGaBbCgAr@q@ZuAMmCyA}DsAiBqDiCSaApAiF|D}AfAcBJeBYcB_E}E`CuCOmCtIqT`@kEy@cCgHyCaAuBGaBfG_NhA_E`Du@lBp@rAAvCeErCE|BkAb@eBCyAaDkF\\cAxAy@jB^fFjI`Av@z@E|@w@vAuEzALrAlADnElC`BXdAc@~@{Bv@c@dA?bKsA|S~DbFZ`B\\R|Fh@pL{CjBn@v@jGZrL]bBkBbBIdB^nFt@pB|Al@xBMnGrAjBxA\\lCnAfA`Ak@tC{IfAmAbAF|AdA`@tCfFVtClDhBCnAg@l@s@VyAc@aBeCmAoBh@iBbC{EC[Qc@uC}CkAmAfAwC`J_Aj@gAeA_@mCiBuAwGwA_CHoAi@u@qB[eFHiBfB{A^cBUyK{@kHoBy@kM|C}Fu@W}AaDkDg@sAvAyRBsKh@cA~B}@LiB}CuB@uDeA}A_C_@}AzE_Bz@sAaAsE{HsAq@cB`@gA|AdDbGAdBk@zAsBx@oCBoCbEcAF}Bu@aDp@uItSChB~@~BlAbAlFhBl@fCk@fEoIbTLrCwBvBXnA",
+    "bbox": [
+      166.96030697380655,
+      -11.665959069302035,
+      167.01753302619343,
+      -11.632330669420737
+    ],
+    "location": null
+  },
+  {
+    "id": 18964970632,
+    "name": "Dillon swim",
+    "type": "Swim",
+    "date": "2026-06-17",
+    "start_date": "2026-06-17T22:24:42Z",
+    "distance_m": 2560.3,
+    "moving_time_s": 2088,
+    "average_speed": 1.226,
+    "average_heartrate": 148.1,
+    "elevation_gain_m": 0,
+    "is_race": false,
+    "has_map": false,
+    "polyline": ""
+  },
+  {
     "id": 18951173907,
     "name": "4x4:00 w/ 3:00 active recovery",
     "type": "Run",
