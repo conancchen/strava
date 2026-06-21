@@ -1,5 +1,27 @@
 [
   {
+    "id": 19004486750,
+    "name": "Making sure I am still ok",
+    "type": "Run",
+    "date": "2026-06-20",
+    "start_date": "2026-06-21T01:49:46Z",
+    "distance_m": 1971.2,
+    "moving_time_s": 720,
+    "average_speed": 2.738,
+    "average_heartrate": 145.1,
+    "elevation_gain_m": 15,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "{wguF`ztfMCMLn@@FH?XM\\Gl@YbDiADI@MI[KaAQq@ASDQJIt@WRQLE^Eh@SLIHMBQASIk@Ug@EOG}@UoA?ENGN@NFFCPuA?UQ]KCMB[PSRGEGYSk@_@kBS_AGq@Qu@c@mC[qAGo@[mBEa@GOGCE?OTi@Zc@JsAd@YbACVP`@H`@Pf@ThAANEHQDaAj@c@NKJLNTr@d@pBb@pAv@pDVv@DFDTAv@D\\HLRLXbAJZR^Lb@@z@GPo@VSNQF[Tg@Le@POP@PJd@PpA",
+    "bbox": [
+      -74.65994800000001,
+      40.34663672690169,
+      -74.65055199999999,
+      40.3509332396073
+    ],
+    "location": "princeton, nj"
+  },
+  {
     "id": 18965933609,
     "name": "1hr easy",
     "type": "VirtualRide",
