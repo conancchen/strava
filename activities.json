@@ -1,5 +1,42 @@
 [
   {
+    "id": 19015875353,
+    "name": "healthier",
+    "type": "VirtualRide",
+    "date": "2026-06-21",
+    "start_date": "2026-06-21T21:07:51Z",
+    "distance_m": 35619.3,
+    "moving_time_s": 3633,
+    "average_speed": 9.804,
+    "average_heartrate": 142.5,
+    "elevation_gain_m": 54,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "nm_fAqfcz^x@yFyBwFv@}@bDEVsEn@s@dCNfDfBFvB`C`AcA~CbApAhIa@~BuC_AqCKkAzCwCVwAIkBkBmFwF{ESmAjAwEfEeBbAcBI_EcEiF|BiCKuCrIoTd@iEw@eCgHuCaAmBKmBzFeM~AcFrCo@tBt@hAAz@i@~A{CnCE~BeAf@cBEiBaDmF`@}@rAw@nB\\nFtI|@p@x@Gx@u@`B{EdBZ~@|@FvEjCzAXfAQr@gCbAe@bA?vJuAnT`EdF^bB\\LxFh@pL{ChBn@t@rF^fKMlCsBhBQbARxFx@tC|Ar@hCIfGrA`BlAh@~ChA~@dAk@pCwIjAqAfAJtA~@h@|CbFTpChDlCO`BaBDgCqBcBoCRkBjCuE?m@U[mC{CsAoA`AaDnJ_Ab@cAeA_@iCeBuAwGyAeCFsAm@u@mCSgGNq@pBmBN{Cc@}Kq@qEgBy@sLzCgGg@o@oB_EcFpA{S@eK`@_A|Bw@`@}@[sAkCyACoEqAoAkBQyArEy@v@y@D{@s@gFqI{@c@_AB_BfAW`A~CbFDdBc@|AsBdAeDLqAnCw@l@eABsBs@mDx@sAtE}FfMHrBbArBbHtCx@xBc@lEqIfTLvCaCnCdEtFDtDu@tAqEnBmA~ETrAdGnFrAzDNlCg@`BcClBDbBbApBkA~BcAp@{D\\}C[SgAbCwErBkAdDa@bCiAn@w@VwAO_CyAcEiGuFMaApAcFbEaB~@yAJmBU{AoD{DOs@|BaCIaDjIwSf@yEQqAi@s@gHyCaAuBCeB~FmMnAkEfDu@pDr@~@m@|AyCtCGvBaAj@mBEaB_DiFl@mAnAm@fB`@fFnIhAt@pBcAvAqEjBVfArA@dExClBEbB_Cz@o@jACvKsAfSfEtFj@hBbGj@pLyCjBj@n@tDd@zLOzCoBfBQbAPxFz@tCzAr@jCIdGrAlBzA\\nCvA`A|@s@xCeJbA{@vChAd@xChFZxCjDvDq@p@eALiBy@sAmBu@qBj@_B~BkFCo@}C}AeAcAMoAbAwCdJaAj@eAaAe@wCeBoAiGwAaCJaBq@s@wBWuGXcAdB}AR}Cg@eMs@wDiBm@cMzCmFg@u@uB}DaFrAuSBoKl@cAvBs@PmB}CuB@wDmAaByBWwArEgB~@iAy@yEaIgBq@_Bj@w@pA`DxFB`Bm@hBqBv@yCJ{AxCy@f@_Eq@}Cv@wAvEyF`M@fB~@xBlAbAbF~At@dCc@`EkIvS@rD{BdCvDvEZrD_ArBsErBiAnFRz@~EzD",
+    "bbox": [
+      166.96010197483616,
+      -11.66594906930216,
+      167.0173280251639,
+      -11.63232066942085
+    ],
+    "location": null
+  },
+  {
+    "id": 19014864510,
+    "name": "Short",
+    "type": "Swim",
+    "date": "2026-06-21",
+    "start_date": "2026-06-21T19:28:14Z",
+    "distance_m": 1851.7,
+    "moving_time_s": 1538,
+    "average_speed": 1.204,
+    "average_heartrate": 142.9,
+    "elevation_gain_m": 0,
+    "is_race": false,
+    "has_map": false,
+    "polyline": ""
+  },
+  {
     "id": 19004486750,
     "name": "Making sure I am still ok",
     "type": "Run",
