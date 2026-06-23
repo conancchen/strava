@@ -1,5 +1,49 @@
 [
   {
+    "id": 19029000672,
+    "name": "Super humid brick",
+    "type": "Run",
+    "date": "2026-06-22",
+    "start_date": "2026-06-22T23:44:17Z",
+    "distance_m": 5023,
+    "moving_time_s": 1648,
+    "average_speed": 3.048,
+    "average_heartrate": 162.9,
+    "elevation_gain_m": 48,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "g{guF`wtfMiBl@{An@M@GEOYKEKB[Po@TWPa@Pa@?[JCEKSg@_B]wAe@oAEa@w@wCQ{@s@eCMeAa@m@mBgDUYc@}@_AeBOoAAg@KmASgAE]Qu@m@mAk@{@Yo@_@kBGq@Kg@EIIo@m@}CGw@O{@KcAFIZWx@e@b@a@`Ao@XYj@_@p@k@lA_ANO^U\\[pA}@T]JIVMt@k@d@U\\[RKZ[^S\\a@TKt@m@rAw@RI^[p@a@t@i@NOv@g@Z[`@SXUVIXQt@m@tByAFK`@_@b@W`Ao@^[tA{@hA{@FAvAaAx@o@RKj@c@DAFFNZTRTb@nA~D|@hCR^DV?PW`@?Jj@nA^j@R|@Zt@AFIFOH]DOD[XSJQNiAn@IH?RJXJFSQQBq@b@eCpBa@RYXQLW\\UPeAlA[Xm@TWNGFV|Ap@pBJ`Af@|AF^Pl@\\bATbAPVHZLhA?ZBTHxELf@L~@XtAJdAn@`DBV?^M`@F|@DDp@zA@NGV_@`@MXBP`@r@HZBTC`@CFMFWHO@OCW[c@Wc@IYHm@r@ELDzAB`@?FEJo@Zc@NOJKBK?EGEe@k@kDCc@FI`@E`@MhAq@\\M",
+    "bbox": [
+      -74.66498218423989,
+      40.34361470481494,
+      -74.63405781576013,
+      40.35775510481237
+    ],
+    "location": "princeton, nj"
+  },
+  {
+    "id": 19028603210,
+    "name": "4x15 min z2 build",
+    "type": "VirtualRide",
+    "date": "2026-06-22",
+    "start_date": "2026-06-22T21:57:20Z",
+    "distance_m": 55145.1,
+    "moving_time_s": 5424,
+    "average_speed": 10.167,
+    "average_heartrate": 145.7,
+    "elevation_gain_m": 85,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "tm_fAydcz^r@iHwBeGxE}@bAeGnHnBHzBbCfAeArCz@vAjI[fCuCiAiFvCqCRkDkB}F{F}ESaBpAsE~FqDEkEcEkFzBaCI}CrIiTb@oEs@aCuHeDcAgEnIcTdD{@vDt@`DiEhGgAd@uE_D}ErB_CpB^dHbKxBy@dB}EbD|AFtEbDdD}DpDwAh`@xF|IfGd@xL{CzAt@pA|TsC~GtAjJnN|B`CdFhA~@fAe@hFoLrClA`@tCnF^hCdDtDa@nAaDo@cBaC_AiEjDoFEg@uCaDyAqA`A_FpKmEiHoN}BgAsKzBsCT}CyAaSmBo@{LzCsFg@qFsItAk`@~DsDgDiDIyE{DsAyAxEmBt@cHcK}B_@wB|B`DnFc@fEmGhAyCdEqDs@aDn@}IdTjAfFfHxCv@jBe@`FsIlTNjC_ClCdEtF@dE_GnDqAzEPvAfGtFdB`IkDvEhAzEkAxBgGnAyC_@QaAfC{EtKsDjAcC}AcIaHmIrA_FbG}DMgE{DqFzByBMuCtIwT`@oEq@uBqH_DcAgFrIsS~Cq@~Dn@hC_EvGoAd@eEcDqFxByBdBXxHlKnBcA`BwEdDzADtEfDhDcErDsAf`@|FzIlFh@xL{CnBn@rAnTiCxEIpBpAjIhNxBhCdFvAhAjHwMpCrA^pCnF^jCdDpCObBsBA{BwBaBiCXqBjC_FAw@eDeDoAeHrMcBmEmB{AoN_CeAsK~B{CPsCoAmRiBeAaM|CmGo@eFmJzAk_@dDsBRiB_DyB?{DaAwAgC[wAtEgBx@qJmLmDdC~CjFa@jEsGlAiC|DeEo@_Dt@sI~SfAdFrH`Dl@jBa@rEsIjTF~C{BfCfEvF@zDcGtDoAfFzGbIbBzHmD`FjArEkAvBkGrAwCa@McAhC_FpKkDnAmCmBqIuGqHjA{EjGcEIgEaEqF|BaCOkCtIwTb@uEs@wBqHaDcAwEvIaTtCo@vDr@zCeEpGgAf@uE_DeFnByBpBXpHhKvBeAvAqEhDxAHvEdDfDcEzDqA``@~FxIvFf@hM}CpAt@rA|RUvCyBpChAxKrN`ChClFpA|@hHwMpCnAj@|CxENnChDzCMzA}A@sCuB}AkC\\iBdCaFAy@_D{CsAmFfLcAl@qEkHiNyBoA}IrCkHqAuTiB}@aM|CmGs@_FgJvAe_@nDgCJyAaDaC@sDiAaBwB[{AvEgB~@sJmLmDvB~CzFg@lEaG|@eDjEwDs@eD|@oIzSpAhF`HrCt@nBc@xEqIjTJzC{BxB`EzFBdEaGtDoAzEV|AbGlFdBvHqDlFlApEu@|AoAhA{HZ}@{AdC}ErKoDnA_CmBcJqGoGdAsFvEwB~@kBQwDkCqC",
+    "bbox": [
+      166.9599669738066,
+      -11.665959069302035,
+      167.01719302619347,
+      -11.632330669420737
+    ],
+    "location": null
+  },
+  {
     "id": 19015875353,
     "name": "healthier",
     "type": "VirtualRide",
