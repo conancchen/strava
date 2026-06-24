@@ -1,5 +1,27 @@
 [
   {
+    "id": 19048896122,
+    "name": "descend",
+    "type": "Run",
+    "date": "2026-06-24",
+    "start_date": "2026-06-24T12:03:04Z",
+    "distance_m": 9852,
+    "moving_time_s": 2820,
+    "average_speed": 3.494,
+    "average_heartrate": 174.8,
+    "elevation_gain_m": 51,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "axguFp{tfMLnAZlBJhAdApFBb@Nb@Hh@b@nBNbAV`@?h@Ld@Hp@JXR^x@hA|@fBzAfCd@~@z@|Bz@lBF@NM|AuAX]f@a@TMvAsAFCB?j@b@l@^nAdAvBrAn@h@|@j@n@f@~CrBbA~@lE|CLTAMPDTKv@l@p@d@bClBTLF@rAgAh@g@`Aq@f@e@z@i@h@e@\\Qd@g@jAy@l@k@`As@pBeB~@o@dBuAt@i@l@m@fBwAVONOb@SZSv@k@PS`BkAlAaADUOcBLeCAWMc@[cAa@u@gAwCm@sAKg@Ac@J[ZGj@]vAgAjAaAbAm@n@m@bBeALMHKLe@Ba@DOn@o@Pa@H{@A{@I{@]uAe@{@k@o@k@k@k@Wg@_@g@Uc@GMEs@i@mAo@i@_@a@a@u@gAIWCMFS`@_@Zi@fAmCFIVAVG^LTRZDNLD@HKDSBEv@FTHXBd@J~@n@zB|@d@VnAd@|@h@p@TxBdAdAj@r@f@`@^b@ZzAxAvAfBx@hAzBnDvA|Ab@p@d@h@fBrCxAhBrEnGf@l@b@r@hAvAvAxB`BlDr@fBXz@d@z@v@jBh@fA`AhCr@`BPXFPQYOi@_@}@}@mB_@cAMQQc@Og@eBmDqAqD_@u@Yq@}@wASa@a@c@c@o@e@c@y@oAuAeBm@}@m@u@e@y@gAsA[k@o@w@[g@q@{@Q]s@{@e@[_A}AsAmBMW_@g@{@}@eAuAcB{AeAu@yBaA{Ay@o@Yu@WoAo@oCoAMCw@c@kA_@w@A]IiAaAUMGI[jAQBOJs@nBc@x@i@j@_@X]Ls@J}@CiBKi@D[J[TGHaBhAQRa@Z[j@aAt@aAl@yB|AQPo@\\SPcA`@o@^eBnAkCfBq@l@qCjBYVo@b@k@\\}@r@_Al@kA`AODw@h@k@TOLICKQICa@?YGOUKYUYYSe@IGE[k@c@_@Qu@SUq@e@OG[CuANMOCMGc@U{AQQa@WEASD",
+    "bbox": [
+      -74.70081726682079,
+      40.316248189150244,
+      -74.62247273317922,
+      40.35208058910838
+    ],
+    "location": "princeton, nj"
+  },
+  {
     "id": 19042237301,
     "name": "5x5 min @ 280W",
     "type": "VirtualRide",
