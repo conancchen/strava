@@ -1,5 +1,49 @@
 [
   {
+    "id": 19104751800,
+    "name": "hungry",
+    "type": "Run",
+    "date": "2026-06-28",
+    "start_date": "2026-06-28T23:43:04Z",
+    "distance_m": 6467.7,
+    "moving_time_s": 2031,
+    "average_speed": 3.184,
+    "average_heartrate": 165.1,
+    "elevation_gain_m": 26,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "koguFfttfMLNbAf@b@`@Ld@LhAFNBBL@`@EdBo@HUb@In@SbAg@RC@@n@?WBEKBSAQEM?G@GLUl@a@\\Mx@q@XOdAy@d@YPOTKbAw@zA{@D?b@OF?p@Kj@Sl@YPGVAd@Bb@FfCBJFPd@JF`@OFA\\]r@Ob@QNANE`@MZQZITARMh@MXDRFj@r@f@~@Tz@j@vANh@DHJ@\\Uj@Uh@e@PGnBmA`A{@h@_@jAo@LKVe@NORKVUFID?XSRWt@q@XSj@Sb@DZ?z@JjADH?HEh@MF?NGd@c@HIHWX_@DYHQ^u@HYXo@LSNc@FGHCNFp@r@d@\\VDH@DAf@Hv@Pd@PjAt@LDL@j@Z\\FPHBBH@VRz@^NLrAl@j@`@hA`@|@d@fAx@JDrAhARTZVV\\PRPXRRVb@JJf@t@PRVh@f@r@HRPXLLNHLPz@|@R^TVRXLJb@n@HNNN~@|Ab@d@`@l@DJd@j@V`@XZJNz@bAh@`AnA`BPJLP`A|Al@x@Tj@DD?JUq@EAQWa@e@U[IGs@iAa@c@mAeB[i@cAsAS_@[Ye@q@c@s@Ya@s@o@[e@KWOSO]g@k@Wa@g@o@Ua@YUSUm@eAc@o@w@}@o@aA_AeAW_@c@a@[a@i@e@a@c@uAcA{Au@MCGIa@UcAa@]U[Gq@a@a@I_@Wo@YuAi@WQo@_@}@UsAOOEMGWU_@e@YOODQn@k@hAWz@q@rAg@f@e@^]Ja@De@?KAWA[@k@IK?e@E]DYJw@n@e@d@BAABULWRMDOJY^MTy@v@qAx@]\\kAv@WT}@d@KJeA^aAl@g@d@gAn@[XqA|@q@l@_Ah@}@t@ULONWJm@j@c@X{@d@e@^",
+    "bbox": [
+      -74.69237688274838,
+      40.31876792392314,
+      -74.62321311725164,
+      40.35040112389435
+    ],
+    "location": "princeton, nj"
+  },
+  {
+    "id": 19104498998,
+    "name": "Fahhh",
+    "type": "VirtualRide",
+    "date": "2026-06-28",
+    "start_date": "2026-06-28T21:59:52Z",
+    "distance_m": 54631.6,
+    "moving_time_s": 5437,
+    "average_speed": 10.048,
+    "average_heartrate": 148.4,
+    "elevation_gain_m": 85,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "lz_fAutbz^mHkFoBwHt@}GsBqFpEs@f@oFxAg@~E`Bf@zCzBt@aAbDp@hAlIQfCoCcAmFxCuCN_EqByFoFoEWyAlAsEdG{DA_EcE_GxByBKuCpIoTd@mEo@_CyHkDcAeEpIeTxCw@fEp@nC_EzGwA`@eEcDiFdBuB~BVlHfKtB_A`ByEdD~ABjEfDlD_EpDuAl`@zFvIlFj@fM}C`Bl@tAzSOrBaC|CjAzKzNbCfEdHrHuMvCrAb@vC|EPlChDxCKbBoBAaCuB_BqC`@mBdCwEC{@cDaDqAiHrMsEiHgNyBmAqK~B_DRuCwA_SyAu@gMzC{Fe@wF_JvAy_@`EuDgDqDIsEmD}AeB|E}A|@aIqKeCMcBvBbDpFa@|DqGlAoCbEcEo@_Dr@wIdTdAxEtHhDn@rBg@vEoI`TNnCaCpCbEpFF`EeGzDoAtENvAjGxFbBbIiDpEfAzEsA`CaGhAuC[OmA`CqEvKsDjAgCaBeI}GkIpA}E`GqDEmEaEsF~BgCMqChIySj@kF}@yBgH{CaA_FtIwSzCq@`En@pCcEjGeAh@iEcDwF~BwBdB`@vHfKpBmAfAaEtBNlA~AB`EpC`BCdBoDdCwAb`@zFbJ|Ff@pL{CjBr@rArROpCaCdDdApKrN`ChChFtAdAbHwMzCpA^rCfFXrCjDrCQ~AkB@}B{BeBgCZqBhCwEA_AcDwCsAiHvMmA_AkCkFmN{BkAeK~BiDP}CyA{RgBq@gM|CeFg@yFqIvAo`@~DwDcD}CMaFmDyAaBvEkB`AkHcKqBc@cC`CbDrFg@bEoGhAiC|DkEm@uCp@wI|S`AdFtHfDn@rBe@tEsIjTNlC_CjC`EnFJvDeGbEqAhFvGzHfBdIoDbFlArEqAvBaGlAyC_@MkA~BoEtKqDnAkCcBeI{GcIlA{EhGiEIyD_EyFzB}BMwCzI{T\\{Dy@eCsHeD}@sEnIyS~Cu@`En@lC}DtGmAf@iEaDsFnBuBrB\\jHdKtB}@|AyEhDvAHzEdDvCcEfEsA``@pFvIvFl@|L{ChBh@vA|ROnCaCjDhAnKpN~BvEjHhHuMxClAn@`DtEN`DlDzDw@z@qCm@_BaCaAmElD_FAu@}CgDwA{GtMmAw@iCoFuNaCgAmK|B_DPoDyAkRuBk@uLxCmFg@uFwIvAc`@hD_CFqBwCmBBsDiAaBaCYuApEcB`AiKoL}ChC~CfF]dEuGpAsC`EuDq@cDr@yI`T~@xErHdDv@~B_@`EyI|TLpC}BdC|DfFLbE_GxDuA`FNtAlG|FbBpHoDhFjAjEk@xAcBxAsHX{@{A`CyEpKoDrA}BeB_JqGcGhBsH",
+    "bbox": [
+      166.95867697380658,
+      -11.665959069302035,
+      167.01590302619346,
+      -11.632330669420737
+    ],
+    "location": null
+  },
+  {
     "id": 19078305855,
     "name": "shoutout wound seal",
     "type": "Run",
