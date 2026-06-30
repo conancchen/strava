@@ -1,5 +1,20 @@
 [
   {
+    "id": 19116260390,
+    "name": "Afternoon Swim",
+    "type": "Swim",
+    "date": "2026-06-29",
+    "start_date": "2026-06-29T21:28:43Z",
+    "distance_m": 3017.5,
+    "moving_time_s": 2421,
+    "average_speed": 1.246,
+    "average_heartrate": 143.6,
+    "elevation_gain_m": 0,
+    "is_race": false,
+    "has_map": false,
+    "polyline": ""
+  },
+  {
     "id": 19104751800,
     "name": "hungry",
     "type": "Run",
