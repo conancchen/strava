@@ -1,5 +1,71 @@
 [
   {
+    "id": 19131151775,
+    "name": "biking back from Trader Joe’s with 60lbs of groceries on my back",
+    "type": "Ride",
+    "date": "2026-06-30",
+    "start_date": "2026-07-01T00:10:52Z",
+    "distance_m": 5726.2,
+    "moving_time_s": 1030,
+    "average_speed": 5.559,
+    "average_heartrate": 141.1,
+    "elevation_gain_m": 58,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "e~_uF~bufMCACMq@kBOQ_@GcACcAOa@S_@DSPAFUvAK^SnAYhAg@nAy@vA]d@o@p@qBdBmBhB_AnAo@jAIFM@IGU_@g@c@eBaAk@_@gKsMeCoBa@_@UW]g@oDqHkAgBoEcEoAgBwDgGm@o@wCyBiAmAo@iAuA}Cw@gAyD_E}BuCq@eA}BuEi@_A}BoDwB_DQ]{@cAWIWHSRyD~F_B~B_CxCa@r@GVEXCf@Dj@VhA@PAx@ERSd@q@lAqDfJUf@Y`@i@b@c@Lq@FW?cDOUBi@NaDzB}BdBaBdAsEhDqFtDm@b@e@d@qAx@QR{@f@kBvAsBjAeAt@g@VK?ECSWo@gAA[gP_CCa@Gg@OUc@[GCa@FWJOJKNYbAITEDuAh@y@R{@\\{Af@YVYd@SAUe@QiAQ{@Gg@Mg@IOg@UWGWAg@Dk@Na@NmAt@m@JYLCD?RHn@ED",
+    "bbox": [
+      -74.70662575794772,
+      40.306399356854946,
+      -74.60424424205232,
+      40.35322855676149
+    ],
+    "location": "princeton, nj"
+  },
+  {
+    "id": 19130598972,
+    "name": "feels like 90 brick",
+    "type": "Run",
+    "date": "2026-06-30",
+    "start_date": "2026-06-30T22:44:33Z",
+    "distance_m": 8320.1,
+    "moving_time_s": 2733,
+    "average_speed": 3.044,
+    "average_heartrate": 164.1,
+    "elevation_gain_m": 18,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "ihduF`rsfMLFp@r@XRNFp@BjAZnAj@^Rj@PvAp@FD~Al@hAl@FF\\L\\TTDd@Z`@NjAp@pBdBpBzB@FZZZd@TTHP`@f@xA`CzA|AnCbEfCdDbBbChB|Bh@x@RTDLbArAZ^lAjBlBfEhA|Cn@lAdBdET^Nb@r@`BTr@j@lARf@LR\\`A`@t@J\\d@`ANd@Vd@r@tBV\\Nd@hBrD~@xAtAzARZXZr@bAxApAlBzARJf@^pAn@`Av@|@n@xAfANR`Ap@hB|Af@ZBD`BlA~AzAh@^|AhBp@dAHPb@r@Rb@`@l@|@hBT^LVNp@HRWm@Oi@sDsGg@aAgBwBcBuAm@m@u@i@oByAiCwBMGg@c@i@]g@c@e@[c@a@QIi@_@_@Os@i@[OwC}BgBiBwCsDsBoDe@cAqAiDeDkHq@oBS]uAqDa@y@Ws@QYMc@kBwDEUMUa@mAs@{Au@kBqBuCw@_Ae@u@oAiBg@i@eA{AY[w@iAU]m@w@oByC}AsBeAgAcA}AYa@GQi@u@g@k@m@w@w@}@_AcAa@Yu@o@y@k@y@]sAu@}@a@SGm@]QEaCiAqBy@aAm@cAU_AGWKc@[[_@i@a@e@SSS}@]m@[m@UoAq@_Bm@[Sw@SMKsBeA{@]_@Ii@UaAo@kAm@kA{@KABBhB~@PPh@R\\Rn@VZPx@Xd@Zv@^`Aj@h@HdBr@lB~@jAp@~Ap@`@XHP@FO`@MVADBLL?HM",
+    "bbox": [
+      -74.70061968082227,
+      40.30609308641291,
+      -74.62878031917775,
+      40.33895588638054
+    ],
+    "location": "princeton, nj"
+  },
+  {
+    "id": 19129963111,
+    "name": "6x6 min upper z2",
+    "type": "VirtualRide",
+    "date": "2026-06-30",
+    "start_date": "2026-06-30T21:20:34Z",
+    "distance_m": 37246.7,
+    "moving_time_s": 3643,
+    "average_speed": 10.224,
+    "average_heartrate": 147.6,
+    "elevation_gain_m": 59,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "nm_fAefcz^v@mGwBuFz@w@zCAZyEn@q@tBHnDbBTlC|B|@eAzC`AlA`I[hCyCiAwExCaDL_EgBkF_GcFMsAhAoEbEaBbAyAGmEaEkF~BeCKyCtIsT^cEs@_CgHwCaAiBOiBzIqTzCo@rBt@hAEtCcExCGrBaAh@iBA}AcDoFb@cApAu@jBXpFvIbAp@jBy@zAwEzAHtAlAHvElC|ARhAYp@{Bv@g@`AEzKsAbS~EpI^RnFj@|L}CdBj@t@jEb@tLQlCaC|CNtFr@~CbBz@bCKxGxA`BvAZhCjAdAhAi@pCuIlAsA`DrA^pCbFVrChDhCIbB{AFwCwBcBeCXmBjCcF?]Sc@wC{CiAoAfA_DlJw@^aAy@c@uCmB{AuGuAeCFsAo@u@oCQaGRy@hB}AT}Ca@yKq@}EoBy@iLxCqGe@i@oBcEoFtAkS@oKd@}@xBw@^eA]iAeCsAIyEwAoA_BO}AzE_B|@oAw@kFuIwBYwA|@]fAdDrFg@xDeB|@kDNwAtC}@j@sDq@aDp@yI~S@jBx@nBrAfA~E~Ax@fCa@zDuItTLtC_ChC|DfFLbEgA~AyDxAuAlFZrAzFbFxAbENfCg@hBaChB@|AdA|BiAxBiAt@yDZ}C[ScAjCcFpGeBzBcAv@w@X}AQiC{AaEaGiFQgArAgFxDwAhA_BKiEaEeF`CqCKwCtIsT\\gEu@yBqH}C}@uBAkBtFuLtA{EzCw@fEn@pC_EbDMnBaAf@gBEkB_DeFp@qAfAe@lB^hFrIfAt@lB_A`B}E|AVjAbAFzEhCxAVnA_@t@aC|@[t@E`LsA|RdEtFr@pBrFh@bM}C`Bl@|@tGXdLUzAkBbBQlB`@~Fr@dBdFb@jGxA~ApA\\jCnAfAdAi@rC{I`AkAlAHzAbAd@vC`FT~ClDvDu@z@yCs@cByBw@kBj@{A|BmF?o@{C_DwAsAdAeDtJkALq@{@YeCqB}AeGuAeCJcBw@w@aDMuF|BoCTmCe@oMs@yDkBs@qLxC}Fe@s@oBaEeFrAsS@iKb@eAfCaAHqBwCiBA_EgA{AyB[{AxEgB|@eAu@iFqI}Ae@cBn@q@zAbDpFa@|DqB~@cDJ}AzC{@f@wDs@cDx@kAdEeGvMFjB|@pBnH`Dt@rBe@xEoIbTLtCaCjCdExFDxD}@vAcE~AsA`FRvAfGrFxAdEJxBa@`BkCvBFdB`ApBo@zA{ApAoHZ{@e@Gs@fCaFlBiA~GcBz@y@VqAOoCoAuDqG_GI}A",
+    "bbox": [
+      166.96007197483613,
+      -11.66594906930216,
+      167.01729802516388,
+      -11.63232066942085
+    ],
+    "location": null
+  },
+  {
     "id": 19116260390,
     "name": "Afternoon Swim",
     "type": "Swim",
