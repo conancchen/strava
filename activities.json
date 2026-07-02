@@ -1,5 +1,27 @@
 [
   {
+    "id": 19144184879,
+    "name": "feels like 97 track workout of doom",
+    "type": "Run",
+    "date": "2026-07-01",
+    "start_date": "2026-07-01T23:13:49Z",
+    "distance_m": 6869.4,
+    "moving_time_s": 1824,
+    "average_speed": 3.766,
+    "average_heartrate": 176.8,
+    "elevation_gain_m": 0,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "syfuFvbsfMr@Lb@OHITe@?o@iAsEMUKISGM?MDSLILKTCb@BXHZn@fDHNXVRDb@EJGNOLg@@WKk@Ca@Uk@C_@Qw@Ue@UUQEM?]JOLQXGf@DVLZJj@l@hCGVXHPHL@^EPKV_@F_@AYy@kDWs@KOWKQAK@OHWVCd@CP?R@Nn@dCR~@TXNFV@NCNIXe@BU?WCMq@sCIk@O_@YUIAS?WFMLOVET?`@x@jDDTL^TVLDV@NGVUHSFc@?OIa@KYKk@Uw@Q}@KMUOMEQ?KBWRGHMb@?VBNXfAd@tBN^NPNHL@XIZYLa@@a@g@}BWu@Oq@UWKC]?KDOJS\\CN?h@fArEEVP@PJLD^ETOLSFOD_@Ko@c@gBMs@Me@MOOIOEO?OB[TKNGh@?Rt@vCB\\HXVb@LFJDZAXQLOHSD]CWmA_FWUUEQ?[NMPIRCVDn@^rAVpAFLiAkEjAzEJPJJPHL@TAZUHOF[@i@Ic@Sq@k@_CGMYSUC[DQNILGPEl@jA`FJLPNLD\\ARMR[H[?SGc@Mc@e@yBOk@MO]OO?UFMHQ\\ER?ZFd@n@bCLx@TZLHTBFATKLKNYHe@ASm@cC[wA[]KEOAUDKFOPK`@CXDd@d@hBDZRz@PTJJJBRBLEXOLWDQDe@CSm@{BEYW}@UU[GU@KHY`@Gl@@XACbAlENVJH^FLCTKTYDQBg@CWcAeEIOKIQIOC[DQLILGVCZDb@b@hBZ|ARXRHR@NC\\WFOFQB[Ec@a@wAY_BIOUYMEWAODMFOPIPEd@@PJj@Rp@\\`BL`@VTRH\\ELIXe@DQ?SGm@_AyDIQKKMEWA]HWTGRCZ@RfAzEHPLLLFPBNAXSLOH]BSAUg@yBG]W_AIOMKMGQCO@WJKLGNE\\@d@CAn@`CXtANTLJP@J?VKLMP_@Dc@CUaAiEIQWQME]@MFKJOZEf@BR",
+    "bbox": [
+      -74.65144797618746,
+      40.34367330725034,
+      -74.64724202381258,
+      40.34559668312511
+    ],
+    "location": "princeton, nj"
+  },
+  {
     "id": 19131151775,
     "name": "biking back from Trader Joe’s with 60lbs of groceries on my back",
     "type": "Ride",
