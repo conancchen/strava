@@ -1,5 +1,20 @@
 [
   {
+    "id": 19156324610,
+    "name": "rec swim demon",
+    "type": "Swim",
+    "date": "2026-07-02",
+    "start_date": "2026-07-02T21:17:55Z",
+    "distance_m": 3291.8,
+    "moving_time_s": 2591,
+    "average_speed": 1.27,
+    "average_heartrate": 150.3,
+    "elevation_gain_m": 0,
+    "is_race": false,
+    "has_map": false,
+    "polyline": ""
+  },
+  {
     "id": 19144184879,
     "name": "feels like 97 track workout of doom",
     "type": "Run",
