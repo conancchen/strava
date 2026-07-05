@@ -1,5 +1,27 @@
 [
   {
+    "id": 19182404472,
+    "name": "speed test",
+    "type": "Run",
+    "date": "2026-07-04",
+    "start_date": "2026-07-04T23:30:53Z",
+    "distance_m": 4038.3,
+    "moving_time_s": 1038,
+    "average_speed": 3.89,
+    "average_heartrate": 178.7,
+    "elevation_gain_m": 26,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "m~hsFbf|jMUk@}@wCa@aAm@oB]}@w@iCg@oAg@aBHJACO]Sw@Yk@k@gBu@qBe@aBu@wBMa@BDO[kCoIs@uBMs@_@sAqBwFe@gB{@_CC[QmADkAt@aAj@cBbCwDP]J[R]r@cATe@zAcCl@y@LWjAeBVg@Ze@`@w@JMFCD@DDFPr@fCXr@t@dC`@bAnA`EJVRv@t@jBXbA\\z@j@rBTh@l@lBfA|CzA~EbAnCBREjDERG@OBq@Eq@?m@GgBq@mAOU?}BI[@YDU@]Hc@Bw@X{A~@aA|@M\\KDCD[V_Ah@MLBVdBjFfAvCNh@DXf@lAl@lBn@~A`@hAJ^`@bA",
+    "bbox": [
+      -75.353632,
+      40.02496854759715,
+      -75.33257800000001,
+      40.03464130213362
+    ],
+    "location": "bryn mawr, pa"
+  },
+  {
     "id": 19163284971,
     "name": "sweating balls",
     "type": "Ride",
