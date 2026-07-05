@@ -1,5 +1,27 @@
 [
   {
+    "id": 19191292163,
+    "name": "Wawa public humiliation ritual",
+    "type": "Ride",
+    "date": "2026-07-05",
+    "start_date": "2026-07-05T11:44:19Z",
+    "distance_m": 97098.2,
+    "moving_time_s": 12005,
+    "average_speed": 8.088,
+    "average_heartrate": 151.3,
+    "elevation_gain_m": 925,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "{_isFlc}jMkB`TwGfJIfQtCzJdBjPhAdEns@nwB_L`PaExJYnF_LtB{ECuGwEoCsEaJA_JsGiUyp@{KzXaI`IyGjOiKt]pEfOmB`B}Nh\\kKcHoWqAgE|@_DdF{NdLmVpn@kOpVkR|LyFjGsNnFc[|Pc@bA|e@`qC|Ijl@rC`MfAnHQvF|BbDle@fuCzXbnAwAR{@jCLzD{BnT`@rH`Q`hAnEjLZpMhA|GfBlCnDeAYfSeK`bBx@|e@b@l@dEt_@ns@lkE|Ltg@lw@bpCb@vAr@LVtD~Ofk@H|D|Mve@ElKxBhJUdKjGhSp@b@`TkNfCk@hMro@tFpTfMpPtKrSbEvE|BnGvBjJ^pMnDpDKfNpAs@vBsFrH}FxLsDlRvDtKgAnNhE~PDrInIhJcF|HKzDeFrD}AhHLxHmJdJtCjGC`MuGdGkArHvArIvJjAX~IoIbCqEzA}FtAgKhPwTbByD`K{CnGhEnHbBnHoAhDaIqAeLVcA`\\{NlGuHvO}T~IsDtCwElEmBhOePnJgBbJ_HzW|DhE|U\\tSbC`EzXtN|S~GtDNlImBvG_MlB_JlHoQe@eOh@oGkA_KnBsJlDqHtOkDtD{E`JqQtBiBbDWnEjBrEkA`AkA`BmIhAmAtRsAxLn@zK}A`DkOdKyS`SmQzEaA~MExSsWhCuGbDuBtDqMyC_L{DgU_BiYeAw_@mc@whAcO{c@g[}x@AsAbBaAeCfAwIyWgNmR}m@}iB{AcA_TCqReDcHyCoFaGuIsEqDuDkW{@uA{ChCqOY_GmAgCyH}HcBkJyKq[yAaB}KyCsSaOcTyFaIg@eUzDqLi[_GcIuB}@mNGyMeR{Xa{@uJoSwJuWmD_@gMtGwK`A_G`D{BjEqOvEyJv@yd@p\\sD}Mk@I{eBhlA}f@iViGaJaJaI{I}PaKmXwIaGUwAb@wEo@sF|AsDWwEeJoV{CiFS{C~@aDYkCbOwKzBwRlEaJdFaPnH{LnEwCjCoD|E}RyEaDuFoNu@{H`@{FgCkIiB_TgG{[sX{n@~CoYmPuG_EmHaGqBoEyKYkFaAsD{^ql@QgD~Ac_@pIav@nHcSVaL`DiOoAmQsSbAyGiF}BuDeJIuIsGsTgq@rHwRNqL|DcQKwHpCeH`Lej@\\g\\dFoGtTmOq\\ccA~N|c@aAzE|@oGsTap@jI}FbHWh@|S_BxBeBWcBmF[kD?mImHxE|ImF~DYhAn@FrS}AhBiBWsAeEe@cPwIvGrR~j@uRuk@rIiG~GUb@lAF~Pe@lBsBj@_BaBiAkHRqHo@aB{HhHdObd@",
+    "bbox": [
+      -75.74135478862884,
+      39.87097987364073,
+      -75.26929521137114,
+      40.08801586374485
+    ],
+    "location": "newtown square, pa"
+  },
+  {
     "id": 19182404472,
     "name": "speed test",
     "type": "Run",
