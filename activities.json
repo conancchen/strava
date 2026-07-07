@@ -1,5 +1,42 @@
 [
   {
+    "id": 19207763488,
+    "name": "drizzle",
+    "type": "Run",
+    "date": "2026-07-06",
+    "start_date": "2026-07-06T22:57:02Z",
+    "distance_m": 9763.3,
+    "moving_time_s": 3300,
+    "average_speed": 2.959,
+    "average_heartrate": 158.3,
+    "elevation_gain_m": 111,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "izguF`wtfMDCFO?Wc@_Bk@{C@]HSRQTKd@[nAgAj@Wp@k@RMJE^WLOr@c@|@s@RUf@UTQhD_Ch@c@b@YPYh@[fA_An@[^Yh@[^]nBwArAs@|AiAb@a@~B}ARULG^[HE~BaBz@{@DCPYVONSpAiALQPM@CzAwArAuAf@_@b@e@\\e@x@y@LYEq@Me@Ii@Gm@IoBUoA]qAW_@{@}Am@sAYaA_@cA{@wCIi@GQIe@AUSy@SkAKs@E_AKs@Gy@GeBDuA?a@LoAAYBU@mAC_AMgAUaAs@sBGGI?INGPKp@WbAQTc@Zo@LGNCRLrA@l@H\\@jABJJnCHnDJxB?h@RzBBfBRzCB`ALvAd@|BJ^JNH\\lAxB`AvAXf@HRf@h@\\n@X\\Vj@VZFNx@dATRFEb@a@TQf@q@@SYsBMeC_@mBUw@Yq@KQ]y@QWiAeCs@iCc@eBMa@o@aD]_CCk@Ik@?[SaB?kBL}AF{ADm@CwAMgAw@mCWm@CAI@Sb@WnASj@QR[Rm@PGLDZAj@PjCAj@D\\?XD\\@f@BXH|AFdDJlBDLAXJfB?hAFj@FzADVJtBBTJ`@BZPn@Rn@LP^bAnApBNZhBbC^t@XZBJP^\\^t@jAXNtAwANS?QASa@sCCe@MqAe@aCKUeAcCIEi@eAa@gAi@_B{@kDi@qC]eCE}@[}BCm@BoBFg@NuDAy@IeA{@eDUg@EAI?KPK\\Gf@Kh@O\\[ZUNo@PGNFTA`@DV@~@FXFxA@v@RxD?hAL|B?x@DXD~@FrCFf@LvB?h@J^Dt@DJRnAV~@NVNb@bAlB`@l@T`@JLh@z@Z^DLFDDT`@d@f@bART^j@h@f@@ReAjAOHY^}BvBINID{@~@m@j@a@Xa@b@o@^oAhAs@d@wBbBSJWT_@ReAv@_@Rg@`@IFKBw@n@o@Z_@\\oBpAq@h@w@b@[\\i@\\Ub@e@Vi@`@k@ZsBzAy@b@s@r@cAv@SJ[XUHg@XMLyA`AkAbASL]ZUPMBGFV|@PlALb@",
+    "bbox": [
+      -74.66222892547206,
+      40.337725512632026,
+      -74.63260107452794,
+      40.351274312629755
+    ],
+    "location": "princeton, nj"
+  },
+  {
+    "id": 19206877482,
+    "name": "10x200 2:40",
+    "type": "Swim",
+    "date": "2026-07-06",
+    "start_date": "2026-07-06T21:22:17Z",
+    "distance_m": 3497.6,
+    "moving_time_s": 2789,
+    "average_speed": 1.254,
+    "average_heartrate": 148.8,
+    "elevation_gain_m": 0,
+    "is_race": false,
+    "has_map": false,
+    "polyline": ""
+  },
+  {
     "id": 19191292163,
     "name": "Wawa public humiliation ritual",
     "type": "Ride",
