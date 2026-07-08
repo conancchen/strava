@@ -1,5 +1,27 @@
 [
   {
+    "id": 19221987024,
+    "name": "no way we missed the dinky",
+    "type": "Run",
+    "date": "2026-07-07",
+    "start_date": "2026-07-07T23:11:53Z",
+    "distance_m": 8429,
+    "moving_time_s": 2846,
+    "average_speed": 2.962,
+    "average_heartrate": 148.4,
+    "elevation_gain_m": 46,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "ozguF`ttfMWqAS}@M}@X[Rg@h@a@^_@b@UXYfAm@d@g@zAaADGfAw@DARQj@YvB_Bp@a@X[x@i@Xa@~@o@TQDIVSv@_@p@i@ZKfA}@D?\\WTq@Lq@JMa@KGUKu@?EA@@Nn@bBX^J@BANMFCVSXO~BgB`@Wf@e@ZO`Aw@z@g@h@a@NSj@e@JQDOFI`@MJOZWf@k@bCaCDIRS`C{BrBaCT]VWpBuCdB{Bv@mA~AsBR_@|AyB~@kAFQNMx@oApBkCLWb@m@vDaFv@oAjCoDLUz@iAJQx@gAHS?QG{@FQVg@`@[\\?Z@JAf@s@JSfB{Bf@y@d@k@bBgCZ_@JQLOXg@fAwAT_@j@s@Xc@hBgCJUlBiCb@w@PQT_@jBcCJS\\k@nAeBr@y@Ta@`@i@h@{@RSl@}@Tc@PSf@w@l@u@fAaBPM`@m@j@}@f@m@j@}@VYBAPFLG|A{BNYbAuANOd@gAXiAB_@Ls@H{@DSBKLKREFO@UGEEGEWDYf@kABEVAHc@P[tDyCjAeAd@WdA_AXQl@UjAWH?XDTAPLBAHEx@An@Ij@BXL^ET@^ERGjAG`@K`@?d@Ej@AdAObAGB@JZRT\\XFNzBbARDd@FfAAZMLOLEdBT`AR`ANJAPKP]Ha@Fq@Ne@@U@Eb@e@P]BSAOMaA?OFSHIPENA\\BHC`@WTEPKx@YpAw@x@w@R]NCLJh@zADXFRHb@Fp@DNHp@Lj@@XLf@LjAf@pC?RIFC@UC[Bm@VGDMXKNER@TLXx@|@Td@J\\PfA?d@Cz@Mf@MTWTOF[CkAWMBUNIXKx@Aj@QxBMd@KJE@q@EcASM?IFER?n@I`AKjAENMFq@Es@OqCWIC_@CKEa@Ca@Is@Gi@Kq@Is@MO?IDMPANUfCElAJd@`@rA`@x@g@cAw@gCiAuAe@s@KM]Um@[g@EMGy@eAo@q@[O[?c@o@Yc@Sg@]g@G_@Q[AAMB[f@EJSFEA",
+    "bbox": [
+      -74.69245255049593,
+      40.30383801600745,
+      -74.5833774495041,
+      40.35372961589436
+    ],
+    "location": "princeton junction, nj"
+  },
+  {
     "id": 19207763488,
     "name": "drizzle",
     "type": "Run",
