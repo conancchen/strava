@@ -1,5 +1,64 @@
 [
   {
+    "id": 19236598219,
+    "name": "ran out of eggo waffles",
+    "type": "Ride",
+    "date": "2026-07-08",
+    "start_date": "2026-07-09T00:44:08Z",
+    "distance_m": 4458,
+    "moving_time_s": 730,
+    "average_speed": 6.107,
+    "average_heartrate": 139.7,
+    "elevation_gain_m": 32,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "gchuFxxtfMK@m@ZeC|@IAGEISkFoRs@qBcFcJMk@YuDIm@SaAOi@kAuBYs@Ma@mBgL_@oCECOEIB_@JQJaBlAuBrAsAbAqE|Cq@`@_DpAgAn@yAdAkHxEIBQI_@_AOE{@f@W@M]S@RXNDNCv@a@nFmDHBFDXt@NHPCpEwCvAm@JCd@Ab@Q~BwApFyDrAgAfDsBJBDHP~@`A|Gv@jEJb@nAdC\\x@Lf@XbBHt@HhBP|@`C~DvBzDxAdFb@fBfCfJ\\`@R@b@O|CqAFDHPNLH?fEuAJPNjA",
+    "bbox": [
+      -74.67147389051111,
+      40.34887267280202,
+      -74.63572610948889,
+      40.36521707279806
+    ],
+    "location": "princeton, nj"
+  },
+  {
+    "id": 19236306578,
+    "name": "20 @ 70.3 power (215-220W)",
+    "type": "VirtualRide",
+    "date": "2026-07-08",
+    "start_date": "2026-07-08T23:31:20Z",
+    "distance_m": 34245.6,
+    "moving_time_s": 3426,
+    "average_speed": 9.996,
+    "average_heartrate": 143.6,
+    "elevation_gain_m": 53,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "|z_fAasbz^cBaDaDq@s@}@sBiIx@qGqB}DE{@~@{@lCHd@gFhBs@`FlB^tCrBj@Fb@eA`Cp@nAfIQlCqCFs@aAoBIiAvCsCP_EuB_GkFkEU_BlAoEbE_B`AyAEeEcEkF~BsCK{CpIeTb@cEu@gCoFgBeA{@{@qBEyA`GqMjAmEhDy@pBr@fAAx@i@|AyC~CKvBkAb@eBEwAcDkF\\aAfAu@hAIv@b@pEpHbBtAjBaA|AyEhB^`AbA@jEpCbBVbA_@|@cC~@_@`AAtKuA`SdEpFp@lBbGj@tL{C`Bf@r@`Ed@|LMnCgBbB[bARbGx@tC|Ar@jCKtG|AxAlAZlClAdAjAq@jCmIhAsAhAHvA~@h@~C`FRnChD|CS~AyBKyBsC_BsBj@cB`CmFGm@_D_BgAcAGcAx@{ChJy@p@kAy@g@{CgBuAqGuA_CJ}Aq@w@yCQmFTeAhBcBRoCg@kMo@wD_Bu@wLzCgGg@m@iBeEmFpAeSByKd@_A`C{@XaAWcAkCyAK_FqAiAgBOaB`FaBr@gAy@gFoIu@a@oAJkBrB~ClFHvAc@hBiBdAsDTgCxDgADeCs@yCr@wAzEyF`MF|B~@nBpH|Cn@pBe@rEmIxSMhATxA{BdCV`AbDjDLfEy@tAmEfBoAdFPhAnGxFpA|DNhC_@zAkCtBFdB|@vBwAbCo@b@_F^eC_@QcAlCaFlGcB|BcAv@w@\\aBWkC_BgEuFyEUgApAiF`E_B`A{AHsBWyA}D}E~BmCKyCnIgTd@yEw@{BgFaBiA}@}@yBA_BxI}S~Co@jDr@~@g@~A}CbDMpBcAd@mBE{A_DcFh@qAlAo@jB\\fFpIbAt@|@Gz@y@~AuE|AXdAbAJxEfCvAXnA]t@eC~@]x@?rKuAhS`ElFr@rBtFl@hM}C~An@v@rF\\xJQ`DmBdBSdAXjGt@`CxAp@hCKjGvA|AfAj@bDtA~@~@q@nCuIhAmAxChAt@bDxEPjCdD|COdAw@`@oAY}B_CmAwBb@eBdCoFEm@}C_BeAeAKkAhAuC|I_Al@gAaA]kCcBwAuG{AqCFyAy@u@oDKsEZcA`BuATqCe@eMw@kEkBk@_MzCoFi@u@uByDyEpAuS@qKb@_A|Bw@^mAY_AmC}ADaDWcAcCoAeAb@iAbE{Ar@oA_AkFqI_A[iAP_BpB`DpFBfBi@~AiBz@{CFwCdEsEo@cDlA{@lDiGnNNdBdArBtGhC|@xAOpEwEvL",
+    "bbox": [
+      166.95856171476427,
+      -11.665937469482467,
+      167.01574828523576,
+      -11.632332269600925
+    ],
+    "location": null
+  },
+  {
+    "id": 19235235306,
+    "name": "30 continuous",
+    "type": "Swim",
+    "date": "2026-07-08",
+    "start_date": "2026-07-08T21:56:29Z",
+    "distance_m": 2994.7,
+    "moving_time_s": 2464,
+    "average_speed": 1.215,
+    "average_heartrate": 148,
+    "elevation_gain_m": 0,
+    "is_race": false,
+    "has_map": false,
+    "polyline": ""
+  },
+  {
     "id": 19221987024,
     "name": "no way we missed the dinky",
     "type": "Run",
