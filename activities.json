@@ -1,5 +1,20 @@
 [
   {
+    "id": 19249095025,
+    "name": "wetsuit test",
+    "type": "Swim",
+    "date": "2026-07-09",
+    "start_date": "2026-07-09T22:26:01Z",
+    "distance_m": 1828.8,
+    "moving_time_s": 1434,
+    "average_speed": 1.275,
+    "average_heartrate": 142.8,
+    "elevation_gain_m": 0,
+    "is_race": false,
+    "has_map": false,
+    "polyline": ""
+  },
+  {
     "id": 19236598219,
     "name": "ran out of eggo waffles",
     "type": "Ride",
