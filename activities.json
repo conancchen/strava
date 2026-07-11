@@ -1,5 +1,49 @@
 [
   {
+    "id": 19270465021,
+    "name": "shakeout",
+    "type": "Run",
+    "date": "2026-07-11",
+    "start_date": "2026-07-11T14:48:26Z",
+    "distance_m": 2274.1,
+    "moving_time_s": 720,
+    "average_speed": 3.158,
+    "average_heartrate": 165.2,
+    "elevation_gain_m": 13,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "ucvdGlctvMO]?[NEROP@DAb@i@@ALBTYf@c@VMz@q@r@_@~@q@f@]VKf@_@n@OBCL]HGfBgAHI\\MTUvA{@VUt@e@~@w@XM^YHCr@i@FAHQBKTGDGx@@h@C\\^DBJ@XCT?FAvBBl@EV?JIJCtCAVNTCRFDRA\\@VJJTo@KI@ICm@IIQCaAFeACg@Bq@Ao@?u@FiACg@DOASIQ?e@@KAq@@KDa@FMFQ`@[X{@f@kCjBgDvBq@h@gAn@SP?FIFUJI@_@RgBlAuA|@a@ZQHu@f@o@b@SRE@EAE?ILoAn@?JDZFPHL",
+    "bbox": [
+      -77.28655688683443,
+      42.87113994329507,
+      -77.26281311316558,
+      42.88157994329457
+    ],
+    "location": "canandaigua, ny"
+  },
+  {
+    "id": 19270020273,
+    "name": "activation",
+    "type": "Ride",
+    "date": "2026-07-11",
+    "start_date": "2026-07-11T13:37:09Z",
+    "distance_m": 25375.2,
+    "moving_time_s": 3068,
+    "average_speed": 8.271,
+    "average_heartrate": 156.7,
+    "elevation_gain_m": 215,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "k~udGletvM`DbL^bBxBnHlBzGj@fBBFRLPDPBnADdC?lELdBBlBDrCL|CZn@Jn@R~B`@fFBdAEv@KdF{@lBe@bGmBjKoDrCeAtCy@jAYlB[dJiAfBYfSoCxD_@~BOtAGpBL|JhArC^t@FdC@nPM|F@pCJdDXnF\\dEJfMd@fAJxAZt@Rt@ZzDjBp@TtBf@pBVj@Dx@BpACjEYvAGzAMrFSxDHxGZtBHnAHfBN~Ch@tFtAdPxDdAXrAf@bBt@xKpFx@d@z@^~A|@dBvA~@~@z@~@zClCv@~@fA|@TVv@h@\\`@xB|AtHvFtBtAdAv@vAz@hH|EnJjFzA`Ar@^`FzCtBlAzN|IdKfGnFrChCxA~ItFbBjAdAdAd@r@p@pAbAbC^vAdAtFt@rEd@~BXbAb@lAj@fAX`@r@r@h@b@zEfDrA`A^T|C~BnAj@|@t@~A`An@f@FNZVz@l@`Ad@nA^|EjArLjCzBj@tEfA`Cr@fA^rFnChAp@jBbAxAp@\\X`Ah@dBz@pF`CXRvAj@f@Z`@ZRRLXPRM[_@c@y@q@o@a@mEkBm@]cAc@oE{BoB}@uFeD}A{@{@a@yAe@}@SwCy@}@Q}Ac@iAYYKo@Ka@MuAWqD}@sAYwD}@iBg@_@Oc@UuD}BaGsEcD{BaFqDeBuAa@a@OUa@q@e@gAg@aB_@aBs@{D}@oFc@}BOc@y@kBoA}Be@m@aA_Ak@_@g@a@e@Si@[eAw@q@]g@a@uAy@UQoHyDsAy@{Aw@cAo@QGqBsA_@Qi@_@i@Ws@i@_Ai@s@g@gO}I_CqAqKoGw@g@kBgA}E_D_CwA_KuHuCoBeEoDgFwEsFiFm@c@gE}BoKqFwAo@qBq@mA[wFiAwBk@mCk@mCs@oEaAoAUuBQsBMmAC_AGkDO{FIaCJ_EXi@@iCPuDHoBCeAKyAYwCcAsCyAsAi@g@O_AUqAMyAI_DKeDGuFUaLs@sBImBCiB?uHF}F@aECi@EeC]mJaA{AK{@EY@{ALiADmFd@sIpAuAXuCX_QxB}Ct@_H|BmE`BoKfDkE|@eCb@{@Jy@DiA@eEGc@CgCm@kCa@iBOmAGoCI_OMKC_@_@IQwJm^uCuJ_@]I?",
+    "bbox": [
+      -77.43176989685885,
+      42.770129104620416,
+      -77.16243010314116,
+      42.888646303856625
+    ],
+    "location": "canandaigua, ny"
+  },
+  {
     "id": 19249095025,
     "name": "wetsuit test",
     "type": "Swim",
