@@ -1,5 +1,71 @@
 [
   {
+    "id": 19283943537,
+    "name": "ironman 70.3 run",
+    "type": "Run",
+    "date": "2026-07-12",
+    "start_date": "2026-07-12T13:44:55Z",
+    "distance_m": 21224.9,
+    "moving_time_s": 6290,
+    "average_speed": 3.374,
+    "average_heartrate": 175.4,
+    "elevation_gain_m": 117,
+    "is_race": true,
+    "has_map": true,
+    "polyline": "mftdGhjytMZe@yAmFWYWKGMa@}Bs@cJ}AyNIgBq@iJ{@ePi@mPKkI@oAIuD@}AGuCEoJIwBDyHHqB?kAHqABcBHKDFEh@AhAOtECbKLpKBlKHbEEdANtGRjEFzC`@|HF`CrAhSDvAj@xEn@xGn@vIXrBJR^NRZxAnF^h@~@\\LNP\\b@`BZz@|@zAnApAdAj@vAZ|AOn@LZPf@n@XP`Dv@dGpBNN@^CDY@KRFTRNnE?fCR~Ad@hBhAnApA|@dBp@tBZfBDp@TxAnAfKPNrAUrEsAjAe@vFwA`Aa@nB[xBu@~Bi@lAe@fFsALODY[eCq@cE?MLKhAEpAUbDMLVLx@h@vBN`@VRbA?THTd@PdAR\\ZHbBU^XPBNGR]JGNJz@nAD^KXe@HqDnAyNnDMMUuAWgBAq@OeAESMC_I|BeDx@sAh@{JfCaF~AmEdAOc@Ii@SqBy@}Fk@wD]uAy@wBa@q@U]kAmAiB}@oBc@sHGOSEWFWXAFMAWMOmEsAsEiAaAcAo@YWGuAJaAImAk@m@c@yA}Ay@eBu@qCMQq@Qs@q@Sc@cAsEOOa@UKQc@gCQ_De@{F{AsN{@}MEqAO_Bi@mLa@_M?{AEWB{AKoFCcFCc@A}EG}CCmF@gHTyF@oBHM@NSnFE~B@`@EbBJlLCdAHtDHbPJnHJnDZhGTpFB~AnAtRPjBB~@PjBfAnJt@dKXvAn@d@JRr@nCNx@Pb@d@j@t@TXXJRp@bC|@dBfAlAzA~@pAZzAKj@H^NdAdAfFtAvDpATNFLCXEB]HB`@NLZDjFCr@FpBh@xAx@~@|@t@|@nApC^|A@\\VxALjBz@zEZlCPTtDy@\\SpA_@hCm@zCaAtCo@|Bw@`FoA|Ak@lD}@HKDWs@kEEu@SoAFQl@M|E_@`ACHJHp@|@lD`@Tn@Cl@RN`@JbANZ\\N|AUv@VJA\\g@N?TTj@fAHf@ENQH}FvAq@VsCn@yF`BSGOi@k@eEMsAIOQAgIxB}FnBaGbBcNnDe@TECECI[q@cEg@aFw@{E_@mAg@iAkAeBw@u@mAy@wBm@iCMwDDSQGOAUFK\\IDY_@_@eGgBcASeAY]Ui@q@SK}@S_AL}@I_AW_Ag@i@a@s@aAm@oAg@qAWkAQa@iA_@g@m@sAsFUY[KMU]}Bk@_IQkASwCOO[@_@ZWr@Kb@Ar@DV|@jDdAhD",
+    "bbox": [
+      -77.00008979798395,
+      42.84759359865541,
+      -76.93692020201608,
+      42.87537559864569
+    ],
+    "location": "geneva, ny"
+  },
+  {
+    "id": 19284183201,
+    "name": "Ironman 70.3 bike",
+    "type": "Ride",
+    "date": "2026-07-12",
+    "start_date": "2026-07-12T11:03:56Z",
+    "distance_m": 90252,
+    "moving_time_s": 9515,
+    "average_speed": 9.485,
+    "average_heartrate": 159.6,
+    "elevation_gain_m": 463,
+    "is_race": true,
+    "has_map": true,
+    "polyline": "oktdGp_ytMKwA_@wAgEgNoDgOiKo^g@cC]kCMiDDsCbDem@|@yRHqFSsDk@gDgAmDqC{ESeADgArAyEpAyCx@sArBaC`DyC|NaLdHiFnCsAV]Bg@Eg@gCaJo@sAeDiFQu@Hy@vBaITcB@mBg@o^De@TMvm@oBnNo@bh@sAXOPc@vJs_@hGyX~DsTDaAOwGYs\\RoCvA}HPyB_Aat@sAylAi@yZ_@oe@fR_ThJgFhJqEnBo@bS_AzXgBlADxFbAfBDbgA}BXIR[D_AeA_cAsAccAEwLK_@MG_CAUy@_@sWi@km@QaIc@iFGeBIuMe@c\\FuDpAiFTeDb@yStCs~@Ws@yF}F{U_X{S}WmFkHyDuGsS_b@cJoTiJsPyGuJgDwDoBiAs`@oJWe@EWXyIOs@a@_@}@QmLi@cs@wEsJc@wzAiKwP_AkS}A}TsAmIo@_@MMa@AUNiG`Cex@ViLLk@`@Y~Be@hm@}RbF_AvKqAdDJdCh@pBdAbG|D`CbAhBb@jBTrHXpJLtEr@tDzAlLzHpDpB`D~@xF^rBKnDo@`Y{Gr_AcTj\\aIzB_@pCQdEJ~SfC|Nz@xNhAjHhA~i@rNvRjFjBn@lBdAdCpBpAvAvXh]xAhA~H|DhC`CvAjBvFxIfLzRrBvBzBfA~F|@rS`AjNxA`UbEbRp@rIx@fB`@`I`DfFrAfZdHbEt@xADdEKdf@kBpIPhM~@tJ\\RPFt@YhEkArXsDxaAcB~_@cJfgCc@xNJ^d@N``BjMzCTf@IPa@Dg@AsDo@uh@_BgdBL{An@eBzA{B|A{@rD]nHOtRC|X{ApnBwDblD}Hb@TdB|hCx@p{@t@~gAdBlvBGvBY`CiDvVfAnm@CpC_AvFi@bBqGfOmPhb@i`@vn@kb@pp@kD|EcB|AeBnA}EhC{ChAeD^_Uh@cCE_C]a`@gKoE_AmIDqz@vB_AJiA`@aJhFsQ`J_Bj@aBNue@nAKHGf@lDhlCDlFUt@mRvBs`@pBcq@|CgCn@yJjDoFnAmHtBcIxAwG`AuWxCiSlAuEl@aEnAmUdJyB~AgMnKmG~DkLjE{F|AuBPiCEqeDmQgnAsBec@Z_GTeEj@o\\|G_f@|IwEjAoDtAqBC[RkD`E}CnB{PlHkDz@uANeC?_Ec@{L}EyCm@uE?{ATcCt@sCdBsTrP{FlFqBjCaAnBoBlGSrADn@TbAjCvE`AvCp@jENzDEjDQhEaA`OyCvi@G|CL`E^bDd@`CjItY|D`QjGjU",
+    "bbox": [
+      -77.11333359670435,
+      42.678665174362365,
+      -76.60457640329564,
+      42.902672769120116
+    ],
+    "location": "romulus, ny"
+  },
+  {
+    "id": 19283936479,
+    "name": "ironman 70.3 swim",
+    "type": "Swim",
+    "date": "2026-07-12",
+    "start_date": "2026-07-12T10:32:36Z",
+    "distance_m": 1854.7,
+    "moving_time_s": 1653,
+    "average_speed": 1.122,
+    "average_heartrate": 149.6,
+    "elevation_gain_m": 0,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "u}sdGjoytM\\_@Ta@R_Ap@eFz@eF\\mCZuBFi@FmA`@mBh@{Ct@yFh@eDLoACi@AMYEoADm@AwCc@_@AqA@aC[kAAcBKa@?]DAv@DdBZlDJdCRzBRjFThDFfFNfCD`BPhCBx@BXC@",
+    "bbox": [
+      -76.97751028670977,
+      42.86692006015222,
+      -76.96654971329023,
+      42.871739909913856
+    ],
+    "location": "geneva, ny"
+  },
+  {
     "id": 19270465021,
     "name": "shakeout",
     "type": "Run",
