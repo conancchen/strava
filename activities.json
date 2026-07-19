@@ -1,5 +1,27 @@
 [
   {
+    "id": 19377482052,
+    "name": "damn I hate running",
+    "type": "Run",
+    "date": "2026-07-19",
+    "start_date": "2026-07-19T13:13:12Z",
+    "distance_m": 10286.8,
+    "moving_time_s": 3300,
+    "average_speed": 3.117,
+    "average_heartrate": 168.3,
+    "elevation_gain_m": 39,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "kvguF|}tfMVQB@bBp@H?NFp@V\\HPAZIZSLS\\mAZ[vBw@f@IHGb@KPKfA]TW`@oAHKd@[TKJCPFNLJLXxAHz@HJjAMRGZDTZ`@RXTLn@RTPHHHJ\\HLLD`@HPHRTL\\PXLB^BZEJEXa@TWz@g@`Aa@h@_@`@]r@c@j@i@hBkANQLGTEv@m@xA_An@m@j@YNORKVQh@g@H?VTB?f@_@ZOb@M`@WVIlCmBbBqAj@_@LMJWLMPCrA~@|Ap@FH@FATWr@Wj@Y\\Sn@I`@@ZDVRb@`AhAdD`CVZDl@F`@N\\`@l@`@lAZl@|@~B?XEl@@PFR|@tBtBzFDX@j@ErBB`@J^NZLDNETKl@g@HARNNj@`@`ANZ\\~@v@~AJf@LTXv@Vf@nBdFTlAH|@FnADfBDRBZ?t@HfCLvAHh@B\\hBbFPp@\\v@lAxDXj@RZLj@Vf@P`@b@z@Vj@Z~@f@bAr@tBFx@?h@Ht@@lALdBDhCFb@L`@^f@ZJtA\\JF\\HDBfB\\j@PrAZRHRDBBb@JLFrD`ANHVTj@l@d@t@f@`AZd@Zr@jArBT\\l@j@~A|@RNlBbADDh@Vh@LvARnAHr@Jb@@d@Hx@Cn@INGpAO|D}@TA^Kp@IPGzAOxAa@hBYbAU\\O|AoAn@a@v@o@b@Yl@g@bAk@^YTIVUXQXQJAzAaA\\[tBwAb@OPOf@UNMPEd@G^WFM?UEOQa@EWYo@o@cAe@cAgCkEcBuB_As@wAsA}AeAwAmAa@U_@]mA}@u@s@gBoASSo@e@_@Oe@YSQ]QcBsAOOe@[_@a@YUcAgAmCkDSa@g@w@a@}@[e@Me@[o@Si@k@oACMg@sAe@}@g@wAw@eBQg@Wg@[}@{AiDQg@Wm@QY_A{Bu@wAQc@EUWk@IYmAeCc@eAs@aAMWUYECe@w@{@eAgAaBaAiAe@o@ISm@{@g@k@m@_AuAeBi@}@m@q@y@kAk@g@sA}BW_@s@{@]k@OSYWkC_D_Am@c@c@m@_@wAo@_@SgBw@]M[SaAc@OMWGkCkAe@]OGE@]SaB[K?MJEXAXa@AULK@e@SW_@ISIGEBQVIXo@bB]h@o@p@kA\\",
+    "bbox": [
+      -74.72077457734399,
+      40.30501572198133,
+      -74.61669542265602,
+      40.3526221218831
+    ],
+    "location": "princeton, nj"
+  },
+  {
     "id": 19283943537,
     "name": "ironman 70.3 run",
     "type": "Run",
