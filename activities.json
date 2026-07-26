@@ -1,5 +1,27 @@
 [
   {
+    "id": 19475478057,
+    "name": "gym was closed",
+    "type": "Run",
+    "date": "2026-07-26",
+    "start_date": "2026-07-26T15:38:39Z",
+    "distance_m": 8072.4,
+    "moving_time_s": 2371,
+    "average_speed": 3.405,
+    "average_heartrate": null,
+    "elevation_gain_m": 19,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "_{fuFbutfMHj@EPP`@FZ`@MPEb@?^Kf@BHLB^NBRTF\\\\j@Rf@^RJC^LZ\\Xl@PN~@@nB{AdB}@RSDOPEhAs@vC{BNCFMP?lB{ATE\\[HSF@l@_@Z]F@\\[J?hAgAT@^Vd@]PCn@_@`@[BMVENQPGn@k@dAo@RYd@ULQJE^o@b@UZc@d@SrAkAd@M^?xAHDE`@@PJBGDJjAQj@WZ]FUPQb@{@H]FCZw@F?DUJEJ}APDJNtAfAj@HHHXCNLZ?h@P\\Zl@XFCHJfBl@ZX`Bv@R@jB~@DLj@N^DZRPXDGLPh@Zj@Xz@t@BLXT@HRLVb@RL|@bAnBjCr@nAJFAPRR\\XDNZ^VN^l@TNRh@T`@`AhAdAxAHRbBjBBTDCdB|BRh@XP|AzBFPVTZh@\\RALXXJb@JJf@|@@Nj@fABf@LJDTTRLZBNX^@LLJN^^\\@NNTFb@Vz@NT@JPFFN?NHHPt@F@Jp@NHLd@NJ@TJFA^XVl@zAR@@VJRAN^t@BPJRNF?HRd@FZj@`A@V\\fAXd@H?FNHd@Nb@NB@TVXP\\Rj@t@lAXLDR`@f@JALNJj@LDVZP@Bf@SQEQaA_BeA{@K]c@g@_@u@KGWcAa@k@Og@]u@CWOIWg@G[KEGWGAQYGg@e@{@AUQWe@W@SGi@EC]_A@GICCSGKG@GSSY?]Sk@Yi@GQBMIE]{@OOYw@MEWq@?Mc@{@CQGAOW?SQa@MKK_@i@gACSa@k@I[KIY_Ai@gAQSCO_@QAKK@GODWU]QGUWK[[WGU_@]m@s@Qa@U_@[UGOMCASe@o@c@]CQGCM]{@_AG?kAwBq@o@Ym@YUQc@Yc@I@QU@EQI[a@i@aAc@e@Um@]Y?MgAgAAMa@[MUa@]w@eAe@c@I@}@{@S?GOu@UOQWAy@a@y@k@WE}@k@UC[UM?sAu@{@KaAy@yAc@GII@KK[Be@MGKCFQS]OW_@KAe@xAe@L]fAa@bAcAlAUHIEILw@L_A@o@MGFqAK_@Fk@TCNg@\\}@~@q@`@Wf@_@TwAjAe@Ri@h@M?CPUFi@j@SHGTIGq@Zu@TMPSDeAx@[L{ApAoAr@QXWH",
+    "bbox": [
+      -74.69985899722327,
+      40.31315344485106,
+      -74.62517100277674,
+      40.347315444814775
+    ],
+    "location": "princeton, nj"
+  },
+  {
     "id": 19377482052,
     "name": "damn I hate running",
     "type": "Run",
