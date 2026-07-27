@@ -1,5 +1,20 @@
 [
   {
+    "id": 19485192537,
+    "name": "first full practice since January",
+    "type": "Swim",
+    "date": "2026-07-27",
+    "start_date": "2026-07-27T11:01:39Z",
+    "distance_m": 5000,
+    "moving_time_s": 4500,
+    "average_speed": 1.111,
+    "average_heartrate": null,
+    "elevation_gain_m": 0,
+    "is_race": false,
+    "has_map": false,
+    "polyline": ""
+  },
+  {
     "id": 19475478057,
     "name": "gym was closed",
     "type": "Run",
