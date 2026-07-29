@@ -1,5 +1,20 @@
 [
   {
+    "id": 19514233671,
+    "name": "Morning Swim",
+    "type": "Swim",
+    "date": "2026-07-29",
+    "start_date": "2026-07-29T11:25:00Z",
+    "distance_m": 3657.6,
+    "moving_time_s": 3600,
+    "average_speed": 1.016,
+    "average_heartrate": null,
+    "elevation_gain_m": 0,
+    "is_race": false,
+    "has_map": false,
+    "polyline": ""
+  },
+  {
     "id": 19485192537,
     "name": "first full practice since January",
     "type": "Swim",
