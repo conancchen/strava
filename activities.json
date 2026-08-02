@@ -1,5 +1,27 @@
 [
   {
+    "id": 19572475239,
+    "name": "dunkin donuts",
+    "type": "Ride",
+    "date": "2026-08-02",
+    "start_date": "2026-08-02T13:06:39Z",
+    "distance_m": 72558.7,
+    "moving_time_s": 9035,
+    "average_speed": 8.031,
+    "average_heartrate": 159.1,
+    "elevation_gain_m": 653.8,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "u~hsFhe|jM}Uct@uLw]{EyL_EqDkBeKwAaOgBeH{w@ni@iQvAcD}@yEeDeAMiP~LiYvI{AWyIeKoOg^m@aEBoIUoBaUqs@c@yCrBqLLeGeC}RcBsHaDcEaUuTMgAhAaBjApAe@vD_DbLmE|HoIhM{DnEyBhBgBd@_ExDqExC{GvB_QrBeQhEw^bDgUg@y_@aCoIl@uElBkF~E}ChGqDzMi@xC^l@^SSmAsAAmFpZ{HpXuD|QiObm@u@bFqGtUg@FUkAe@Is@pCuIffAq@nr@i@rNy@bJoGlc@g@xHQtgAjDl]hIt^tSrd@rBlGbQvcAvBhBMp@^~Gs@{JmA[z@zJQpMgBfKkFvQ{@dGc@hHXhmA~@zRe@lMaAnEkAlCgIrH_H`BaNKiPdFSOdGuCNNLxFaArOFxGQxA_Bl@qG{AyKo@{BJ}CxAiF~HyCxHgHn]wAnDeBdCiAbJFxDhCpPlC~FvCzLcInNLjAbCdCVnCLjK~@pKKvYoDpFuDfI`@bCEt@m_@vy@mE`GFdClGrSmAjAR~Fz@pGqDjK?zHc@lCjI|TpFnIbA`EJjDu@vBwCxAqH~AkGd@iL|J[rORnJeFraAoBpOXzE^`@h@We@jA|D|Rj@nGwDhNg@jFNfBfCzI^nPaFlX}FfMdAhCYjFfEvEpGxEl[bLt@pAl@zDt@x@hIdCvIB_CbNwBhE}@dD_AdMfE|NdL|U|BpNf@zKpA~ElChFnj@xh@`PxJ`ItDhBR`Di@hPyKvIoA|Gx@dA[Z_BqGs[dMgYvAu@h@_Mm@yFHcH{@iH`HmL|DcLdEqHjBgWeByOpBoEfHyJe@uAf@kKmH{UeAmHqEuRhL{S~GaCnDyCrAsC|AiGwBwF}CcFsAsHFmHa@_E@uCpC{Yg@qLkAiJ}ByJcLiU_UcSeTqJmCqBoAgDh@kJWwEcFcFkFiAtOq[~C{L|@gRlGKnRg^qBg[r@oCbFiLAeP~@}KjByLCsK\\gJbAgJ|@cDtMcZBuDu@_Jl@gEy@wHBwElJs[`@{BEaGmAmEwB_YSyELiEd@_@tF?fE|@fDkAx@uApAeFx@{GfBgHfAyBbA{@bBKvC|@tF`@tDCfNk@bHoBxBsIVoFMwGiC_NXsBll@o_@n[eUAkAyTov@U_CvCiAnEhBhIeAr@}@dB{Gl@cAte@eXpMyEbEcFrSwMdNcT~Mw[rHqToTgr@{Cu]rSwC~CiAb`@mQpTeOtWf@pNyBjOoG~FwAtK{Wf@yLvDoQKcIvCgHnKoi@FmX^aC~EcGzMkJ",
+    "bbox": [
+      -75.628994,
+      40.00450229785141,
+      -75.28267600000001,
+      40.163483191188945
+    ],
+    "location": "malvern, pa"
+  },
+  {
     "id": 19514233671,
     "name": "Morning Swim",
     "type": "Swim",
