@@ -1,5 +1,27 @@
 [
   {
+    "id": 19659086810,
+    "name": "agentic ai founder startup bro",
+    "type": "Run",
+    "date": "2026-08-08",
+    "start_date": "2026-08-08T16:55:47Z",
+    "distance_m": 20263.3,
+    "moving_time_s": 6448,
+    "average_speed": 3.143,
+    "average_heartrate": 168.2,
+    "elevation_gain_m": 153,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "wrleFdpbjVHfB]`@K\\YDyMn@kAAeSbAs@Nw@IkKd@y@T{BLiCEaBPw@]w@JO}ABsAQmD@gCUqEBw@QkF@oAW}GJeASiBSuE?qD[_IQcLgAw@aCN{@[Ku@DyAWgFHWAi@m@wNIm@?}Ae@EDy@eCOw@u@oBcD}@Ig@aCCwBMSmAR}DHeAe@i@Iq@JoB|@kGlBoDNoAIwHd@_BGYLMf@\\tB^hA@d@O`EOZiA~@m@RUSaAsCoBwHyAiASEkM`@qC|@i@IqCDqBWc@]WX_B@yFa@mLc@_EPaE|@}AtAo@\\[bAuCxD[@_@s@]Ck@VsB~BsD`Fk@h@}@xAsAbAkAhAkAhByB`CiBtA{B|AiEpEuAbAoCpCyGdF{BvBsIhHyB`Bs@x@e@XQ^yCfCcCxD_@XkA`BmB|C]p@c@tAc@n@aArCq@bAw@dBI`Ac@nBgBbGUb@QdEMLoA_@qJvE`@[f@MjE_C|B`@[`EZ`@B\\Ev@]tAOfBJb@A|AFVCnAaAl@A|@Lb@\\`@Dj@AV]v@E|AD@De@TYjADp@MNFNZVlFl@lGHjEh@jE@jDNb@BhALAHx@|BzEXz@NrA?`BcA~Fe@r@w@h@qBb@_@`@GRNnAMdC@tAxBhDJ\\r@j@lA\\~@Dv@~@^Hx@IZNR\\p@lCX^TBVt@K|@[l@a@RKd@ZzESt@FbAgG~KSlAdAdQf@jFB~Ah@fJjA|Oh@zJkALiAh@e@h@y@vAEd@HbBf@zBXxCB~At@xK`@`B\\~Bf@lJf@fIf@pHn@dIDnAErBXvNQ`F{@bHwA|CoChE_D|AiBfAiCnCeAhBQAyBuA[]Fk@^}@i@|A\\^hCzAb@lAQv@k@~@Ph@t@T@`@Td@If@a@TVLBTk@f@?V\\Fn@aANC\\`@XfAGb@u@`Be@bDAdAIPu@\\Y`AVz@v@tA`@jAb@\\XSAPUJ]YwAqD?ULQPTj@nA?JuBhByCdAyDNuTtASOYNNMTJb[oBtA]`Ae@nBeB?M]e@Iw@e@RP~@QQ_@kADo@|@q@RWLoBj@kC`@gAhBeC~AeEd@If@aAdAmEAm@DUb@k@`@QfAGvAPl@QXYh@eB`B}Af@eBDUEk@_@m@I[N_@P}CViBhB_\\",
+    "bbox": [
+      -122.5069758254754,
+      37.747967807442045,
+      -122.35714417452465,
+      37.819017806975495
+    ],
+    "location": "san francisco, ca"
+  },
+  {
     "id": 19628300546,
     "name": "mud",
     "type": "Ride",
