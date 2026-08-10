@@ -1,5 +1,27 @@
 [
   {
+    "id": 19674556835,
+    "name": "hike with dev",
+    "type": "Hike",
+    "date": "2026-08-09",
+    "start_date": "2026-08-09T21:01:29Z",
+    "distance_m": 10238.2,
+    "moving_time_s": 5817,
+    "average_speed": 1.76,
+    "average_heartrate": null,
+    "elevation_gain_m": 167,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "crveFplpjVWWESKQQG?GECLe@?DP@B?E?DIDRHEIGBAE]KKYEGLWFMF?F_@YM?e@X@FGKVQIW@I[IGQKDgAo@c@Rm@~@eAh@aC?g@Oq@@EFcA[MTWDa@s@Ow@[WEWIM@MG[LKJJJb@\\d@CPq@t@SLYXWJEHo@XsAX?DWCe@Bk@J{CLiARiA?kBFeAPaDJ_BTu@FCOKKKNc@Pg@FGIs@BOJMI_@DSImAFm@NWEOHWAWHSISH?G]Ls@D[AFBCHo@?c@EWHcA?SHa@?_@JOEOHc@GBFO@OK[LkAHCF_@A_BNSI[Jw@Da@EUDOJMGCFm@Hc@Ck@HEA?GUJqAHEFWEeBFk@FCFGED@GA?D~t@{}Bqu@t}BaDZkACOPaAAoAPYE_@DI[OL?NWH[C_ALgCDcAPU@@GAHSGWL]HMG[DAGiCJDAAHDCGC]TMS_BFgBTMHaELgAPSLICgAb@gAt@ECeAhAQ@Y]l@qANGCQDHOCW^WJ_@EOJFAIFJFKHLFEJJSHb@VCd@N]GDYLGHHFNIQGHCr@LGAD@B?Gb@|@@EGE@SCHDPOAEPB?EEILGd@EHE^@LV@FLFh@@pA`@b@Np@d@V\\x@l@RfAf@sAJIEKJs@?i@IbAr@r@XvAX|A@d@OpAoBZWlAe@Zc@jAyCvC_@j@sA^SJMJ@HQECD@?G?DBEBDMCAICH?ID@CDFHE@LGAEJAODALUDe@^a@dAQPSFKCWPc@Ew@JEx@CMFKGA?KU~@Sf@SRUn@DTULYb@a@OIOURHOD@[VaAzAc@XcBAwASuBeAOCGFIIDCQOaA[}@Ha@NSGEMFUXa@Pg@Lq@Ak@Ti@Zk@Jc@RWLwAVU?KJIEk@Og@Q?JKMIKNEEANGBBFLHT?LUXOBId@[RUhBy@Z?DGjAYjAEHGFBz@Cb@KdAADGXBr@ORDnAIDFJKPFlAKTGNDRIHFh@OzAC`@Md@@nAMDFJAdBMB[TDPPjAMTD^CzASHFTMv@?PK`@C^@DFHM|@Df@MxAGPI`CMdCCTONFbAMVDfCOFGnAE\\B^Mt@ALFnB_@t@JdASn@@NGrDSTIVDnDWdAAZIjACVG@IlALAEJ?EAj@@rBYrIc@XI`@DtC[|@DvB]`Bo@bAw@r@{@e@q@Ic@GCKBANJPRhAJV^b@CLBP\\Pl@YbANZAz@R|BGbAc@l@s@FSRMf@Ln@h@l@J",
+    "bbox": [
+      -122.50704971899268,
+      37.801684301366976,
+      -122.43561028100738,
+      37.83554470131666
+    ],
+    "location": "san francisco, ca"
+  },
+  {
     "id": 19659086810,
     "name": "agentic ai founder startup bro",
     "type": "Run",
