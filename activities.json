@@ -1,5 +1,27 @@
 [
   {
+    "id": 19689957096,
+    "name": "pre redeye shakeout",
+    "type": "Run",
+    "date": "2026-08-10",
+    "start_date": "2026-08-11T02:48:49Z",
+    "distance_m": 5347.1,
+    "moving_time_s": 1651,
+    "average_speed": 3.239,
+    "average_heartrate": 165.2,
+    "elevation_gain_m": 141,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "eoleFpbbjVDELEt@MRBFJ@FJvA?v@Hv@AV@j@CPCd@NLBJ?JFPFHLBPADzBVzGANBx@DTJBTAhAIxBMP@VEz@GNBf@E`CIb@GN@r@CJ?DBFHVl@`@pALj@^`AJ`@BT@`@Ah@FXBjAAtALpBLzFBPFNH@^G|@DNEVCN@JETCHDDHZEV?h@GZAVBfAKtAEx@Ih@UJ?HDN@FE@KD{AXw@?U@E@?Nl@DJNHDJD`@Ab@IVIL[`AUh@Uz@}@bFE`@@FCt@R^d@ZFHTPPVTj@TVVPND`@@j@PHDRZVTNBf@GLL^m@F]Fq@Ec@Ua@QQSg@AMBu@AWGSs@s@k@qAEIKG]KQJEJ?TFRj@^QIYBC?MRCF?zAEMEe@BUPe@FIRAFGOEKKGO@Q@GJOLEDALBPLFJh@nAj@h@LNDV@VAn@DRPJD?HE@SIiBMk@c@oAGaADiAP{A?_@R_B@o@UmBGkBAoBEaAIg@Sa@]Si@MIEQAGDDCBm@?i@EWEEE?OFEH?l@CNITq@`A[ZODM?{ALO?EAi@DS?WBy@BYFWEc@Do@?o@HaBB{@LMEKMMGi@WYYGOCg@Mm@]{@u@oCKAi@JGA@k@CCkAHaABg@CqAPi@@w@HoAFs@Bq@A[Fi@AwABQDuAJQ?}@LECI]D_CGgAEiBE_@?_BG_AKs@CsAEg@?GFOZE?CYMIKCEIiACo@BMLGVAX@PC",
+    "bbox": [
+      -122.42421553532871,
+      37.74113352833722,
+      -122.39712446467132,
+      37.75398632833446
+    ],
+    "location": "san francisco, ca"
+  },
+  {
     "id": 19674556835,
     "name": "hike with dev",
     "type": "Hike",
