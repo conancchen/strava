@@ -1,5 +1,27 @@
 [
   {
+    "id": 19743225062,
+    "name": "reclamation",
+    "type": "Ride",
+    "date": "2026-08-14",
+    "start_date": "2026-08-14T19:38:50Z",
+    "distance_m": 8676,
+    "moving_time_s": 1157,
+    "average_speed": 7.499,
+    "average_heartrate": null,
+    "elevation_gain_m": 77,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "aaisFd_|jMwIuWyAgEaBkFG[@MDMHE^Ql@_@fA_AxAgAr@]r@Ub@Kx@IjAGx@@NDPHV^FR@f@EbBAdCOlCDjANtA?n@I`@Q^YV_@TQFS@g@GQIQOMQUm@e@aBOm@SwAKsAAg@B}@RwBBe@Cc@Iu@BQFKLGZGx@?j@KN?`ADNDNJPf@@R?zC@fBEvDBd@TtA?XIh@Uf@WTi@Xa@FQAa@OMO_@y@i@gBMk@_@aCGm@?o@@k@TaC@e@Gy@Q_@KIMEK@q@^k@b@}AvAGFKRqAbAnA_Ab@_@zBaBh@[f@Sj@Oj@KxAIl@?j@DPBNJFPDZBr@ApCGtFBx@NrA?XCXUr@OTQNWLWDYBYCUKSWMY{@uCa@{BI{@A}@B}@TwC?[A[Mq@KOOIMD_An@mA`AY\\}BdBOFG?GEOm@oCeICM?MDOHIb@YXOLCZDd@Td@JLLTh@RPLBZCLGRSFM@M?SAMc@mAQw@[{@KQWSUIS?QF]ZSZIRIb@AVHv@NR`@XVH^FFFJd@HNLJP@\\IVOHODm@E_@gAeDOYUQUGW@k@`@_@p@Gj@C|@MX[Z]RMBU?Lf@ATEJmBlAq@\\k@^UZMb@Kv@G|@{@vISlCGxBQdCIpCEp@EVSh@[b@OLSHS@i@Ce@KOKu@w@[UKEUCcBqC?DH\\JZd@x@LJNHt@PPLr@r@PLTHj@JT@T?RGNIZ]JULm@LuEVyEVsDnAmMDQR[`BcAzAoAPIJ@JPdCrHrCpIDP?NEJGHaAf@QB[@mBYSAI@GDIRMzA@r@~@fBJd@?TGf@IfBB`@J^JTNPPLRF^Az@SZEJ@XFVRFJd@bAHBNC\\SJOHSBWCoAFq@FUHQLILC",
+    "bbox": [
+      -75.35665914042575,
+      40.0272327559449,
+      -75.33560085957427,
+      40.036907155944036
+    ],
+    "location": "villanova, pa"
+  },
+  {
     "id": 19729071716,
     "name": "these tan lines are getting rlly bad",
     "type": "Ride",
