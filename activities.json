@@ -1,5 +1,27 @@
 [
   {
+    "id": 19786250223,
+    "name": "rewatching shang-chi",
+    "type": "VirtualRide",
+    "date": "2026-08-17",
+    "start_date": "2026-08-17T22:14:41Z",
+    "distance_m": 36186.5,
+    "moving_time_s": 3641,
+    "average_speed": 9.939,
+    "average_heartrate": 141.7,
+    "elevation_gain_m": 56,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "zz_fA}rbz^}AaDeDu@w@mAoB{Ht@wGoB}DCu@|@w@tC@b@eF~Am@~EdB^h@@jB|Bv@aAbDp@hAfIQpCuCgAiFzCsCHgEoBsFoFmESaBrAsEdEaBz@{AG}DuDaEKu@vBwBG_DfIsSn@oEm@mC{HkDu@}AOiBpIeT`Dy@vDr@z@e@dBaD`DKjB_Af@cBAgBcDgFbBuBbCVbH`K|@Az@u@|AyEfBT`A|@L~EjCxAVdASt@_Cx@k@`ACnKsAxSzDbFx@xBxFh@|L{ChBt@t@zFZzLWzAmBdBMnB\\jFt@pBfFb@fGtA`BpA`@rCvAdA`Au@hCiIlAuA`DnAl@|CbFTbCbDbEk@r@iAJkBaAwAeBm@uBp@wAxBoFCm@}CcDsAcAt@}CjJ{@r@iAw@o@gD{AgAyKmAqAi@w@sB[eFJiBdB{A^cB[iM{@aGwBo@mLxC}Fi@g@iBcEgFpA{S@aKf@iAbC}@T}@]kAiCyAK}EmAaA_BUaBxEcB`AqA}@gFoIwBWoAr@e@jAdDvFa@rDqBdAeDLsCbEcEs@qCn@}IhTJvB~@hBfHzCv@rBg@|EoIdTH|C{BdC~DbFJhEiA~AyDvAqA`FXzA~FhFxAlEJ|Be@`BeCpBBxAbAvBkA~BeAp@wD\\_D[QkAdCwErKmDt@u@X{AWwCsAsD}FgFUsAhAuEnEmBz@{AMgE}DgFzB_CIaDlI}Sf@sEm@{BcIsDs@eBCmBrIwSpCs@jEn@pCaEfDMhB}@h@cBCkB_DqFzBsBhB`@~EdIpA`ArBgApAmE`BNlAfAJzElCzARdAUr@gC~@a@`AAfKuAvSxEbIf@\\lFh@fM}CzAh@p@~Dd@dMMfCoBhBU`ARtF|@~CxAp@fCKvG|AxAhA`@rCjAdAjAo@nCuIhAmA|CjAh@zCfFX~B`DbDM|AiB?}BuBeBmC\\uBhCeECm@U_@oCcDoAkAhA}CjJw@^gA_Ac@sCiBwAwGuAmE_@s@iB_@sFH}ApBmBVcB[_My@_GgBu@uL|CaGg@s@qB_E_FrA{SBkKh@aA~B}@Ty@YiAoCcBGsEgAcAoBQ}AxEeBz@mAaAaFgIqB_@{Az@c@lAbDnF?dBi@zAsB|@oCB_DfE_Eq@_Dx@qIdTD~Av@hBnAhAvFpBb@`Dk@jDgIrSJ|C_CjC`EhFF`Ey@tAiEhBqAfFTjAdGpFvA~DHzC_@lAgCrBF`B~@hB]pAoBfB{F\\",
+    "bbox": [
+      166.9585417147643,
+      -11.665937469482467,
+      167.01572828523578,
+      -11.632332269600925
+    ],
+    "location": null
+  },
+  {
     "id": 19754184399,
     "name": "thanos",
     "type": "Ride",
