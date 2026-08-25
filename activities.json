@@ -1,5 +1,27 @@
 [
   {
+    "id": 19885543329,
+    "name": "Evening Ride",
+    "type": "Ride",
+    "date": "2026-08-24",
+    "start_date": "2026-08-24T22:37:27Z",
+    "distance_m": 37162.8,
+    "moving_time_s": 4405,
+    "average_speed": 8.437,
+    "average_heartrate": 154.3,
+    "elevation_gain_m": 92,
+    "is_race": false,
+    "has_map": true,
+    "polyline": "o{qsFpdtjMaAbByAjBwDvH{@xAgArAgDjDw@j@}AXeD`DqDjC_Bx@eDnA}E|@iF`@_Fr@gQbEcNrAeFXuEl@uBLoFKqF_@oEIsFY_OiAyJa@uEn@mDpAsA|@{CpCe@XiBfDqAdDeDtMWnA?`@L\\RPJALUBQCUW[]Mi@FSbBkBdJyBlLiEbP_BbFOr@QnBwB~H_@jCuHxX}AhIyBbIIt@WbAQ|AaA`DeEjPQ\\YHSOEw@OUUEYZa@xB]rC_AhNy@vIc@vGw@fJaB|TWzJCtLSnUShJUfE{@jJ{B~OmCdQYdCQhCE~AEjg@Ih[DpDTfDXxCdCbSp@hDbGxVd@xA|BhGjM~WlArCpAjER|@dAtFbC`Pl@vC|@lGrA~GrBhMPb@`AjHJx@P`ED|CElD[tE{@xF_GrR}@nF_@pEKnDRt[?fDExA?pKDlCCjAD|RHhEp@fJHlCIlEW~DQnA_@lBmAbDgA`BkCjCcBlAy@b@yBt@sBZyCDeD[{BDyAN{Bx@tC_A|@I\\DfAl@hBn@hBXbDIpCg@d@A@pAOJmAR[E[w@UOkBHeB?oA[wAg@sAu@mABaB\\fB[|@AzDbBfBX~BIbFq@HHBVO~AeHrA}AGg@Mi@]aDiDg@Wi@G{@N}IdCaBj@oAfAaAG{@dAq@Vc@AMSBUrCwAf@MJFa@Pk@bAa@Z}@VSIEKHSTOxCyAv@@ZGrJoCnCcAz@KbCCdDZ~B@rBWlBe@z@]dAq@tAeAtAqAfBaCdAeC`@_B^yB\\qFFmDIyCq@kKKkEIcO@kDGgDFeCMsJD{GHoAMyI?oJ`@sGl@gElAcFhB}F~A}F`A{F\\yEBaEGsCe@oFq@yDAk@SwAeBwJWwBcGm\\wCiQgAsDy@yBqM}X{C_He@{Ao@eC}A}HkBkHo@{Ck@wDKyAWeB_AkIc@iFIkBA_JFyHFkg@EqFJeFf@qFlG{b@l@{F`@mHLgEXs[D}KRsJdBaT~@qM~AaRn@kJp@wFTiAPa@f@GVrA\\JJI~DiOvA{EHqAVoAFs@~BuI~AeIjHyWn@}DdBmG\\wChCsIlDsMtEoVZmCLKRCTLHLHb@Gh@OBOQE[D_@PaA|CiLfB{EhAoBjA{AxDyC~BkApBq@pD_@|C@f]|B`KTdBNhGAtDc@zH_@|NoAxQsE|Di@lGi@|Dq@|CgAbBy@rCgB|@w@lCqCZQfAUb@YrBkBfDsDrFiJpA{AhC_FdAeBtAkDvAwF\\wCAKm@nEc@zA",
+    "bbox": [
+      -75.468624,
+      40.057157123709665,
+      -75.295146,
+      40.13677887688079
+    ],
+    "location": "king of prussia, pa"
+  },
+  {
     "id": 19822367426,
     "name": "hour of power",
     "type": "Ride",
