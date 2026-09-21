@@ -1,181 +1,473 @@
+/**************/
+/* THEME      */
+/**************/
+/* Dark is the default; the toggle opts into light and remembers the choice */
 :root {
-  --bg: #fafaf8;
-  --surface: #ffffff;
-  --text: #1a1a1a;
-  --muted: #888;
-  --border: rgba(0, 0, 0, 0.08);
+  color-scheme: dark;
+  --bg: #202020;
+  --text: #f2f2f0;
+  --muted: #8a8a8a;
+  --rule: #3a3a3a;
+  --link: #9a9a98;
+  --underline: #55554f;
+  --race: #fc4c02;
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #111;
-    --surface: #1a1a1a;
-    --text: #f0f0f0;
-    --muted: #888;
-    --border: rgba(255, 255, 255, 0.1);
-  }
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #ffffff;
+  --text: #16150f;
+  --muted: #8a8a8a;
+  --rule: #e0dfdb;
+  --link: #6f6e6a;
+  --underline: #d3d2ce;
+  --race: #d84302;
 }
-* { box-sizing: border-box; }
+
+/**************/
+/* BASE       */
+/**************/
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  padding: 3rem 1.5rem 5rem;
-  background: var(--bg);
+  background-color: var(--bg);
   color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.6;
 }
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-header {
-  margin-bottom: 2.5rem;
-}
-.back,
-.back:visited,
-.back:hover,
-.back:active {
-  display: inline-block;
-  font-size: 12px;
-  color: var(--muted);
+
+a {
+  color: var(--link);
   text-decoration: none;
-  margin-bottom: 1rem;
+  transition: opacity 0.15s ease;
 }
-.back:hover {
-  color: var(--text);
+
+a:hover,
+a:focus {
+  opacity: 0.7;
 }
-h1 {
-  font-size: 18px;
-  font-weight: 500;
-  margin: 0 0 0.25rem;
+
+/**************/
+/* LAYOUT     */
+/**************/
+.page {
+  width: 100%;
+  max-width: 580px;
+  margin: 0 auto;
+  padding: 64px 24px 48px;
 }
-.sub {
-  color: var(--muted);
-  font-size: 13px;
+
+.header {
+  padding-top: 13px;
+  margin-bottom: 16px;
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.header h1 {
+  font-size: 14px;
+  font-weight: 400;
   margin: 0;
 }
-.plain-link,
-.plain-link:link,
-.plain-link:visited,
-.plain-link:hover,
-.plain-link:active,
-.plain-link:focus {
-  color: #fff;
-  font-weight: 700;
-  text-decoration: none;
-}
-.controls {
-  margin-bottom: 1.5rem;
-}
-.switch {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-  font-size: 13px;
-  color: var(--muted);
-  user-select: none;
-}
-.switch input {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-}
-.switch-track {
-  position: relative;
-  display: inline-block;
-  width: 38px;
-  height: 22px;
-  background: var(--border);
-  border-radius: 11px;
-  transition: background 0.25s ease;
-}
-.switch-thumb {
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 18px;
-  height: 18px;
-  background: #fff;
-  border-radius: 50%;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
-  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.switch input:checked + .switch-track {
-  background: #fc4c02;
-}
-.switch input:checked + .switch-track .switch-thumb {
-  transform: translateX(16px);
-}
-.switch input:checked ~ .switch-label {
+
+/* The name is a button that replays the title animation, not a link */
+.home-link {
+  font: inherit;
   color: var(--text);
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
 }
-.switch input:focus-visible + .switch-track {
-  outline: 2px solid var(--muted);
-  outline-offset: 2px;
+
+/* A click shouldn't leave a focus ring behind; a keyboard tab still should */
+.home-link:focus:not(:focus-visible),
+.filter:focus:not(:focus-visible),
+.icon-button:focus:not(:focus-visible),
+.entry > summary:focus:not(:focus-visible) {
+  outline: none;
 }
-.grid.races-only .card:not(.race) {
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.icon-button {
+  display: inline-flex;
+  background: transparent;
+  border: none;
+  padding: 4px;
+  margin: 0;
+  line-height: 0;
+  color: var(--muted);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.icon-button:hover {
+  color: var(--text);
+  opacity: 1;
+}
+
+.icon-sun,
+.icon-moon {
   display: none;
 }
-::view-transition-old(root),
-::view-transition-new(root) {
-  animation-duration: 0.25s;
-  animation-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+
+:root:not([data-theme="light"]) #theme-toggle .icon-sun {
+  display: block;
 }
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1rem;
+
+:root[data-theme="light"] #theme-toggle .icon-moon {
+  display: block;
 }
-.card {
-  background: var(--surface);
-  border: 0.5px solid var(--border);
-  border-radius: 10px;
-  overflow: hidden;
-  text-decoration: none;
-  color: inherit;
+
+/* Sits under the title at the same size, in muted gray */
+.subtitle {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+}
+
+/**************/
+/* FILTERS    */
+/**************/
+.filters {
   display: flex;
-  flex-direction: column;
-  transition: transform 0.1s ease;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 10px;
+  margin: 28px 0 0;
 }
-.card.race:hover {
-  transform: translateY(-1px);
+
+.filter[data-year] {
+  font-size: 13px;
 }
-.card.race {
-  border-color: #fc4c02;
-  box-shadow: 0 0 0 1px #fc4c02;
+
+/* Sets one group of filters apart from the next */
+.filter-gap {
+  width: 8px;
 }
-.race-badge {
-  display: inline-block;
-  font-size: 10px;
-  font-weight: 600;
+
+.filter-icon {
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+  padding: 0;
+  text-decoration: none;
+  align-self: center;
+}
+
+.filter-icon.is-on {
+  color: var(--text);
+}
+
+.filter {
+  font: inherit;
+  color: var(--muted);
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--rule);
+}
+
+.filter:hover {
+  color: var(--text);
+}
+
+.filter.is-on {
+  color: var(--text);
+  text-decoration-color: var(--underline);
+}
+
+/**************/
+/* MILEAGE    */
+/**************/
+/* Red / green / blue from the data-viz reference palette, stepped per surface
+   and checked with its validator. Red against green is the pair that defeats
+   colour-blind readers, so the light steps are pushed apart until they clear
+   the separation threshold on their own — no dashes needed. */
+:root {
+  --series-run: #e66767;
+  --series-bike: #008300;
+  --series-swim: #3987e5;
+}
+
+:root[data-theme="light"] {
+  --series-run: #e8605f;
+  --series-bike: #006e00;
+  --series-swim: #2a78d6;
+}
+
+.year-stats:not(:empty) {
+  margin: 24px 0 10px;
+}
+
+.chart-keys {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.key {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.key-line {
+  overflow: visible;
+  flex-shrink: 0;
+}
+
+.key-line path {
+  stroke-width: 2;
+  fill: none;
+}
+
+.key-value {
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+.chart-plot {
+  position: relative;
+  margin-top: 10px;
+}
+
+.chart {
+  display: block;
+  width: 100%;
+  height: 112px;
+  overflow: visible;
+}
+
+.axis {
+  stroke: var(--rule);
+  stroke-width: 1;
+  fill: none;
+}
+
+.axis-top {
+  stroke-dasharray: 2 4;
+}
+
+.line {
+  fill: none;
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.line-run,
+.key-run .key-line path { stroke: var(--series-run); }
+
+.line-bike,
+.key-bike .key-line path { stroke: var(--series-bike); }
+
+.line-swim,
+.key-swim .key-line path { stroke: var(--series-swim); }
+
+.cursor {
+  stroke: var(--rule);
+  stroke-width: 1;
+  fill: none;
+  opacity: 0;
+}
+
+.cursor-dot {
+  fill: var(--bg);
+  stroke-width: 2;
+  opacity: 0;
+}
+
+.dot-run { stroke: var(--series-run); }
+.dot-bike { stroke: var(--series-bike); }
+.dot-swim { stroke: var(--series-swim); }
+
+.chart.is-hovered .cursor,
+.chart.is-hovered .cursor-dot {
+  opacity: 1;
+}
+
+.chart-max {
+  position: absolute;
+  top: -2px;
+  right: 0;
+  color: var(--muted);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+
+.chart-ticks {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: -14px;
+  font-variant-numeric: tabular-nums;
+}
+
+/**************/
+/* LOG        */
+/**************/
+.log {
+  margin-top: 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.log.is-in {
+  opacity: 1;
+}
+
+/* Each month is a row: its name in a gutter on the left, its activities
+   stacked beside it. The rule above a month spans both columns. */
+.month {
+  display: grid;
+  grid-template-columns: 104px 1fr;
+  align-items: start;
+  border-top: 1px solid var(--rule);
+  padding: 16px 0;
+}
+
+.log > .month:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.month-name {
+  color: var(--muted);
+}
+
+.month-entries {
+  min-width: 0;
+}
+
+.entry > summary {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 5px 0;
+  cursor: pointer;
+  list-style: none;
+}
+
+.entry > summary::-webkit-details-marker {
+  display: none;
+}
+
+.entry:first-child > summary {
+  padding-top: 0;
+}
+
+.day {
+  color: var(--muted);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  width: 18px;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.name {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.amount {
+  color: var(--muted);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* Races are the ones that counted, so they carry Strava's orange */
+.entry.is-race .day,
+.entry.is-race .name,
+.entry.is-race .amount {
+  color: var(--race);
+}
+
+.race-mark {
+  color: var(--race);
+  font-size: 11px;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: #fff;
-  background: #fc4c02;
-  padding: 2px 6px;
-  border-radius: 4px;
-  vertical-align: 2px;
-  margin-left: 6px;
+  margin-left: 8px;
 }
+
+/**************/
+/* DETAIL     */
+/**************/
+.detail {
+  padding: 4px 0 14px 30px;
+  animation: detail-in 0.18s ease both;
+}
+
+@keyframes detail-in {
+  from {
+    opacity: 0;
+    transform: translateY(-2px);
+  }
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 0 0 10px;
+}
+
+.meta a {
+  text-decoration: underline;
+  text-decoration-color: var(--underline);
+  text-underline-offset: 3px;
+}
+
 .map-wrap {
   position: relative;
   aspect-ratio: 5 / 3;
-  background: var(--bg);
   overflow: hidden;
+  border-radius: 4px;
+  border: 1px solid var(--rule);
+  margin-bottom: 12px;
 }
+
 .map {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: saturate(0.55) brightness(0.92);
+  filter: saturate(0.32) contrast(0.95);
 }
-@media (prefers-color-scheme: dark) {
-  .map {
-    filter: saturate(0.55) brightness(0.78);
-  }
+
+:root:not([data-theme="light"]) .map {
+  filter: saturate(0.28) brightness(0.72) contrast(0.95);
 }
+
 .map-svg {
   position: absolute;
   inset: 0;
@@ -183,48 +475,66 @@ h1 {
   height: 100%;
   pointer-events: none;
 }
-.map.empty {
-  aspect-ratio: 5 / 3;
-  background: var(--bg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+.no-map {
   color: var(--muted);
-  font-size: 12px;
-}
-.body {
-  padding: 14px 16px 16px;
-}
-.title {
-  font-size: 14px;
-  font-weight: 500;
-  margin: 0 0 2px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.meta {
-  font-size: 12px;
-  color: var(--muted);
+  font-size: 13px;
   margin: 0 0 12px;
 }
+
 .stats {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px 16px;
+  grid-template-columns: repeat(auto-fit, minmax(84px, 1fr));
+  gap: 10px 18px;
 }
+
 .stat-label {
-  font-size: 11px;
   color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.04em;
   margin: 0;
 }
+
 .stat-value {
-  font-size: 15px;
-  font-weight: 500;
-  margin: 2px 0 0;
+  font-size: 14px;
+  margin: 1px 0 0;
+  font-variant-numeric: tabular-nums;
 }
-.empty-state {
-  text-align: center;
-  padding: 4rem 1rem;
+
+/**************/
+/* FOOTER     */
+/**************/
+.rule {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 32px 0 14px;
+}
+
+.updated {
   color: var(--muted);
+  font-size: 12px;
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.updated a {
+  text-decoration: underline;
+  text-decoration-color: var(--underline);
+  text-underline-offset: 3px;
+}
+
+@media screen and (max-width: 480px) {
+  .page {
+    padding: 40px 20px 32px;
+  }
+
+  /* No room for a gutter, so the month sits above its activities */
+  .month {
+    grid-template-columns: 1fr;
+    row-gap: 6px;
+  }
+
+  .detail {
+    padding-left: 0;
+  }
 }

@@ -111,8 +111,8 @@ async function downloadMapPng(bbox, outPath) {
   await fs.writeFile(outPath, Buffer.from(await res.arrayBuffer()));
 }
 
-// Reverse geocode (lat, lng) to a "city, region" label.
-// US gets "princeton, nj"; Chinese-script regions get the city + country in 中文; others stay English.
+// Reverse geocode (lat, lng) to a "city, region" label, always in English.
+// US gets "princeton, nj"; everywhere else gets "city, country".
 async function geocodeOne(lat, lng, language) {
   const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${lng},${lat}.json?access_token=${MAPBOX_TOKEN}&types=place&limit=1&language=${language}`;
   const res = await fetch(url);
@@ -142,15 +142,7 @@ function formatLabel(feature, countryCode) {
 async function reverseGeocode(lat, lng) {
   const en = await geocodeOne(lat, lng, 'en');
   if (!en) return null;
-  const cc = countryCodeOf(en);
-  const zhLang = cc === 'cn' ? 'zh-Hans'
-    : ['tw', 'hk', 'mo'].includes(cc) ? 'zh-Hant'
-    : null;
-  if (zhLang) {
-    const zh = await geocodeOne(lat, lng, zhLang);
-    if (zh) return formatLabel(zh, cc);
-  }
-  return formatLabel(en, cc);
+  return formatLabel(en, countryCodeOf(en));
 }
 
 const bboxCenter = ([w, s, e, n]) => [(s + n) / 2, (w + e) / 2];
