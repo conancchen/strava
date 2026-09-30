@@ -56,13 +56,13 @@ a:focus {
 /**************/
 .page {
   width: 100%;
-  max-width: 600px;
+  max-width: 568px;
   margin: 0 auto;
   padding: 64px 24px 48px;
 }
 
 .header {
-  padding-top: 13px;
+  max-width: 600px;
   margin-bottom: 16px;
 }
 
@@ -74,7 +74,7 @@ a:focus {
 }
 
 .header h1 {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
   margin: 0;
 }
@@ -143,9 +143,10 @@ a:focus {
 /* Sits under the title at the same size, in muted gray */
 .subtitle {
   color: var(--muted);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
   margin: 0;
+  font-variant-numeric: tabular-nums;
 }
 
 /**************/
@@ -156,7 +157,7 @@ a:focus {
   flex-wrap: wrap;
   align-items: baseline;
   gap: 6px 10px;
-  margin: 28px 0 0;
+  margin: 0;
 }
 
 .filter[data-year] {

@@ -375,7 +375,6 @@ async function load() {
   try {
     const res = await fetch('./activities.json', { cache: 'no-cache' });
     if (!res.ok) throw new Error(res.status);
-    const synced = res.headers.get('Last-Modified');
     all = await res.json();
     all.sort((a, b) => (a.start_date < b.start_date ? 1 : -1));
     apply();
@@ -383,12 +382,6 @@ async function load() {
     const day = (d) => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
     const latest = all[0] && day(new Date(all[0].date + 'T00:00:00'));
     footnote.textContent = `${all.length.toLocaleString()} activities, last on ${latest}`;
-
-    // When the file itself was last written, which is when the sync last ran
-    const when = synced ? new Date(synced) : null;
-    const line = when && !isNaN(when) ? `Last synced ${day(when)}` : 'Training log';
-    if (window.setSubtitle) window.setSubtitle(line);
-    else document.querySelector('.subtitle').textContent = line;
   } catch (e) {
     log.innerHTML = '<p class="meta">no activities synced yet</p>';
     log.classList.add('is-in');
