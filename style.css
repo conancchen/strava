@@ -1,19 +1,8 @@
 /**************/
 /* THEME      */
 /**************/
-/* Dark is the default; the toggle opts into light and remembers the choice */
+/* Light is the default; the toggle opts into dark and remembers the choice */
 :root {
-  color-scheme: dark;
-  --bg: #202020;
-  --text: #f2f2f0;
-  --muted: #8a8a8a;
-  --rule: #3a3a3a;
-  --link: #9a9a98;
-  --underline: #55554f;
-  --race: #fc4c02;
-}
-
-:root[data-theme="light"] {
   color-scheme: light;
   --bg: #ffffff;
   --text: #16150f;
@@ -22,6 +11,17 @@
   --link: #6f6e6a;
   --underline: #d3d2ce;
   --race: #d84302;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #000000;
+  --text: #f2f2f0;
+  --muted: #8a8a8a;
+  --rule: #3a3a3a;
+  --link: #9a9a98;
+  --underline: #55554f;
+  --race: #fc4c02;
 }
 
 /**************/
@@ -110,17 +110,34 @@ a:focus {
   opacity: 1;
 }
 
-.icon-sun,
-.icon-moon {
-  display: none;
+/* The theme toggle is a yin-yang that spins each time it is pressed, slowing
+   as it settles; the script picks how far it turns and how long that takes */
+.icon-yinyang {
+  --angle: 0deg;
+  --yin: currentColor;
+  --yang: var(--bg);
+  transform: rotate(var(--angle));
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-:root:not([data-theme="light"]) #theme-toggle .icon-sun {
-  display: block;
+/* Yin is always the darker half, so it trades colors with yang in dark mode */
+:root[data-theme="dark"] .icon-yinyang {
+  --yin: var(--bg);
+  --yang: currentColor;
 }
 
-:root[data-theme="light"] #theme-toggle .icon-moon {
-  display: block;
+.icon-yinyang .yin {
+  fill: var(--yin);
+}
+
+.icon-yinyang .yang {
+  fill: var(--yang);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .icon-yinyang {
+    transition: none;
+  }
 }
 
 /* Sits under the title at the same size, in muted gray */
@@ -194,15 +211,15 @@ a:focus {
    colour-blind readers, so the light steps are pushed apart until they clear
    the separation threshold on their own — no dashes needed. */
 :root {
-  --series-run: #e66767;
-  --series-bike: #008300;
-  --series-swim: #3987e5;
-}
-
-:root[data-theme="light"] {
   --series-run: #e8605f;
   --series-bike: #006e00;
   --series-swim: #2a78d6;
+}
+
+:root[data-theme="dark"] {
+  --series-run: #e66767;
+  --series-bike: #008300;
+  --series-swim: #3987e5;
 }
 
 .year-stats:not(:empty) {
@@ -452,7 +469,7 @@ a:focus {
   filter: saturate(0.32) contrast(0.95);
 }
 
-:root:not([data-theme="light"]) .map {
+:root[data-theme="dark"] .map {
   filter: saturate(0.28) brightness(0.72) contrast(0.95);
 }
 
