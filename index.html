@@ -29,7 +29,7 @@
     <div class="page">
       <header class="header">
         <div class="header-row">
-          <h1 translate="no"><button type="button" class="home-link" onclick="playTitleScramble()" title="Replay the animation">Custom Strava</button></h1>
+          <h1 translate="no">Custom Strava</h1>
           <div class="header-actions">
             <a class="icon-button" href="https://conancchen.github.io/" aria-label="Back to the home page" title="Back">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -102,134 +102,10 @@
     </script>
 
     <script>
-      // The same title animation the main site uses: the name and the line under
-      // it churn through simple Chinese characters and lock in left to right.
-      window.playTitleScramble = function () {};
       window.setSubtitle = function (text) {
         var el = document.querySelector('.subtitle');
         if (el) el.textContent = text;
       };
-
-      (function () {
-        var link = document.querySelector('.home-link');
-        var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        if (!link || reduceMotion) return;
-
-        var GLYPHS = '一乙二十丁七人入八九几儿了力乃刀又三干于亏士工土才下寸大丈与万上小口山巾千川个夕久么及广亡门义之尸弓己已子女飞刃习叉马乡王天夫元无云专不五支厅太犬区历友尤匹车巨牙屯戈比互切瓦止少日中贝内水见午牛手气毛长仁什片化币仍仅斤爪反介父从今凶分乏公仓月氏勿欠风丹匀乌凤勾文六方火为斗忆订计户认心打巧正扑扒功扔去甘世古节本术可丙左厉右石布龙平灭东卡北占业旧帅归且旦目叶甲申叮电号田由只史央兄叫另叹四生失禾丘付仗代';
-
-        function randomGlyph() {
-          return GLYPHS.charAt(Math.floor(Math.random() * GLYPHS.length));
-        }
-
-        var TICK = 40;          // ms between scramble frames
-        var TOTAL_MS = 2200;    // when the last letter locks in
-        var TOTAL_TICKS = TOTAL_MS / TICK;
-        var LOCK_START = TOTAL_TICKS * 0.25;
-        var LAST_LOCK = TOTAL_TICKS - 1;
-        var SATURATION = 75;
-        var LIGHTNESS_DARK = 70;
-        var LIGHTNESS_LIGHT = 45;
-
-        var targets = [];
-        var tick = 0;
-        var timer = null;
-
-        function makeTarget(el, box) {
-          var t = { el: el, box: box || el, chars: [], nodes: [] };
-          t.box.style.height = t.box.offsetHeight + 'px';
-          el.style.whiteSpace = 'nowrap';
-
-          var walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
-          var texts = [];
-          while (walker.nextNode()) texts.push(walker.currentNode);
-
-          texts.forEach(function (node) {
-            var frag = document.createDocumentFragment();
-            var spans = node.nodeValue.split('').map(function (ch) {
-              var span = document.createElement('span');
-              frag.appendChild(span);
-              t.chars.push({ span: span, ch: ch });
-              return span;
-            });
-            if (!spans.length) return;
-            node.parentNode.replaceChild(frag, node);
-            t.nodes.push({ orig: node, spans: spans });
-          });
-
-          t.step = t.chars.length > 1 ? (LAST_LOCK - LOCK_START) / (t.chars.length - 1) : 0;
-          targets.push(t);
-        }
-
-        function restore(t) {
-          t.box.style.height = '';
-          t.el.style.whiteSpace = '';
-          t.nodes.forEach(function (n) {
-            n.spans[0].parentNode.insertBefore(n.orig, n.spans[0]);
-            n.spans.forEach(function (span) { span.parentNode.removeChild(span); });
-          });
-        }
-
-        // The log tells us when it last synced, and that word arrives while the
-        // line under the title is still churning. Swapping the text under the
-        // animation lets it settle into the real line rather than landing on a
-        // placeholder and then blinking to something else.
-        window.setSubtitle = function (text) {
-          var el = document.querySelector('.subtitle');
-          if (!el) return;
-          if (!timer) { el.textContent = text; return; }
-          for (var i = 0; i < targets.length; i++) {
-            if (targets[i].el !== el) continue;
-            restore(targets[i]);
-            targets.splice(i, 1);
-            break;
-          }
-          el.textContent = text;
-          makeTarget(el);
-        };
-
-        function randomColor() {
-          var dark = document.documentElement.getAttribute('data-theme') === 'dark';
-          var hue = Math.floor(Math.random() * 360);
-          return 'hsl(' + hue + ', ' + SATURATION + '%, ' + (dark ? LIGHTNESS_DARK : LIGHTNESS_LIGHT) + '%)';
-        }
-
-        function render() {
-          targets.forEach(function (t) {
-            t.chars.forEach(function (c, i) {
-              if (tick >= LOCK_START + i * t.step || /\s/.test(c.ch)) {
-                c.span.textContent = c.ch;
-                c.span.style.color = '';
-              } else {
-                c.span.textContent = randomGlyph();
-                c.span.style.color = randomColor();
-              }
-            });
-          });
-        }
-
-        function play() {
-          if (timer) return;
-          targets = [];
-          tick = 0;
-          makeTarget(link, link.parentNode);
-          var subtitle = document.querySelector('.subtitle');
-          if (subtitle) makeTarget(subtitle);
-          render();
-          timer = setInterval(function () {
-            tick++;
-            render();
-            if (tick >= TOTAL_TICKS) {
-              clearInterval(timer);
-              timer = null;
-              targets.forEach(restore);
-            }
-          }, TICK);
-        }
-
-        link.setAttribute('aria-label', link.textContent);
-        window.playTitleScramble = play;
-        play();
-      })();
     </script>
   </body>
 </html>
