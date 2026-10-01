@@ -110,28 +110,30 @@ a:focus {
   opacity: 1;
 }
 
-/* The theme toggle is a yin-yang that spins each time it is pressed, slowing
-   as it settles; the script picks how far it turns and how long that takes */
+/* The theme toggle is half a yin-yang that spins each time it is pressed,
+   slowing as it settles; the script picks how far it turns and how long that
+   takes. It shows the half for the theme it switches to: the dark yin on the
+   light page and the light yang on the dark one. */
 .icon-yinyang {
   --angle: 0deg;
-  --yin: currentColor;
-  --yang: var(--bg);
+  color: #000;
   transform: rotate(var(--angle));
   transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* Yin is always the darker half, so it trades colors with yang in dark mode */
+.icon-yinyang .yang,
+:root[data-theme="dark"] .icon-yinyang .yin {
+  display: none;
+}
+
+:root[data-theme="dark"] .icon-yinyang .yang {
+  display: inline;
+}
+
+/* Pure black on the light page and pure white on the dark one, rather than the
+   muted gray of the other header buttons, hovered or not */
 :root[data-theme="dark"] .icon-yinyang {
-  --yin: var(--bg);
-  --yang: currentColor;
-}
-
-.icon-yinyang .yin {
-  fill: var(--yin);
-}
-
-.icon-yinyang .yang {
-  fill: var(--yang);
+  color: #fff;
 }
 
 @media (prefers-reduced-motion: reduce) {
