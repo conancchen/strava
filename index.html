@@ -89,8 +89,7 @@
       // longer spins get a little more time.
       var yinyangAngle = 0;
 
-      function toggleTheme() {
-        var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      function switchTheme(next) {
         localStorage.setItem('theme', next);
         applyTheme(next);
         var spin = 360 + Math.random() * 720;  // degrees
@@ -98,6 +97,30 @@
         var icon = document.querySelector('#theme-toggle .icon-yinyang');
         icon.style.transitionDuration = (0.5 + 0.2 * spin / 360) + 's';
         icon.style.setProperty('--angle', yinyangAngle + 'deg');
+      }
+
+      // The new theme spills out of the yin-yang in a growing circle until it
+      // covers the page. Browsers without view transitions, and anyone who
+      // prefers reduced motion, just get the instant switch.
+      function toggleTheme() {
+        var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!document.startViewTransition || reduceMotion) {
+          switchTheme(next);
+          return;
+        }
+
+        var box = document.getElementById('theme-toggle').getBoundingClientRect();
+        var x = box.left + box.width / 2;
+        var y = box.top + box.height / 2;
+        var radius = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+
+        document.startViewTransition(function () { switchTheme(next); }).ready.then(function () {
+          document.documentElement.animate(
+            { clipPath: ['circle(0px at ' + x + 'px ' + y + 'px)', 'circle(' + radius + 'px at ' + x + 'px ' + y + 'px)'] },
+            { duration: 500, easing: 'cubic-bezier(0.4, 0, 0.2, 1)', pseudoElement: '::view-transition-new(root)' }
+          );
+        });
       }
 
       applyTheme(document.documentElement.getAttribute('data-theme'));

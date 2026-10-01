@@ -140,6 +140,14 @@ a:focus {
   }
 }
 
+/* The theme wipe draws its own circle over the page, so the browser's default
+   cross-fade between the old and new snapshots is switched off */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
 /* Sits under the title at the same size, in muted gray */
 .subtitle {
   color: var(--muted);
