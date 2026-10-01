@@ -4,7 +4,7 @@
 /* Light is the default; the toggle opts into dark and remembers the choice */
 :root {
   color-scheme: light;
-  --bg: #ffffff;
+  --bg: #fbfaf8;
   --text: #16150f;
   --muted: #8a8a8a;
   --rule: #e0dfdb;
@@ -15,7 +15,7 @@
 
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --bg: #000000;
+  --bg: #121212;
   --text: #f2f2f0;
   --muted: #8a8a8a;
   --rule: #3a3a3a;
