@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,7 +10,7 @@
       // Runs before the first paint, so the page never flashes the wrong theme
       // or a fully rendered header
       (function () {
-        document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'light');
+        document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'dark');
       })();
     </script>
 
