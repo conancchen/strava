@@ -4,7 +4,7 @@
 /* Light is the default; the toggle opts into dark and remembers the choice */
 :root {
   color-scheme: light;
-  --bg: #fbfaf8;
+  --bg: #fff;
   --text: #16150f;
   --muted: #8a8a8a;
   --rule: #e0dfdb;
@@ -37,7 +37,12 @@ body {
   color: var(--text);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   font-size: 13px;
-  line-height: 1.6;
+  /* Spaced like the home page: a 20px line at 14px, letters a hair tight */
+  line-height: calc(20 / 14);
+  letter-spacing: -0.09px;
+  /* Smoothed like the home page, so the title and text read the same weight */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -56,14 +61,15 @@ a:focus {
 /**************/
 .page {
   width: 100%;
-  max-width: 568px;
+  max-width: 582px;
   margin: 0 auto;
-  padding: 64px 24px 48px;
+  padding: 80px 16px 48px;
 }
 
+/* Spaced like the home page's header: the subtitle 4px under the title and
+   24px down to what follows */
 .header {
-  max-width: 600px;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 .header-row {
@@ -75,7 +81,7 @@ a:focus {
 
 .header h1 {
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 525;
   margin: 0;
 }
 
@@ -91,6 +97,9 @@ a:focus {
   align-items: center;
   gap: 2px;
   flex-shrink: 0;
+  /* The 26px buttons would stretch the title's 20px line and push the
+     subtitle down, so they overhang it instead */
+  margin: -3px 0;
 }
 
 .icon-button {
@@ -155,7 +164,7 @@ a:focus {
   color: var(--muted);
   font-size: 14px;
   font-weight: 400;
-  margin: 0;
+  margin: 4px 0 0;
   font-variant-numeric: tabular-nums;
 }
 
@@ -200,7 +209,9 @@ a:focus {
   padding: 0;
   margin: 0;
   cursor: pointer;
-  text-decoration: underline dotted;
+  text-decoration: underline;
+  text-decoration-thickness: 1.25px;
+  text-decoration-skip-ink: none;
   text-underline-offset: 3px;
   text-decoration-color: var(--rule);
 }
@@ -387,6 +398,12 @@ a:focus {
   padding: 5px 0;
   cursor: pointer;
   list-style: none;
+  transition: opacity 0.1s ease-in-out;
+}
+
+/* Hovering a race dims the other activities, so the race stands out */
+.log:has(.entry.is-race > summary:hover) .entry > summary:not(:hover) {
+  opacity: 0.4;
 }
 
 .entry > summary::-webkit-details-marker {
@@ -460,6 +477,8 @@ a:focus {
 .meta a {
   text-decoration: underline;
   text-decoration-color: var(--underline);
+  text-decoration-thickness: 1.25px;
+  text-decoration-skip-ink: none;
   text-underline-offset: 3px;
 }
 
@@ -536,6 +555,8 @@ a:focus {
 .updated a {
   text-decoration: underline;
   text-decoration-color: var(--underline);
+  text-decoration-thickness: 1.25px;
+  text-decoration-skip-ink: none;
   text-underline-offset: 3px;
 }
 
