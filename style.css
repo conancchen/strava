@@ -37,12 +37,14 @@ body {
   color: var(--text);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   font-size: 13px;
+  font-weight: 436;
   /* Spaced like the home page: a 20px line at 14px, letters a hair tight */
   line-height: calc(20 / 14);
   letter-spacing: -0.09px;
   /* Smoothed like the home page, so the title and text read the same weight */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 a {
@@ -81,7 +83,7 @@ a:focus {
 
 .header h1 {
   font-size: 14px;
-  font-weight: 525;
+  font-weight: 474;
   margin: 0;
 }
 
@@ -97,9 +99,14 @@ a:focus {
   align-items: center;
   gap: 2px;
   flex-shrink: 0;
+  /* The buttons' padding and the moon's inset inside its icon would leave it
+     short of the column's right edge; this pulls its rim onto that edge, as on
+     the home page */
+  margin-right: -5.5px;
   /* The 26px buttons would stretch the title's 20px line and push the
      subtitle down, so they overhang it instead */
-  margin: -3px 0;
+  margin-top: -3px;
+  margin-bottom: -3px;
 }
 
 .icon-button {
@@ -119,51 +126,31 @@ a:focus {
   opacity: 1;
 }
 
-/* The theme toggle is half a yin-yang that spins each time it is pressed,
-   slowing as it settles; the script picks how far it turns and how long that
-   takes. It shows the half for the theme it switches to: the dark yin on the
-   light page and the light yang on the dark one. */
-.icon-yinyang {
-  --angle: 0deg;
-  color: #000;
-  transform: rotate(var(--angle));
-  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.icon-yinyang .yang,
-:root[data-theme="dark"] .icon-yinyang .yin {
+/* The theme toggle shows a moon on the light page and a sun on the dark one */
+.icon-theme .icon-sun,
+:root[data-theme="dark"] .icon-theme .icon-moon {
   display: none;
 }
 
-:root[data-theme="dark"] .icon-yinyang .yang {
+:root[data-theme="dark"] .icon-theme .icon-sun {
   display: inline;
 }
 
-/* Pure black on the light page and pure white on the dark one, rather than the
-   muted gray of the other header buttons, hovered or not */
-:root[data-theme="dark"] .icon-yinyang {
-  color: #fff;
+/* Moving between this and the home page keeps the name in place while the
+   rest swaps */
+@view-transition {
+  navigation: auto;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .icon-yinyang {
-    transition: none;
-  }
-}
-
-/* The theme wipe draws its own circle over the page, so the browser's default
-   cross-fade between the old and new snapshots is switched off */
-::view-transition-old(root),
-::view-transition-new(root) {
-  animation: none;
-  mix-blend-mode: normal;
+.header h1 {
+  view-transition-name: site-name;
 }
 
 /* Sits under the title at the same size, in muted gray */
 .subtitle {
   color: var(--muted);
   font-size: 14px;
-  font-weight: 400;
+  font-weight: inherit;
   margin: 4px 0 0;
   font-variant-numeric: tabular-nums;
 }
@@ -209,11 +196,8 @@ a:focus {
   padding: 0;
   margin: 0;
   cursor: pointer;
-  text-decoration: underline;
-  text-decoration-thickness: 1.25px;
-  text-decoration-skip-ink: none;
-  text-underline-offset: 3px;
-  text-decoration-color: var(--rule);
+  /* No underlines; the picked filter shows by its darker text */
+  text-decoration: none;
 }
 
 .filter:hover {
@@ -222,7 +206,6 @@ a:focus {
 
 .filter.is-on {
   color: var(--text);
-  text-decoration-color: var(--underline);
 }
 
 /**************/
@@ -560,11 +543,14 @@ a:focus {
   text-underline-offset: 3px;
 }
 
-@media screen and (max-width: 480px) {
+/* Phones get the home page's margins, so the header sits in the same place */
+@media screen and (max-width: 639px) {
   .page {
-    padding: 40px 20px 32px;
+    padding: 32px 24px 40px;
   }
+}
 
+@media screen and (max-width: 480px) {
   /* No room for a gutter, so the month sits above its activities */
   .month {
     grid-template-columns: 1fr;

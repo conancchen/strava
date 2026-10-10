@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="google" content="notranslate" />
-    <title>Custom Strava</title>
+    <title>Custom Strava — Conan Chen</title>
 
     <script>
       // Runs before the first paint, so the page never flashes the wrong theme
@@ -31,16 +31,16 @@
         <div class="header-row">
           <h1 translate="no">Conan Chen</h1>
           <div class="header-actions">
-            <a class="icon-button" href="https://conancchen.github.io/" aria-label="Back to the home page" title="Back">
+            <a class="icon-button" href="/" aria-label="Back to the home page" title="Back">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="7 3 3 7 7 11"></polyline>
                 <path d="M3 7h11a6 6 0 0 1 0 12H6"></path>
               </svg>
             </a>
             <button class="icon-button" id="theme-toggle" onclick="toggleTheme()" aria-label="Switch to dark mode" title="Switch to dark mode">
-              <svg class="icon-yinyang" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" fill-rule="evenodd">
-                <path class="yin" d="M12 1.75 A10.25 10.25 0 0 0 12 22.25 A5.125 5.125 0 0 0 12 12 A5.125 5.125 0 0 1 12 1.75 Z M13.6 17.125 A1.6 1.6 0 1 0 10.4 17.125 A1.6 1.6 0 1 0 13.6 17.125 Z M13.6 6.875 A1.6 1.6 0 1 0 10.4 6.875 A1.6 1.6 0 1 0 13.6 6.875 Z"></path>
-                <path class="yang" d="M12 1.75 A10.25 10.25 0 0 1 12 22.25 A5.125 5.125 0 0 0 12 12 A5.125 5.125 0 0 1 12 1.75 Z M13.6 6.875 A1.6 1.6 0 1 0 10.4 6.875 A1.6 1.6 0 1 0 13.6 6.875 Z M13.6 17.125 A1.6 1.6 0 1 0 10.4 17.125 A1.6 1.6 0 1 0 13.6 17.125 Z"></path>
+              <svg class="icon-theme" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path class="icon-moon" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                <g class="icon-sun"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></g>
               </svg>
             </button>
           </div>
@@ -82,40 +82,10 @@
         toggle.setAttribute('title', label);
       }
 
-      // Each switch spins the yin-yang one full turn: clockwise into dark,
-      // counterclockwise into light
-      var yinyangAngle = 0;
-
-      function switchTheme(next) {
-        localStorage.setItem('theme', next);
-        applyTheme(next);
-        yinyangAngle += next === 'dark' ? 360 : -360;
-        var icon = document.querySelector('#theme-toggle .icon-yinyang');
-        icon.style.setProperty('--angle', yinyangAngle + 'deg');
-      }
-
-      // The new theme spills out of the yin-yang in a growing circle until it
-      // covers the page. Browsers without view transitions, and anyone who
-      // prefers reduced motion, just get the instant switch.
       function toggleTheme() {
         var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-        var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        if (!document.startViewTransition || reduceMotion) {
-          switchTheme(next);
-          return;
-        }
-
-        var box = document.getElementById('theme-toggle').getBoundingClientRect();
-        var x = box.left + box.width / 2;
-        var y = box.top + box.height / 2;
-        var radius = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
-
-        document.startViewTransition(function () { switchTheme(next); }).ready.then(function () {
-          document.documentElement.animate(
-            { clipPath: ['circle(0px at ' + x + 'px ' + y + 'px)', 'circle(' + radius + 'px at ' + x + 'px ' + y + 'px)'] },
-            { duration: 500, easing: 'cubic-bezier(0.4, 0, 0.2, 1)', pseudoElement: '::view-transition-new(root)' }
-          );
-        });
+        localStorage.setItem('theme', next);
+        applyTheme(next);
       }
 
       applyTheme(document.documentElement.getAttribute('data-theme'));
