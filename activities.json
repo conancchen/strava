@@ -1,5 +1,20 @@
 [
   {
+    "id": 20882580740,
+    "name": "Morning Swim",
+    "type": "Swim",
+    "date": "2026-11-06",
+    "start_date": "2026-11-06T12:56:25Z",
+    "distance_m": 1074.4,
+    "moving_time_s": 1729,
+    "average_speed": 0.621,
+    "average_heartrate": 106.2,
+    "elevation_gain_m": 0,
+    "is_race": false,
+    "has_map": false,
+    "polyline": ""
+  },
+  {
     "id": 20522247642,
     "name": "princeton half marathon training",
     "type": "Run",
