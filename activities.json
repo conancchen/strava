@@ -1,5 +1,27 @@
 [
   {
+    "id": 20908894718,
+    "name": "princeton half marathon",
+    "type": "Run",
+    "date": "2026-11-08",
+    "start_date": "2026-11-08T12:00:38Z",
+    "distance_m": 21328.6,
+    "moving_time_s": 5903,
+    "average_speed": 3.61,
+    "average_heartrate": 180.3,
+    "elevation_gain_m": 231.8,
+    "is_race": true,
+    "has_map": true,
+    "polyline": "aehuFvrufMBb@CjABl@ZnBrAfGBh@EjA@TlA`Fl@vCH`AtAdGd@fCRIdCeCtGaFfE}D|AaAlE}DjAy@VC|I~FnA`AfDrBjAdArEbDvBfBpBnAjDlCtBtApC`CfD|BlAr@|G~Et@p@|A~@hEpDpGvEXJPEd@u@d@UpEd@RCHMAMKQm@c@WIiA|@e@Ds@M[Nu@r@W@UEkJaHuCiBmE}Cs@s@S_@?[Ja@n@_A~@e@`Bc@lAcA\\{@NcAAsDBWNOxAg@d@c@z@oAn@}BJ_AIaFIkAuA}Da@s@c@SWAsAx@kMlKsCfC{@n@YHSEuAy@aBiAeAaAkEqCo@m@]g@@OJSh@k@pBuA`GuE~B}A~CoClFaEhBoA|CkCvDyC`@g@jCoBtBmBzAeAjAo@`@i@\\qAp@}@Li@FaAK_AOs@So@Wa@gAyAwAeAeBu@uCwAiAgAkAgBuBJeDGg@FsB|AyCnBoGzEsA|@e@J[_@iA{Cy@wAe@cAm@{@_AoD_@mBe@}DsAkFsBcCiA}BQKk@Z}A`BuKvHs@r@eElC_BjAw@r@gDvB}C`CoBfAgBtAmAlA_E|BqApAwCxAuAb@yExBWIo@yAy@kDqBoHeA}AiBaDaAqB]e@k@HoFpB{Bd@aGxBw@FOUWqAcAwGCo@Ja@Za@dBkAV[DUG_@Ci@HUhDsAbEqAvA[HIBOa@aBq@uDc@kDe@cBq@}COcAi@oBi@_BeAgC{A_FMkBAs@b@_ECy@SiAISqEkGk@eAk@sA[c@SDeAhAyBjDiAvBcBdCc@x@STSByDsAwE_C}K_FkCw@_@CMHM|@M`BSlAKXOF_BMqBk@{@KwDgAs@YsAW{CeAaCi@eCsAeJaC}CsAgEyAm@]mDgA]EQP_DvH[f@y@dAoB~AwDjDqAd@iALeAVu@ZaAr@{@r@yBdCi@dA[vAEpAa@dFJx@l@rA@`@Ct@o@tDsA|Fe@dAQz@@PNThExD~@bA`Av@JTDd@GjCB|BX~E@tBHb@RLpAN|@\\f@b@r@|@hBhCd@h@dCpBfBjAdCtAjClAl@PhAGjBc@jACfAJdCj@z@b@p@p@pCnBbB|AlBhAfHhCvF~A~CnAvFxChH~Bb@ElBk@nHkCfGaBbC_A~Bs@l@Y~AM`Dd@l@EnHmCzCs@lBs@pJaDlBu@|F{Cb@IXRTd@`@vBlEzOd@hC?v@",
+    "bbox": [
+      -74.72682466066365,
+      40.324878845012805,
+      -74.58667533933637,
+      40.388957244774424
+    ],
+    "location": "princeton, nj"
+  },
+  {
     "id": 20882580740,
     "name": "Morning Swim",
     "type": "Swim",
