@@ -1,4 +1,5 @@
-// Syncs Strava activities to local JSON + map PNGs.
+// Syncs Strava activities to local JSON: each one's numbers, and for races
+// their details and a map PNG.
 // Run via GitHub Actions on a cron, or manually with `npm run sync`.
 
 import fs from 'node:fs/promises';
@@ -147,23 +148,46 @@ async function reverseGeocode(lat, lng) {
 
 const bboxCenter = ([w, s, e, n]) => [(s + n) / 2, (w + e) / 2];
 
+const isRace = (a) => a.workout_type === 1 || a.workout_type === 11;
+
+// Every activity keeps only its numbers: enough to total a day, a month or a
+// sport. A race also keeps what its own entry on the site opens to.
 function shapeActivity(a) {
-  return {
+  const base = {
     id: a.id,
-    name: a.name,
     type: a.type,
     date: a.start_date_local.slice(0, 10),
     start_date: a.start_date,
     distance_m: a.distance,
     moving_time_s: a.moving_time,
+    // workout_type 1 = race (run), 11 = race (ride).
+    is_race: isRace(a),
+  };
+  if (!base.is_race) return base;
+  return {
+    ...base,
+    name: a.name,
     average_speed: a.average_speed,
     average_heartrate: a.average_heartrate ?? null,
     elevation_gain_m: a.total_elevation_gain ?? 0,
-    // workout_type 1 = race (run), 11 = race (ride).
-    is_race: a.workout_type === 1 || a.workout_type === 11,
     has_map: Boolean(a.map?.summary_polyline),
     polyline: a.map?.summary_polyline ?? null,
   };
+}
+
+// An activity already in the file, cut down to its numbers
+function slim(a) {
+  const { id, type, date, start_date, distance_m, moving_time_s } = a;
+  return { id, type, date, start_date, distance_m, moving_time_s, is_race: false };
+}
+
+async function removeMap(id) {
+  try {
+    await fs.unlink(path.join(MAPS_DIR, `${id}.png`));
+    console.log(`  removed map for ${id}`);
+  } catch (e) {
+    if (e.code !== 'ENOENT') throw e;
+  }
 }
 
 async function main() {
@@ -177,26 +201,22 @@ async function main() {
   }
   const existingIds = new Set(existing.map((a) => a.id));
 
-  // Always pull the full list so we can refresh mutable fields (name, race tag) on existing entries.
+  // Always pull the full list so a race tagged or untagged on Strava later, or renamed, follows here.
   console.log('Fetching all activities');
   const accessToken = await getAccessToken();
   const fresh = await fetchActivities(accessToken, 0);
   console.log(`Strava returned ${fresh.length} activities`);
+  const freshById = new Map(fresh.map((a) => [a.id, a]));
 
-  const existingById = new Map(existing.map((a) => [a.id, a]));
-  let updatedCount = 0;
-  for (const a of fresh) {
-    const ex = existingById.get(a.id);
-    if (!ex) continue;
-    const newName = a.name;
-    const newIsRace = a.workout_type === 1 || a.workout_type === 11;
-    if (ex.name !== newName || ex.is_race !== newIsRace) {
-      ex.name = newName;
-      ex.is_race = newIsRace;
-      updatedCount++;
-    }
-  }
-  if (updatedCount > 0) console.log(`Updated name/race tag on ${updatedCount} existing activities`);
+  // Existing entries: one that is a race holds the race's full entry, any other only its numbers.
+  const kept = existing.map((ex) => {
+    const f = freshById.get(ex.id);
+    const race = f ? isRace(f) : ex.is_race;
+    if (!race) return slim(ex);
+    // Newly tagged as a race: its details were never stored, so take them from Strava.
+    if (f && !('polyline' in ex)) return shapeActivity(f);
+    return f ? { ...ex, name: f.name, is_race: true } : ex;
+  });
 
   const deduped = fresh.filter((a) => !existingIds.has(a.id));
   const publicOnly = deduped.filter((a) => !a.private && a.visibility !== 'only_me');
@@ -205,42 +225,37 @@ async function main() {
   const newOnes = publicOnly.map(shapeActivity);
   console.log(`${newOnes.length} new activities after dedup`);
 
-  for (const a of newOnes) {
-    if (!a.has_map) continue;
-    const points = decodePolyline(a.polyline);
-    if (points.length < 2) {
-      a.has_map = false;
-      continue;
-    }
-    a.bbox = computeBbox(points, MAP_WIDTH, MAP_HEIGHT);
-    const outPath = path.join(MAPS_DIR, `${a.id}.png`);
-    try {
-      await downloadMapPng(a.bbox, outPath);
-      console.log(`  saved map ${outPath}`);
-    } catch (e) {
-      console.error(`  failed map for ${a.id}: ${e.message}`);
-      a.has_map = false;
-    }
-    if (a.has_map) {
-      a.location = await reverseGeocode(...bboxCenter(a.bbox));
-    }
-  }
-
-  // Backfill locations: missing entirely, or stored in English for a Chinese-script country.
-  const needsZhUpgrade = /,\s*(china|taiwan|hong kong|macau)$/i;
-  const toBackfill = existing.filter((a) =>
-    a.bbox && (a.location === undefined || (a.location && needsZhUpgrade.test(a.location)))
-  );
-  if (toBackfill.length > 0) {
-    console.log(`Backfilling location for ${toBackfill.length} existing activities`);
-    for (const a of toBackfill) {
-      a.location = await reverseGeocode(...bboxCenter(a.bbox));
-    }
-  }
-
-  const merged = [...existing, ...newOnes].sort(
+  const merged = [...kept, ...newOnes].sort(
     (x, y) => new Date(y.start_date) - new Date(x.start_date)
   );
+
+  // Only races have a map: draw the ones missing theirs, and remove any left from before.
+  for (const a of merged) {
+    if (!a.is_race) {
+      await removeMap(a.id);
+      continue;
+    }
+    if (!a.has_map) continue;
+    if (!a.bbox) {
+      const points = decodePolyline(a.polyline);
+      if (points.length < 2) {
+        a.has_map = false;
+        continue;
+      }
+      a.bbox = computeBbox(points, MAP_WIDTH, MAP_HEIGHT);
+      const outPath = path.join(MAPS_DIR, `${a.id}.png`);
+      try {
+        await downloadMapPng(a.bbox, outPath);
+        console.log(`  saved map ${outPath}`);
+      } catch (e) {
+        console.error(`  failed map for ${a.id}: ${e.message}`);
+        a.has_map = false;
+        delete a.bbox;
+        continue;
+      }
+    }
+    if (a.location === undefined) a.location = await reverseGeocode(...bboxCenter(a.bbox));
+  }
 
   await fs.writeFile(ACTIVITIES_FILE, JSON.stringify(merged, null, 2) + '\n');
   console.log(`Wrote ${ACTIVITIES_FILE} with ${merged.length} total activities`);
