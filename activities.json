@@ -1,5 +1,14 @@
 [
   {
+    "id": 21112991045,
+    "type": "Swim",
+    "date": "2026-11-24",
+    "start_date": "2026-11-24T20:27:18Z",
+    "distance_m": 3063.2,
+    "moving_time_s": 4068,
+    "is_race": false
+  },
+  {
     "id": 20908894718,
     "name": "princeton half marathon",
     "type": "Run",
