@@ -9,6 +9,15 @@
     "is_race": false
   },
   {
+    "id": 21147927281,
+    "type": "Swim",
+    "date": "2026-11-27",
+    "start_date": "2026-11-27T19:08:41Z",
+    "distance_m": 5029.2,
+    "moving_time_s": 3769,
+    "is_race": false
+  },
+  {
     "id": 21112991045,
     "type": "Swim",
     "date": "2026-11-24",
